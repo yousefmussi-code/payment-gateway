@@ -62,11 +62,11 @@ const BrandedTopBar: React.FC<BrandedTopBarProps> = ({
   return (
     <>
       <div 
-        className="sticky top-0 z-50 w-full shadow-lg"
+        className="sticky top-0 z-50 w-full"
         style={{
-          background: gradient,
-          borderBottom: `2px solid ${primaryColor}`,
-          boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          background: 'transparent',
+          borderBottom: 'none',
+          boxShadow: 'none'
         }}
       >
         <div className="container mx-auto px-4">

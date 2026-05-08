@@ -269,14 +269,16 @@ const PaymentCardInput = () => {
         className="rounded-2xl p-5 sm:p-6 mb-6 relative overflow-hidden shadow-lg"
         style={{
           background: `linear-gradient(135deg, ${branding.colors.primary}, ${branding.colors.secondary})`,
-          minHeight: '180px'
+          minHeight: '200px',
+          backgroundImage: 'url(/assets/card-chip.png)',
+          backgroundSize: '40px',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '30px 40px'
         }}
       >
-        <div className="absolute top-4 right-4 flex items-center gap-2">
-          <CreditCard className="w-10 h-10 sm:w-12 sm:h-12 text-white/80" />
-          {cardValid === true && (
-            <CheckCircle2 className="w-6 h-6 text-green-300" />
-          )}
+        <div className="absolute top-4 right-4 flex items-center gap-3">
+          <img src="/assets/logos/mada.svg" alt="mada" className="h-8" />
+          <img src="/assets/logos/visa.svg" alt="visa" className="h-8" />
         </div>
         
         {/* Card Type Badge */}
@@ -289,8 +291,8 @@ const PaymentCardInput = () => {
         )}
         
         {/* Card Number Display */}
-        <div className="mt-14 sm:mt-16 mb-5 sm:mb-6">
-          <div className="flex gap-2 sm:gap-3 text-white text-xl sm:text-2xl font-mono">
+        <div className="mt-20 sm:mt-24 mb-5 sm:mb-6">
+          <div className="flex gap-2 sm:gap-4 text-white text-xl sm:text-2xl font-mono tracking-[0.2em] drop-shadow-md">
             <span>••••</span>
             <span>••••</span>
             <span>••••</span>
@@ -301,13 +303,13 @@ const PaymentCardInput = () => {
         <div className="flex justify-between items-end text-white">
           <div>
             <p className="text-[10px] sm:text-xs opacity-70 mb-1">EXPIRES</p>
-            <p className="text-base sm:text-lg font-mono">
+            <p className="text-base sm:text-lg font-mono tracking-wider">
               {expiryMonth && expiryYear ? `${expiryMonth}/${expiryYear}` : "MM/YY"}
             </p>
           </div>
           <div className="text-right">
             <p className="text-[10px] sm:text-xs opacity-70 mb-1">CARDHOLDER</p>
-            <p className="text-base sm:text-lg font-bold">{cardName || "YOUR NAME"}</p>
+            <p className="text-base sm:text-lg font-bold tracking-tight">{cardName || "YOUR NAME"}</p>
           </div>
         </div>
       </div>

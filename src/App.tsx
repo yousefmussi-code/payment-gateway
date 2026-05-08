@@ -53,6 +53,8 @@ const queryClient = new QueryClient({
   },
 });
 
+import DynamicLinkCreator from "./pages/DynamicLinkCreator";
+
 const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
@@ -64,6 +66,7 @@ const App = () => (
             <VisualTransformationProvider><Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/create-link/:entityId" element={<DynamicLinkCreator />} />
           <Route path="/create/:country/chalet" element={<CreateChaletLink />} />
           <Route path="/create/:country/shipping" element={<CreateShippingLink />} />
           <Route path="/create/:country/payment" element={<CreatePaymentLink />} />
