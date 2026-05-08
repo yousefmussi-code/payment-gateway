@@ -1178,21 +1178,33 @@ export const bankBranding: Record<string, CompanyBranding> = {
     description: 'أحد أكبر البنوك السعودية ورائد في تقديم الخدمات المصرفية المتطورة',
   },
 
+  
   alahli_bank: {
     id: 'alahli_bank',
     nameEn: 'Saudi National Bank',
     nameAr: 'البنك الأهلي السعودي',
     colors: {
-      primary: '#034638',
-      secondary: '#84bd00',
+      primary: '#00843D',
+      secondary: '#FFFFFF',
       accent: '#D4AF37',
       background: '#FFFFFF',
-      surface: '#F5FAF7',
+      surface: '#F8F9FA',
       text: '#1A1A1A',
       textLight: '#666666',
       textOnPrimary: '#FFFFFF',
-      border: '#D1E8DC',
+      border: '#D4DDE6',
     },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: {
+      primary: 'linear-gradient(135deg, #00843D 0%, #005c2b 100%)',
+      secondary: 'linear-gradient(180deg, #00843D 0%, #00ad50 100%)',
+      hero: 'linear-gradient(to right, #00843D 0%, #005c2b 100%)',
+    },
+    shadows: { sm: '0 1px 2px 0 rgba(0,0,0,0.05)', md: '0 4px 6px -1px rgba(0,0,0,0.1)', lg: '0 10px 15px -3px rgba(0,0,0,0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي للبنك الأهلي السعودي (SNB).',
+  },
+
     fonts: {
       primary: 'Arial, sans-serif',
       secondary: 'Helvetica, sans-serif',
