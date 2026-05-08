@@ -1139,6 +1139,87 @@ export const governmentPaymentBranding: Record<string, CompanyBranding> = {
 };
 
 export const bankBranding: Record<string, CompanyBranding> = {
+  // SAUDI ARABIA
+  alrajhi: {
+    id: 'alrajhi',
+    nameEn: 'Al Rajhi Bank',
+    nameAr: 'مصرف الراجحي',
+    colors: { primary: '#006C35', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #006C35 0%, #004d26 100%)', secondary: 'linear-gradient(180deg, #006C35 0%, #008f46 100%)', hero: 'linear-gradient(to right, #006C35 0%, #004d26 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 108, 53, 0.05)', md: '0 4px 6px -1px rgba(0, 108, 53, 0.1)', lg: '0 10px 15px -3px rgba(0, 108, 53, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لمصرف الراجحي'
+  },
+  alahli: {
+    id: 'alahli',
+    nameEn: 'Saudi National Bank',
+    nameAr: 'البنك الأهلي السعودي',
+    colors: { primary: '#00843D', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #00843D 0%, #005c2b 100%)', secondary: 'linear-gradient(180deg, #00843D 0%, #00ad50 100%)', hero: 'linear-gradient(to right, #00843D 0%, #005c2b 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 132, 61, 0.05)', md: '0 4px 6px -1px rgba(0, 132, 61, 0.1)', lg: '0 10px 15px -3px rgba(0, 132, 61, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي للبنك الأهلي السعودي'
+  },
+  riyad: {
+    id: 'riyad',
+    nameEn: 'Riyad Bank',
+    nameAr: 'بنك الرياض',
+    colors: { primary: '#0066B2', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #0066B2 0%, #004c85 100%)', secondary: 'linear-gradient(180deg, #0066B2 0%, #0080de 100%)', hero: 'linear-gradient(to right, #0066B2 0%, #004c85 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 102, 178, 0.05)', md: '0 4px 6px -1px rgba(0, 102, 178, 0.1)', lg: '0 10px 15px -3px rgba(0, 102, 178, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لبنك الرياض'
+  },
+  // UAE
+  fab: {
+    id: 'fab',
+    nameEn: 'First Abu Dhabi Bank',
+    nameAr: 'بنك أبوظبي الأول',
+    colors: { primary: '#E0004D', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #E0004D 0%, #b3003e 100%)', secondary: 'linear-gradient(180deg, #E0004D 0%, #ff1a6d 100%)', hero: 'linear-gradient(to right, #E0004D 0%, #b3003e 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(224, 0, 77, 0.05)', md: '0 4px 6px -1px rgba(224, 0, 77, 0.1)', lg: '0 10px 15px -3px rgba(224, 0, 77, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لبنك أبوظبي الأول'
+  },
+  enbd: {
+    id: 'enbd',
+    nameEn: 'Emirates NBD',
+    nameAr: 'بنك الإمارات دبي الوطني',
+    colors: { primary: '#003D7A', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #003D7A 0%, #002b55 100%)', secondary: 'linear-gradient(180deg, #003D7A 0%, #004f9f 100%)', hero: 'linear-gradient(to right, #003D7A 0%, #002b55 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 61, 122, 0.05)', md: '0 4px 6px -1px rgba(0, 61, 122, 0.1)', lg: '0 10px 15px -3px rgba(0, 61, 122, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لبنك الإمارات دبي الوطني'
+  },
+  // KUWAIT
+  nbk: {
+    id: 'nbk',
+    nameEn: 'National Bank of Kuwait',
+    nameAr: 'بنك الكويت الوطني',
+    colors: { primary: '#003D7A', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #003D7A 0%, #002b55 100%)', secondary: 'linear-gradient(180deg, #003D7A 0%, #004f9f 100%)', hero: 'linear-gradient(to right, #003D7A 0%, #002b55 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 61, 122, 0.05)', md: '0 4px 6px -1px rgba(0, 61, 122, 0.1)', lg: '0 10px 15px -3px rgba(0, 61, 122, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لبنك الكويت الوطني'
+  },
+  kfh: {
+    id: 'kfh',
+    nameEn: 'Kuwait Finance House',
+    nameAr: 'بيت التمويل الكويتي',
+    colors: { primary: '#006847', secondary: '#FFFFFF', accent: '#D4AF37', background: '#FFFFFF', surface: '#F8F9FA', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#D4DDE6' },
+    fonts: { primary: 'Arial, sans-serif', secondary: 'Helvetica, sans-serif', arabic: 'Cairo, Tajawal, sans-serif' },
+    gradients: { primary: 'linear-gradient(135deg, #006847 0%, #004d35 100%)', secondary: 'linear-gradient(180deg, #006847 0%, #008f61 100%)', hero: 'linear-gradient(to right, #006847 0%, #004d35 100%)' },
+    shadows: { sm: '0 1px 2px 0 rgba(0, 104, 71, 0.05)', md: '0 4px 6px -1px rgba(0, 104, 71, 0.1)', lg: '0 10px 15px -3px rgba(0, 104, 71, 0.2)' },
+    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    description: 'الموقع الرسمي لبيت التمويل الكويتي'
+  },
+
   alrajhi_bank: {
     id: 'alrajhi_bank',
     nameEn: 'Al Rajhi Bank',
