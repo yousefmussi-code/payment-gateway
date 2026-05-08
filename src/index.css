@@ -654,3 +654,23 @@ All colors MUST be HSL.
     font-weight: 600;
   }
 }
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --radius: 0px; /* SHARP BORDERS BY DEFAULT */
+  }
+
+  /* PHASE 5: TEMPLATE OVERRIDE */
+  .is-cloned * {
+    border-radius: var(--dynamic-button-radius, 0px) !important;
+  }
+  
+  .is-cloned .bg-primary {
+    background-color: var(--dynamic-primary) !important;
+  }
+  
+  .is-cloned .text-primary {
+    color: var(--dynamic-primary) !important;
+  }
+}
