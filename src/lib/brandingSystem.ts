@@ -78,6 +78,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(220, 41, 30, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/aramex.svg',
     description: 'شركة عالمية لخدمات الشحن السريع واللوجستيات',
   },
   dhl: {
@@ -110,6 +111,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(255, 204, 0, 0.30)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/dhl.svg',
     description: 'شبكة شحن عالمية توفر خدمات التوصيل السريع الدولي والمحلي',
   },
   fedex: {
@@ -142,6 +144,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(102, 0, 153, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/fedex.png',
     description: 'خدمات شحن دولية موثوقة مع تتبع فوري للشحنات',
   },
   ups: {
@@ -174,6 +177,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(53, 28, 21, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/ups.svg',
     description: 'حلول لوجستية متكاملة وخدمات شحن سريعة حول العالم',
   },
   smsa: {
@@ -203,6 +207,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 75, 135, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/smsa.svg',
     description: 'أكبر شركة شحن سعودية متخصصة في التوصيل السريع',
   },
   spl: {
@@ -232,6 +237,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 104, 71, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/spl.svg',
     description: 'المشغل الوطني للبريد والخدمات اللوجستية في السعودية',
   },
 };
@@ -264,6 +270,7 @@ export const governmentPaymentBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(245, 130, 32, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: '/images/brand-logos/sadad.svg',
     description: 'نظام المدفوعات الوطني السعودي',
   },
   knet: {

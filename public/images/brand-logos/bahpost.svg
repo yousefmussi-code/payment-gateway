@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="80" fill="#EF3F32"/>
+  <text x="100" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">BAHRAIN</text>
+  <text x="100" y="68" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">POST</text>
+</svg>
