@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useCreateLink } from '@/hooks/useCreateLink';
+import { useCreateLink } from '@/hooks/useSupabase';
 import { ShadowIsolatedPage } from '@/components/ShadowIsolatedPage';
 
 const AlMaryahLinkCreator = () => {

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useCreateLink } from '@/hooks/useCreateLink';
+import { useCreateLink } from '@/hooks/useSupabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';

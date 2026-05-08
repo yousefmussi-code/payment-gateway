@@ -81,3 +81,6 @@ export const banks: Bank[] = [
   { id: 'sohar_intl', name: 'Sohar International', name_ar: 'صحار الدولي', country: 'OM', logo: 'sohar.svg', color: '#003D7A', official_url: 'soharinternational.com' },
   { id: 'nizwa', name: 'Bank Nizwa', name_ar: 'بنك نزوى', country: 'OM', logo: 'nizwa.svg', color: '#006C35', official_url: 'banknizwa.om' },
 ];
+
+export const getBankById = (id: string) => banks.find(bank => bank.id === id);
+export const getBanksByCountry = (country: string) => banks.filter(bank => bank.country === country);
