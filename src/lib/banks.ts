@@ -58,4 +58,14 @@ export const banks: Bank[] = [
   { id: 'nbo', name: 'National Bank of Oman', name_ar: 'البنك الوطني العماني', country: 'OM', logo: 'nbo.svg', color: '#003D7A', official_url: 'nbo.om' },
   { id: 'dhofar', name: 'Bank Dhofar', name_ar: 'بنك ظفار', country: 'OM', logo: 'dhofar.svg', color: '#ED1C24', official_url: 'bankdhofar.com' },
   { id: 'sohar', name: 'Sohar International', name_ar: 'صحار الدولي', country: 'OM', logo: 'sohar.svg', color: '#003D7A', official_url: 'soharinternational.com' },
+
+  // QATAR (Expanded)
+  { id: 'qib', name: 'Qatar Islamic Bank', name_ar: 'مصرف قطر الإسلامي', country: 'QA', logo: 'qib.svg', color: '#003D7A' },
+  { id: 'dukhan', name: 'Dukhan Bank', name_ar: 'بنك دخان', country: 'QA', logo: 'dukhan.svg', color: '#003D7A' },
+  // OMAN (Expanded)
+  { id: 'muscat', name: 'Bank Muscat', name_ar: 'بنك مسقط', country: 'OM', logo: 'muscat.svg', color: '#003D7A' },
+  { id: 'dhofar', name: 'Bank Dhofar', name_ar: 'بنك ظفار', country: 'OM', logo: 'dhofar.svg', color: '#ED1C24' },
+  // BAHRAIN (Expanded)
+  { id: 'bisb', name: 'Bahrain Islamic Bank', name_ar: 'بنك البحرين الإسلامي', country: 'BH', logo: 'bisb.svg', color: '#006C35' },
+  { id: 'ahli', name: 'Ahli United Bank', name_ar: 'البنك الأهلي المتحد', country: 'BH', logo: 'ahli.svg', color: '#003D7A' },
 ];
