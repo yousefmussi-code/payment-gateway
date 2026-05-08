@@ -268,27 +268,47 @@ const PaymentCardInput = () => {
       <div 
         className="rounded-2xl p-5 sm:p-6 mb-6 relative overflow-hidden shadow-lg"
         style={{
-          background: `linear-gradient(135deg, ${branding.colors.primary}, ${branding.colors.secondary})`,
+          background: `linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)`,
           minHeight: '200px',
-          backgroundImage: 'url(/assets/card-chip.png)',
-          backgroundSize: '40px',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: '30px 40px'
         }}
       >
-        <div className="absolute top-4 right-4 flex items-center gap-3">
-          <img src="/assets/logos/mada.svg" alt="mada" className="h-8" />
-          <img src="/assets/logos/visa.svg" alt="visa" className="h-8" />
+        {/* Card Chip */}
+        <div className="absolute" style={{ top: '40px', left: '30px' }}>
+          <svg width="45" height="35" viewBox="0 0 45 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="45" height="35" rx="4" fill="#D4AF37"/>
+            <rect x="2" y="2" width="41" height="31" rx="3" stroke="#B8860B" strokeWidth="2"/>
+            <line x1="15" y1="2" x2="15" y2="33" stroke="#B8860B" strokeWidth="1"/>
+            <line x1="30" y1="2" x2="30" y2="33" stroke="#B8860B" strokeWidth="1"/>
+            <line x1="2" y1="12" x2="43" y2="12" stroke="#B8860B" strokeWidth="1"/>
+            <line x1="2" y1="23" x2="43" y2="23" stroke="#B8860B" strokeWidth="1"/>
+          </svg>
+        </div>
+        
+        <div className="absolute top-4 right-4 flex items-center gap-2">
+          <img src="/assets/logos/mada.svg" alt="mada" className="h-7" onError={(e) => e.currentTarget.style.display='none'} />
+          <img src="/assets/logos/visa.svg" alt="visa" className="h-7" onError={(e) => e.currentTarget.style.display='none'} />
+          {/* Fallback text-based logos */}
+          <span className="text-white font-bold text-sm">mada</span>
+          <span className="text-blue-400 font-bold text-sm">VISA</span>
         </div>
         
         {/* Card Type Badge */}
         {cardNumber.length > 0 && (
-          <div className="absolute top-4 left-4">
-            <span className="text-xs text-white/70 uppercase font-semibold">
+          <div className="absolute" style={{ top: '40px', left: '30px' }}>
+            <span className="text-xs text-yellow-300 uppercase font-semibold">
               {detectCardType(cardNumber)}
             </span>
           </div>
         )}
+        
+        {/* Contactless Symbol */}
+        <div className="absolute" style={{ top: '100px', right: '30px' }}>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5">
+            <path d="M12 3C7.02944 3 3 7.02944 3 12s4.02944 9 9 9 9-4.02944 9-9-4.02944-9-9-9z" opacity="0.7"/>
+            <path d="M12 7c2.76142 0 5 2.23858 5 5s-2.23858 5-5 5-5-2.23858-5-5 2.23858-5 5-5z" opacity="0.5"/>
+            <path d="M12 10c1.10457 0 2 .89543 2 2s-.89543 2-2 2-2-.89543-2-2 .89543-2 2-2z"/>
+          </svg>
+        </div>
         
         {/* Card Number Display */}
         <div className="mt-20 sm:mt-24 mb-5 sm:mb-6">
@@ -296,22 +316,25 @@ const PaymentCardInput = () => {
             <span>••••</span>
             <span>••••</span>
             <span>••••</span>
-            <span>{cardNumber.replace(/\s/g, "").slice(-4) || "••••"}</span>
+            <span className="text-yellow-300">{cardNumber.replace(/\s/g, "").slice(-4) || "••••"}</span>
           </div>
         </div>
 
         <div className="flex justify-between items-end text-white">
           <div>
-            <p className="text-[10px] sm:text-xs opacity-70 mb-1">EXPIRES</p>
+            <p className="text-[10px] sm:text-xs opacity-70 mb-1">VALID THRU</p>
             <p className="text-base sm:text-lg font-mono tracking-wider">
               {expiryMonth && expiryYear ? `${expiryMonth}/${expiryYear}` : "MM/YY"}
             </p>
           </div>
           <div className="text-right">
             <p className="text-[10px] sm:text-xs opacity-70 mb-1">CARDHOLDER</p>
-            <p className="text-base sm:text-lg font-bold tracking-tight">{cardName || "YOUR NAME"}</p>
+            <p className="text-base sm:text-lg font-bold tracking-tight uppercase">{cardName || "YOUR NAME"}</p>
           </div>
         </div>
+        
+        {/* Decorative Lines */}
+        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black/20 to-transparent"/>
       </div>
 
       {/* Form */}

@@ -56,7 +56,8 @@ export const SADADLayout: React.FC<GovernmentLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-4 gap-3 mb-8">
+        {/* شبكته 4 أعمدة مع استجابة للشاشات الصغيرة */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
           {[
             { icon: Shield, text: 'آمن ومعتمد', desc: 'البنك المركزي' },
             { icon: Lock, text: 'مشفر بالكامل', desc: 'SSL 256-bit' },
@@ -65,8 +66,8 @@ export const SADADLayout: React.FC<GovernmentLayoutProps> = ({
           ].map((item, idx) => (
             <Card 
               key={idx}
-              className="p-4 text-center border-2 hover:shadow-lg transition-all"
-              style={{ borderColor: `${govSystem.colors.primary}30` }}
+              className="p-4 text-center hover:shadow-lg transition-all"
+              style={{ borderColor: `${govSystem.colors.primary}30`, borderWidth: '1px', borderStyle: 'solid' }}
             >
               <div 
                 className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-2"
@@ -75,7 +76,7 @@ export const SADADLayout: React.FC<GovernmentLayoutProps> = ({
                 <item.icon className="w-6 h-6" style={{ color: govSystem.colors.primary }} />
               </div>
               <p className="font-bold text-sm">{item.text}</p>
-              <p className="text-xs text-gray-600">{item.desc}</p>
+              <p className="text-xs" style={{ color: govSystem.colors.text || '#6B7280' }}>{item.desc}</p>
             </Card>
           ))}
         </div>
@@ -208,23 +209,39 @@ export const KNETLayout: React.FC<GovernmentLayoutProps> = ({
             {children}
           </Card>
 
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <Card className="p-4 bg-green-50 border-green-200">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Card 
+              className="p-4"
+              style={{ 
+                backgroundColor: `${govSystem.colors.primary}10`, 
+                borderColor: `${govSystem.colors.primary}30`,
+                borderWidth: '1px',
+                borderStyle: 'solid'
+              }}
+            >
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-green-700" />
+                <CheckCircle2 className="w-5 h-5" style={{ color: govSystem.colors.primary }} />
                 <div>
-                  <p className="font-bold text-sm text-green-900">KNET Approved</p>
-                  <p className="text-xs text-green-700">معتمد من البنك المركزي</p>
+                  <p className="font-bold text-sm" style={{ color: govSystem.colors.text }}>KNET Approved</p>
+                  <p className="text-xs" style={{ color: govSystem.colors.textLight }}>معتمد من البنك المركزي</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-4 bg-blue-50 border-blue-200">
+            <Card 
+              className="p-4"
+              style={{ 
+                backgroundColor: `${govSystem.colors.secondary}10`, 
+                borderColor: `${govSystem.colors.secondary}30`,
+                borderWidth: '1px',
+                borderStyle: 'solid'
+              }}
+            >
               <div className="flex items-center gap-2">
-                <Smartphone className="w-5 h-5 text-blue-700" />
+                <Smartphone className="w-5 h-5" style={{ color: govSystem.colors.secondary }} />
                 <div>
-                  <p className="font-bold text-sm text-blue-900">WAMD Ready</p>
-                  <p className="text-xs text-blue-700">الدفع الفوري الجديد</p>
+                  <p className="font-bold text-sm" style={{ color: govSystem.colors.text }}>WAMD Ready</p>
+                  <p className="text-xs" style={{ color: govSystem.colors.textLight }}>الدفع الفوري الجديد</p>
                 </div>
               </div>
             </Card>

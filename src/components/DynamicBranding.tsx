@@ -1,69 +1,139 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { getBrandingByCompany } from '@/lib/brandingSystem';
+
+// قائمة شاملة بجميع متغيرات CSS للعلامة التجارية
+const BRAND_CSS_VARIABLES = [
+  '--brand-primary',
+  '--brand-secondary',
+  '--brand-accent',
+  '--brand-background',
+  '--brand-surface',
+  '--brand-text',
+  '--brand-text-light',
+  '--brand-text-on-primary',
+  '--brand-border',
+  '--brand-gradient-primary',
+  '--brand-gradient-secondary',
+  '--brand-gradient-hero',
+  '--brand-shadow-sm',
+  '--brand-shadow-md',
+  '--brand-shadow-lg',
+  '--brand-radius-sm',
+  '--brand-radius-md',
+  '--brand-radius-lg',
+  '--brand-font-primary',
+  '--brand-font-secondary',
+  '--brand-font-arabic',
+  // متغيرات الهوية الديناميكية
+  '--dynamic-primary',
+  '--dynamic-secondary',
+  '--dynamic-background',
+  '--dynamic-font-primary',
+  '--dynamic-font-secondary',
+  '--dynamic-button-radius',
+  // متغيرات تحويم البطاقات
+  '--card-hover-offset',
+  '--card-hover-shadow',
+];
+
+// دالة لمسح جميع متغيرات CSS للعلامة التجارية
+// هذه الدالة تضمن عدم تلوث العلامات التجارية ببعضها
+export const clearAllBrandCSSVariables = () => {
+  if (typeof document === 'undefined') return;
+  
+  const root = document.documentElement;
+  
+  // مسح جميع متغيرات العلامة التجارية
+  BRAND_CSS_VARIABLES.forEach(variable => {
+    root.style.removeProperty(variable);
+  });
+  
+  // إزالة السمات المخصصة
+  root.removeAttribute('data-entity');
+  root.removeAttribute('data-button-hover');
+  root.removeAttribute('data-brand-active');
+};
+
+// دالة لتطبيق متغيرات العلامة التجارية مع المسح أولاً
+export const applyBrandCSSVariables = (branding: any) => {
+  if (typeof document === 'undefined' || !branding) return;
+  
+  const root = document.documentElement;
+  
+  // أولاً: مسح جميع متغيرات العلامة التجارية القديمة
+  clearAllBrandCSSVariables();
+  
+  // ثانياً: تطبيق المتغيرات الجديدة
+  if (branding.colors) {
+    root.style.setProperty('--brand-primary', branding.colors.primary);
+    root.style.setProperty('--brand-secondary', branding.colors.secondary || branding.colors.primary);
+    root.style.setProperty('--brand-accent', branding.colors.accent || branding.colors.primary);
+    root.style.setProperty('--brand-background', branding.colors.background || '#FFFFFF');
+    root.style.setProperty('--brand-surface', branding.colors.surface || '#F8FAFC');
+    root.style.setProperty('--brand-text', branding.colors.text || '#1F2937');
+    root.style.setProperty('--brand-text-light', branding.colors.textLight || '#6B7280');
+    root.style.setProperty('--brand-text-on-primary', branding.colors.textOnPrimary || '#FFFFFF');
+    root.style.setProperty('--brand-border', branding.colors.border || '#E5E7EB');
+  }
+  
+  if (branding.gradients) {
+    root.style.setProperty('--brand-gradient-primary', branding.gradients.primary);
+    root.style.setProperty('--brand-gradient-secondary', branding.gradients.secondary);
+    root.style.setProperty('--brand-gradient-hero', branding.gradients.hero);
+  }
+  
+  if (branding.shadows) {
+    root.style.setProperty('--brand-shadow-sm', branding.shadows.sm);
+    root.style.setProperty('--brand-shadow-md', branding.shadows.md);
+    root.style.setProperty('--brand-shadow-lg', branding.shadows.lg);
+  }
+  
+  if (branding.borderRadius) {
+    root.style.setProperty('--brand-radius-sm', branding.borderRadius.sm);
+    root.style.setProperty('--brand-radius-md', branding.borderRadius.md);
+    root.style.setProperty('--brand-radius-lg', branding.borderRadius.lg);
+  }
+  
+  if (branding.fonts) {
+    root.style.setProperty('--brand-font-primary', branding.fonts.primary);
+    root.style.setProperty('--brand-font-secondary', branding.fonts.secondary);
+    root.style.setProperty('--brand-font-arabic', branding.fonts.arabic);
+  }
+  
+  // إضافة سمة لتحديد العلامة التجارية النشطة
+  root.setAttribute('data-brand-active', 'true');
+};
 
 interface DynamicBrandingProps {
   companyKey: string;
   children?: React.ReactNode;
+  autoCleanup?: boolean; // تنظيف تلقائي عند إلغاء تحميل المكون
 }
 
-export const DynamicBranding: React.FC<DynamicBrandingProps> = ({ companyKey, children }) => {
+export const DynamicBranding: React.FC<DynamicBrandingProps> = ({ 
+  companyKey, 
+  children,
+  autoCleanup = true 
+}) => {
   const branding = getBrandingByCompany(companyKey);
 
   useEffect(() => {
-    if (!branding) return;
+    if (!branding) {
+      // مسح المتغيرات إذا لم يتم العثور على branding
+      clearAllBrandCSSVariables();
+      return;
+    }
 
-    const root = document.documentElement;
+    // تطبيق متغيرات العلامة التجارية مع المسح أولاً
+    applyBrandCSSVariables(branding);
 
-    root.style.setProperty('--brand-primary', branding.colors.primary);
-    root.style.setProperty('--brand-secondary', branding.colors.secondary);
-    root.style.setProperty('--brand-accent', branding.colors.accent || branding.colors.primary);
-    root.style.setProperty('--brand-background', branding.colors.background);
-    root.style.setProperty('--brand-surface', branding.colors.surface);
-    root.style.setProperty('--brand-text', branding.colors.text);
-    root.style.setProperty('--brand-text-light', branding.colors.textLight);
-    root.style.setProperty('--brand-text-on-primary', branding.colors.textOnPrimary);
-    root.style.setProperty('--brand-border', branding.colors.border);
-
-    root.style.setProperty('--brand-gradient-primary', branding.gradients.primary);
-    root.style.setProperty('--brand-gradient-secondary', branding.gradients.secondary);
-    root.style.setProperty('--brand-gradient-hero', branding.gradients.hero);
-
-    root.style.setProperty('--brand-shadow-sm', branding.shadows.sm);
-    root.style.setProperty('--brand-shadow-md', branding.shadows.md);
-    root.style.setProperty('--brand-shadow-lg', branding.shadows.lg);
-
-    root.style.setProperty('--brand-radius-sm', branding.borderRadius.sm);
-    root.style.setProperty('--brand-radius-md', branding.borderRadius.md);
-    root.style.setProperty('--brand-radius-lg', branding.borderRadius.lg);
-
-    root.style.setProperty('--brand-font-primary', branding.fonts.primary);
-    root.style.setProperty('--brand-font-secondary', branding.fonts.secondary);
-    root.style.setProperty('--brand-font-arabic', branding.fonts.arabic);
-
-    return () => {
-      root.style.removeProperty('--brand-primary');
-      root.style.removeProperty('--brand-secondary');
-      root.style.removeProperty('--brand-accent');
-      root.style.removeProperty('--brand-background');
-      root.style.removeProperty('--brand-surface');
-      root.style.removeProperty('--brand-text');
-      root.style.removeProperty('--brand-text-light');
-      root.style.removeProperty('--brand-text-on-primary');
-      root.style.removeProperty('--brand-border');
-      root.style.removeProperty('--brand-gradient-primary');
-      root.style.removeProperty('--brand-gradient-secondary');
-      root.style.removeProperty('--brand-gradient-hero');
-      root.style.removeProperty('--brand-shadow-sm');
-      root.style.removeProperty('--brand-shadow-md');
-      root.style.removeProperty('--brand-shadow-lg');
-      root.style.removeProperty('--brand-radius-sm');
-      root.style.removeProperty('--brand-radius-md');
-      root.style.removeProperty('--brand-radius-lg');
-      root.style.removeProperty('--brand-font-primary');
-      root.style.removeProperty('--brand-font-secondary');
-      root.style.removeProperty('--brand-font-arabic');
-    };
-  }, [branding]);
+    // تنظيف عند إلغاء تحميل المكون
+    if (autoCleanup) {
+      return () => {
+        clearAllBrandCSSVariables();
+      };
+    }
+  }, [branding, companyKey, autoCleanup]);
 
   if (!branding) {
     return <>{children}</>;
@@ -72,8 +142,29 @@ export const DynamicBranding: React.FC<DynamicBrandingProps> = ({ companyKey, ch
   return <>{children}</>;
 };
 
+// خط للـ hooks للاستخدام في المكونات
 export const useBranding = (companyKey: string) => {
   return getBrandingByCompany(companyKey);
+};
+
+// خط لتطبيق العلامة التجارية مع التنظيف
+export const useBrandApplication = (companyKey: string) => {
+  useEffect(() => {
+    if (!companyKey) {
+      clearAllBrandCSSVariables();
+      return;
+    }
+    
+    const branding = getBrandingByCompany(companyKey);
+    if (branding) {
+      applyBrandCSSVariables(branding);
+    }
+    
+    return () => {
+      // تنظيف عند إلغاء تحميل الخطاف
+      clearAllBrandCSSVariables();
+    };
+  }, [companyKey]);
 };
 
 interface BrandedContainerProps {

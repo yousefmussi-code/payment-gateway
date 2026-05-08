@@ -55,14 +55,15 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-4 gap-4 mb-8">
+        {/* شبكته 4 أعمدة مع استجابة للشاشات الصغيرة */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
           {[
             { icon: Truck, label: 'توصيل سريع', color: branding?.colors.primary },
             { icon: Shield, label: 'آمن 100%', color: branding?.colors.secondary },
             { icon: MapPin, label: 'تتبع GPS', color: branding?.colors.primary },
             { icon: CheckCircle2, label: 'ضمان الجودة', color: branding?.colors.secondary }
           ].map((item, idx) => (
-            <Card key={idx} className="p-4 text-center hover:shadow-lg transition-all">
+            <Card key={idx} className="p-4 text-center hover:shadow-lg transition-all" style={{ borderColor: `${item.color}30`, borderWidth: '1px', borderStyle: 'solid' }}>
               <div 
                 className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-2"
                 style={{ backgroundColor: `${item.color}15` }}
@@ -139,7 +140,7 @@ export const ZajilLayout: React.FC<CompanyLayoutProps> = ({
   const branding = getBrandingByCompany('zajil');
   
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F8FAFC' }} dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F8FAFC' }}>
       <div 
         className="h-20"
         style={{ background: branding?.gradients.primary }}
@@ -209,7 +210,7 @@ export const SaudiPostLayout: React.FC<CompanyLayoutProps> = ({
   const branding = getBrandingByCompany('saudipost');
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-yellow-50" dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ background: `linear-gradient(to bottom right, ${branding?.colors.surface || '#ECFDF5'}, ${branding?.colors.secondary || '#FEF3C7'})` }}>
       <div 
         className="h-24"
         style={{ background: branding?.gradients.primary }}
@@ -309,10 +310,10 @@ export const UPSLayout: React.FC<CompanyLayoutProps> = ({
   const branding = getBrandingByCompany('ups');
   
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FAF8F7' }} dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#FAF8F7' }}>
       <div 
         className="h-20"
-        style={{ backgroundColor: branding?.colors.primary }}
+        style={{ background: branding?.gradients.primary }}
       >
         <div className="container mx-auto h-full flex items-center justify-between px-6">
           <div className="flex items-center gap-3">

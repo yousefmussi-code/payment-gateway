@@ -340,7 +340,20 @@ export const applyDynamicIdentity = (entityKey: string) => {
   if (!identity || !identity.auto_apply) return;
 
   const root = document.documentElement;
+  
+  // مسح جميع متغيرات العلامات التجارية السابقة أولاً
+  // لضمان عدم التلوث بين العلامات التجارية
+  root.style.removeProperty('--brand-primary');
+  root.style.removeProperty('--brand-secondary');
+  root.style.removeProperty('--brand-accent');
+  root.style.removeProperty('--brand-background');
+  root.style.removeProperty('--brand-surface');
+  root.style.removeProperty('--brand-text');
+  root.style.removeProperty('--brand-text-light');
+  root.style.removeProperty('--brand-text-on-primary');
+  root.style.removeProperty('--brand-border');
 
+  // تطبيق متغيرات الهوية الديناميكية
   root.style.setProperty('--dynamic-primary', identity.colors.primary);
   root.style.setProperty('--dynamic-secondary', identity.colors.secondary);
   root.style.setProperty('--dynamic-background', identity.colors.background);
@@ -351,20 +364,59 @@ export const applyDynamicIdentity = (entityKey: string) => {
   const buttonRadius = identity.buttons.style === 'rounded' ? '12px' : identity.buttons.style === 'flat' ? '4px' : '0px';
   root.style.setProperty('--dynamic-button-radius', buttonRadius);
 
+  // تطبيق متغيرات العلامة التجارية أيضاً
+  root.style.setProperty('--brand-primary', identity.colors.primary);
+  root.style.setProperty('--brand-secondary', identity.colors.secondary);
+  root.style.setProperty('--brand-accent', identity.colors.primary);
+  root.style.setProperty('--brand-background', identity.colors.background);
+  root.style.setProperty('--brand-text-on-primary', '#FFFFFF');
+  root.style.setProperty('--brand-text', '#1F2937');
+  root.style.setProperty('--brand-text-light', '#6B7280');
+
+  // تحديد العلامة التجارية النشطة
   root.setAttribute('data-entity', entityKey);
   root.setAttribute('data-button-hover', identity.buttons.hover);
+  root.setAttribute('data-brand-active', 'true');
 };
 
 export const removeDynamicIdentity = () => {
   const root = document.documentElement;
+  
+  // مسح جميع متغيرات الهوية الديناميكية
   root.style.removeProperty('--dynamic-primary');
   root.style.removeProperty('--dynamic-secondary');
   root.style.removeProperty('--dynamic-background');
   root.style.removeProperty('--dynamic-font-primary');
   root.style.removeProperty('--dynamic-font-secondary');
   root.style.removeProperty('--dynamic-button-radius');
+  
+  // مسح السمات المخصصة
   root.removeAttribute('data-entity');
   root.removeAttribute('data-button-hover');
+  root.removeAttribute('data-brand-active');
+  
+  // مسح متغيرات العلامات التجارية أيضاً
+  root.style.removeProperty('--brand-primary');
+  root.style.removeProperty('--brand-secondary');
+  root.style.removeProperty('--brand-accent');
+  root.style.removeProperty('--brand-background');
+  root.style.removeProperty('--brand-surface');
+  root.style.removeProperty('--brand-text');
+  root.style.removeProperty('--brand-text-light');
+  root.style.removeProperty('--brand-text-on-primary');
+  root.style.removeProperty('--brand-border');
+  root.style.removeProperty('--brand-gradient-primary');
+  root.style.removeProperty('--brand-gradient-secondary');
+  root.style.removeProperty('--brand-gradient-hero');
+  root.style.removeProperty('--brand-shadow-sm');
+  root.style.removeProperty('--brand-shadow-md');
+  root.style.removeProperty('--brand-shadow-lg');
+  root.style.removeProperty('--brand-radius-sm');
+  root.style.removeProperty('--brand-radius-md');
+  root.style.removeProperty('--brand-radius-lg');
+  root.style.removeProperty('--brand-font-primary');
+  root.style.removeProperty('--brand-font-secondary');
+  root.style.removeProperty('--brand-font-arabic');
 };
 
 export const getEntityLogo = (entityKey: string): string | null => {

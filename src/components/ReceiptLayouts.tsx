@@ -39,7 +39,7 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
   const branding = getBrandingByCompany('aramex');
   
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F9FAFB' }}>
       <div 
         className="h-32 flex items-center justify-center"
         style={{ background: branding?.gradients.primary }}
@@ -129,16 +129,21 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
 
           <div className="grid grid-cols-3 gap-3 mt-8">
             {[
-              { icon: Download, text: 'تحميل', color: 'blue' },
-              { icon: Share2, text: 'مشاركة', color: 'green' },
-              { icon: Printer, text: 'طباعة', color: 'gray' }
+              { icon: Download, text: 'تحميل', colorKey: 'primary' },
+              { icon: Share2, text: 'مشاركة', colorKey: 'secondary' },
+              { icon: Printer, text: 'طباعة', colorKey: 'accent' }
             ].map((action, idx) => (
               <button
                 key={idx}
-                className={`p-3 rounded-lg border-2 bg-${action.color}-50 border-${action.color}-200 hover:bg-${action.color}-100 transition-all flex items-center justify-center gap-2`}
+                className="p-3 rounded-lg border-2 transition-all flex items-center justify-center gap-2"
+                style={{ 
+                  backgroundColor: `${branding?.colors[action.colorKey as keyof typeof branding.colors] || '#EFF6FF'}20`,
+                  borderColor: `${branding?.colors[action.colorKey as keyof typeof branding.colors] || '#3B82F6'}30`,
+                  color: branding?.colors.primary
+                }}
               >
-                <action.icon className={`w-5 h-5 text-${action.color}-700`} />
-                <span className={`text-sm font-semibold text-${action.color}-900`}>{action.text}</span>
+                <action.icon className="w-5 h-5" />
+                <span className="text-sm font-semibold">{action.text}</span>
               </button>
             ))}
           </div>
@@ -164,7 +169,7 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
   return (
     <div 
       className="min-h-screen"
-      style={{ background: 'linear-gradient(to bottom, #FFF9E6, #FFFFFF)' }}
+      style={{ background: `linear-gradient(to bottom, ${branding?.colors.background || '#FFF9E6'}, var(--brand-background, #FFFFFF))` }}
       dir="rtl"
     >
       <div 
@@ -265,7 +270,7 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
   const branding = getBrandingByCompany('fedex');
   
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F9FAFB' }}>
       <div 
         className="h-36"
         style={{ background: branding?.gradients.hero }}
@@ -366,7 +371,7 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
   return (
     <div 
       className="min-h-screen"
-      style={{ background: 'linear-gradient(to bottom right, #f3e8ff, #fff7ed)' }}
+      style={{ background: `linear-gradient(to bottom right, ${branding?.colors.surface || '#F3E8FF'}, ${branding?.colors.secondary || '#FFF7ED'})` }}
       dir="rtl"
     >
       <div 
@@ -469,7 +474,7 @@ export const NAQELReceipt: React.FC<ReceiptLayoutProps> = ({
   const branding = getBrandingByCompany('naqel');
   
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F9FAFB' }}>
       <div 
         className="h-44"
         style={{ background: branding?.gradients.primary }}

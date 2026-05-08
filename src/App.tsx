@@ -72,6 +72,17 @@ const App = () => (
           <Route path="/create/:country/payment" element={<CreatePaymentLink />} />
           {/* Government Payment Services */}
           <Route path="/create/:country/government/:serviceKey" element={<GovernmentPaymentLinkCreator />} />
+          {/* Government Payment Services Routes - Additional GCC Services */}
+          <Route path="/create/ae/jaywan" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/om/omannet" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/qa/qatar-gov" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/sa/etheq" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/ae/tamm" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/ae/digitaldubai" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/qa/qdi" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/bh/mygov" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/om/ropdigital" element={<GovernmentPaymentLinkCreator />} />
+          <Route path="/create/om/theqa" element={<GovernmentPaymentLinkCreator />} />
           <Route path="/invoices/create/:country" element={<CreateInvoice />} />
           <Route path="/invoices/list/:country" element={<InvoiceList />} />
           <Route path="/invoices/:id/view" element={<InvoiceView />} />
