@@ -41,6 +41,7 @@ import GovernmentPaymentLinkCreator from "./pages/GovernmentPaymentLinkCreator";
 import NotFound from "./pages/NotFound";
 import { AutoIdentityProvider } from "./hooks/useAutoIdentityApplication";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { VisualTransformationProvider } from "./components/VisualTransformationProvider";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,7 +61,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <AutoIdentityProvider>
-            <Routes>
+            <VisualTransformationProvider><Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/create/:country/chalet" element={<CreateChaletLink />} />
@@ -106,7 +107,7 @@ const App = () => (
           <Route path="/local-payment" element={<LocalPaymentPage />} />
           <Route path="/contract-payment" element={<ContractPaymentPage />} />
           <Route path="*" element={<NotFound />} />
-          </Routes>
+          </Routes></VisualTransformationProvider>
           </AutoIdentityProvider>
         </BrowserRouter>
       </TooltipProvider>
