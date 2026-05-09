@@ -235,7 +235,41 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
           </div>
         </div>
       </div>
-      {/* Fallback header for non-branded companies */}
+      ) : (
+        // تخطيط افتراضي للشركات غير المو，品牌ها
+        <div 
+          className="sticky top-0 z-50 w-full shadow-lg"
+          style={{
+            background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
+            borderBottom: `3px solid ${primaryColor}`,
+          }}
+        >
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16 sm:h-18">
+              <div className="flex items-center gap-4">
+                {displayLogo && (
+                  <img 
+                    src={displayLogo} 
+                    alt={serviceName}
+                    className="h-10 sm:h-12 w-auto object-contain brightness-0 invert"
+                  />
+                )}
+                <div className="text-white">
+                  <h2 className="text-lg sm:text-xl font-bold">
+                    {serviceName}
+                  </h2>
+                  <p className="text-xs opacity-90">
+                    الدفع الآمن - Secure Payment
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm">
+                <ShieldCheck className="w-4 h-4 text-white" />
+                <span className="text-xs font-medium text-white">آمن</span>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Main Content */}
