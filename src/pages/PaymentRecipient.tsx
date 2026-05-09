@@ -235,9 +235,8 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
           </div>
         </div>
       </div>
-
-      {/* Hero Carousel */}
-      <BrandedCarousel serviceKey={serviceKey} className="mb-0" />
+      {/* Fallback header for non-branded companies */}
+      )}
 
       {/* Main Content */}
       <div 
@@ -539,8 +538,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
           </div>
         </div>
       </div>
-    )}
-    </>
   );
 };
 
