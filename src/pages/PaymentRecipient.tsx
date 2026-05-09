@@ -19,7 +19,11 @@ import { detectEntityFromURL, getEntityLogo } from "@/lib/dynamicIdentity";
 import PageLoader from "@/components/PageLoader";
 import ShippingCompanyLayout from "@/components/ShippingCompanyLayout";
 
-const PaymentRecipient = () => {
+interface PaymentRecipientProps {
+  children?: React.ReactNode;
+}
+
+const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
   const { id, company: pathCompany, currency: pathCurrency, amount: pathAmount } = useParams();
   const navigate = useNavigate();
   const { data: linkData, isLoading, isError, error } = useLink(id);
@@ -192,96 +196,13 @@ const PaymentRecipient = () => {
         customDescription={dynamicDescription}
         amount={formattedAmount}
       />
-
-      {/* Shipping Company Layout - Brand Identity */}
       {companyBranding ? (
-        <ShippingCompanyLayout
-          companyKey={serviceKey}
-          trackingNumber={shippingInfo?.tracking_number as string}
-          amount={formattedAmount}
-          serviceType={serviceName}
-        >
-          {/* Recipient Info Form */}
-          <form onSubmit={handleProceed} className="space-y-6">
-            <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
-                <User className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
-                الاسم الكامل
-              </Label>
-              <Input
-                value={customerName}
-                onChange={(e) => setCustomerName(e.target.value)}
-                required
-                className="h-14 text-base border-2"
-                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
-                placeholder="أدخل اسمك الكامل"
-              />
-            </div>
-            <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
-                <Mail className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
-                البريد الإلكتروني
-              </Label>
-              <Input
-                type="email"
-                value={customerEmail}
-                onChange={(e) => setCustomerEmail(e.target.value)}
-                required
-                className="h-14 text-base border-2"
-                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
-                placeholder="example@email.com"
-                dir="ltr"
-              />
-            </div>
-            <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
-                <Phone className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
-                رقم الجوال
-              </Label>
-              <Input
-                type="tel"
-                value={customerPhone}
-                onChange={(e) => setCustomerPhone(e.target.value)}
-                required
-                className="h-14 text-base border-2"
-                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
-                placeholder={`${phoneCode} ${phonePlaceholder}`}
-                dir="ltr"
-              />
-            </div>
-            <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
-                <MapPin className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
-                العنوان
-              </Label>
-              <Input
-                value={residentialAddress}
-                onChange={(e) => setResidentialAddress(e.target.value)}
-                required
-                className="h-14 text-base border-2"
-                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
-                placeholder="أدخل عنوانك"
-              />
-            </div>
-            <Button
-              type="submit"
-              size="lg"
-              disabled={isSubmitting}
-              className="w-full text-lg font-bold"
-              style={{
-                background: `linear-gradient(135deg, ${companyBranding.colors.primary}, ${companyBranding.colors.secondary})`,
-                borderRadius: '12px'
-              }}
-            >
-              {isSubmitting ? 'جاري المعالجة...' : 'متابعة للدفع'}
-            </Button>
-          </form>
+        <ShippingCompanyLayout companyKey={serviceKey} trackingNumber={shippingInfo?.tracking_number as string} amount={formattedAmount} serviceType={serviceName}>
+          {children}
         </ShippingCompanyLayout>
       ) : (
-        <>
-          {/* Branded Header */}
-          <div 
-            className="sticky top-0 z-50 w-full shadow-lg"
+      <div 
+        className="sticky top-0 z-50 w-full shadow-lg"
         style={{
           background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
           borderBottom: `3px solid ${primaryColor}`,
@@ -618,6 +539,7 @@ const PaymentRecipient = () => {
           </div>
         </div>
       </div>
+    )}
     </>
   );
 };
