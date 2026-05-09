@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <rect width="100" height="100" rx="20" fill="#003D7A"/>
-  <text x="50" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">CBD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#003D7A"/>
+      <stop offset="100%" style="stop-color:#003D7A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" fill="#003D7A"/>
+  <text x="100" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">بنك دبي التجاري</text>
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.8">Commercial Bank of Dubai</text>
 </svg>

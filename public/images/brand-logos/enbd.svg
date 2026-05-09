@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60">
-  <rect width="160" height="60" rx="8" fill="#0066B3"/>
-  <text x="80" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">الإمارات دبي الوطني</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#003D7A"/>
+      <stop offset="100%" style="stop-color:#003D7A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" fill="#003D7A"/>
+  <text x="100" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">بنك الإمارات دبي الوطني</text>
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.8">Emirates NBD</text>
 </svg>
