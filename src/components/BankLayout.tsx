@@ -1,14 +1,33 @@
 // BankLayout - Official 1:1 Bank Design
 // نسخ طبق الأصل من هوية البنك الرسمية - 175 بنك
+// تصميم RTL مع خط Cairo ومتغيرات CSS --brand-*
 
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { banks, Bank } from '@/lib/banks';
 import { applyBrandCSSVariables, clearAllBrandCSSVariables } from '@/components/DynamicBranding';
-import { Shield, Lock, CheckCircle2, CreditCard, Building2, Globe, Phone } from 'lucide-react';
+import { 
+  Shield, 
+  Lock, 
+  CheckCircle2, 
+  CreditCard, 
+  Building2, 
+  Globe, 
+  Phone,
+  Eye,
+  EyeOff,
+  User,
+  Key,
+  Calendar,
+  FileText,
+  AlertCircle,
+  Verified,
+  Fingerprint,
+  Smartphone
+} from 'lucide-react';
 
 interface BankLayoutProps {
   companyKey: string;
@@ -40,6 +59,15 @@ function adjustColorBrightness(hex: string, percent: number): string {
   const G = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amt));
   const B = Math.max(0, Math.min(255, (num & 0x0000FF) + amt));
   return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
+}
+
+// Helper to convert hex to RGB
+function hexToRgb(hex: string): string {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if (result) {
+    return `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`;
+  }
+  return '0, 0, 0';
 }
 
 // Get bank logo path with fallback
@@ -102,9 +130,45 @@ export const BankLayout: React.FC<BankLayoutProps> = ({
     if (bankData) {
       // Apply brand CSS variables for child components
       const root = document.documentElement;
+      root.style.setProperty('--brand-primary', primaryColor);
+      root.style.setProperty('--brand-gradient', gradient);
+      root.style.setProperty('--brand-text-on-primary', textOnPrimary);
       root.style.setProperty('--bank-primary', primaryColor);
       root.style.setProperty('--bank-gradient', gradient);
       root.style.setProperty('--bank-text-on-primary', textOnPrimary);
+      
+      // Apply branding via DynamicBranding
+      applyBrandCSSVariables({
+        id: bankData.id,
+        nameEn: bankData.name,
+        nameAr: bankData.name_ar,
+        colors: {
+          primary: primaryColor,
+          secondary: adjustColorBrightness(primaryColor, 20),
+          background: '#FFFFFF',
+          surface: surfaceColor,
+          text: '#1F2937',
+          textLight: '#6B7280',
+          textOnPrimary: textOnPrimary,
+          border: '#E5E5E5',
+        },
+        fonts: {
+          primary: 'Cairo, sans-serif',
+          secondary: 'Cairo, sans-serif',
+          arabic: 'Cairo, sans-serif',
+        },
+        gradients: {
+          primary: gradient,
+          secondary: gradient,
+          hero: gradient,
+        },
+        shadows: {
+          sm: `0 1px 2px 0 rgba(${hexToRgb(primaryColor)}, 0.1)`,
+          md: `0 4px 6px -1px rgba(${hexToRgb(primaryColor)}, 0.15)`,
+          lg: `0 10px 15px -3px rgba(${hexToRgb(primaryColor)}, 0.2)`,
+        },
+        borderRadius: { sm: '8px', md: '12px', lg: '16px' },
+      });
       
       console.log(`[BankLayout] Applied official branding for: ${bankData.name_ar}`, {
         color: primaryColor,
@@ -114,9 +178,13 @@ export const BankLayout: React.FC<BankLayoutProps> = ({
     }
     return () => {
       const root = document.documentElement;
+      root.style.removeProperty('--brand-primary');
+      root.style.removeProperty('--brand-gradient');
+      root.style.removeProperty('--brand-text-on-primary');
       root.style.removeProperty('--bank-primary');
       root.style.removeProperty('--bank-gradient');
       root.style.removeProperty('--bank-text-on-primary');
+      clearAllBrandCSSVariables();
     };
   }, [bankData, primaryColor, gradient]);
 
@@ -516,25 +584,281 @@ export const BankInput: React.FC<BankInputProps> = ({
   );
 };
 
-// Credit card input styling with bank branding
-export const BankCardInput: React.FC<BankInputProps> = ({ 
-  label = 'رقم البطاقة',
+// Brand-colored card with official bank styling
+interface BankCardProps {
+  children: React.ReactNode;
+  className?: string;
+  highlight?: boolean;
+  accentLine?: boolean;
+}
+
+export const BankCard: React.FC<BankCardProps> = ({ 
+  children, 
+  className = '',
+  highlight = false,
+  accentLine = true
+}) => {
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const bankGradient = 'var(--brand-gradient, var(--bank-gradient, linear-gradient(135deg, #003366, #003366)))';
+  
+  return (
+    <Card 
+      className={`shadow-lg overflow-hidden ${className}`}
+      style={{
+        border: highlight ? `2px solid ${bankColor}` : '1px solid #E5E5E5',
+        borderRadius: '16px',
+        backgroundColor: '#FFFFFF',
+        fontFamily: 'Cairo, sans-serif',
+      }}
+    >
+      {highlight && accentLine && (
+        <div 
+          className="h-1.5 w-full"
+          style={{ background: bankGradient }}
+        />
+      )}
+      <CardContent className="p-6">
+        {children}
+      </CardContent>
+    </Card>
+  );
+};
+
+// Brand-colored button with official bank styling
+interface BankButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  isLoading?: boolean;
+  fullWidth?: boolean;
+  children: React.ReactNode;
+}
+
+export const BankButton: React.FC<BankButtonProps> = ({ 
+  variant = 'primary', 
+  size = 'md',
+  isLoading = false,
+  fullWidth = false,
+  children, 
+  className = '',
+  disabled,
   ...props 
 }) => {
-  const bankColor = 'var(--bank-primary, #003366)';
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const bankGradient = 'var(--brand-gradient, var(--bank-gradient, linear-gradient(135deg, #003366, #003366)))';
+  const textOnPrimary = 'var(--brand-text-on-primary, var(--bank-text-on-primary, #FFFFFF))';
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm rounded-lg',
+    md: 'px-6 py-3 text-base rounded-xl',
+    lg: 'px-8 py-4 text-lg rounded-xl'
+  };
+
+  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2';
+  const disabledClasses = 'opacity-60 cursor-not-allowed';
+
+  if (variant === 'primary') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: bankGradient,
+          color: textOnPrimary,
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  if (variant === 'secondary') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: '#F3F4F6',
+          color: '#374151',
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className="w-5 h-5 border-2 border-gray-400/30 border-t-gray-400 rounded-full animate-spin" />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  if (variant === 'outline') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} border-2 ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: 'transparent',
+          color: bankColor,
+          borderColor: bankColor,
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className={`w-5 h-5 border-2 rounded-full animate-spin`} style={{ borderColor: `${bankColor}30`, borderTopColor: bankColor }} />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  // Ghost variant
+  return (
+    <button
+      className={`${baseClasses} bg-transparent ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+      style={{ color: bankColor }}
+      disabled={disabled || isLoading}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+// Brand-colored input with official bank styling
+interface BankInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+  hint?: string;
+  icon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  showPasswordToggle?: boolean;
+}
+
+export const BankInput: React.FC<BankInputProps> = ({ 
+  label, 
+  error, 
+  hint,
+  icon,
+  leftIcon,
+  showPasswordToggle = false,
+  className = '',
+  type,
+  ...props 
+}) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const inputType = showPasswordToggle ? (showPassword ? 'text' : 'password') : type;
   
   return (
     <div className="space-y-2">
       {label && (
-        <label className="block text-sm font-semibold text-gray-700">
+        <label 
+          className="block text-sm font-semibold text-gray-700"
+          style={{ fontFamily: 'Cairo, sans-serif' }}
+        >
+          {label}
+        </label>
+      )}
+      <div className="relative">
+        {icon && (
+          <div 
+            className="absolute right-3 top-1/2 -translate-y-1/2"
+            style={{ color: bankColor }}
+          >
+            {icon}
+          </div>
+        )}
+        <Input
+          className={`rounded-xl border-2 transition-all duration-200 ${icon ? 'pr-10' : ''} ${leftIcon ? 'pl-10' : ''} ${error ? 'border-red-500 border-2' : ''} ${className}`}
+          style={{ 
+            borderColor: error ? '#EF4444' : '#E5E7EB',
+            backgroundColor: '#FFFFFF',
+            fontFamily: 'Cairo, sans-serif',
+            '--tw-ring-color': bankColor,
+            paddingRight: icon ? '2.5rem' : undefined,
+            paddingLeft: leftIcon ? '2.5rem' : undefined,
+          }}
+          type={inputType}
+          {...props}
+        />
+        {leftIcon && (
+          <div 
+            className="absolute left-3 top-1/2 -translate-y-1/2"
+            style={{ color: bankColor }}
+          >
+            {leftIcon}
+          </div>
+        )}
+        {showPasswordToggle && (
+          <button
+            type="button"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+          </button>
+        )}
+      </div>
+      {hint && !error && (
+        <p className="text-xs text-gray-500" style={{ fontFamily: 'Cairo, sans-serif' }}>{hint}</p>
+      )}
+      {error && (
+        <p className="text-sm text-red-500 flex items-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+          <AlertCircle className="w-4 h-4" />
+          {error}
+        </p>
+      )}
+    </div>
+  );
+};
+
+// Credit card input with bank branding and formatting
+export const BankCardInput: React.FC<BankInputProps> = ({ 
+  label = 'رقم البطاقة',
+  ...props 
+}) => {
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const [cardNumber, setCardNumber] = useState('');
+  
+  const formatCardNumber = (value: string) => {
+    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    const matches = v.match(/\d{4,16}/g);
+    const match = (matches && matches[0]) || '';
+    const parts = [];
+    for (let i = 0, len = match.length; i < len; i += 4) {
+      parts.push(match.substring(i, i + 4));
+    }
+    return parts.length ? parts.join(' ') : value;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatCardNumber(e.target.value);
+    setCardNumber(formatted);
+    props.onChange?.(e as any);
+  };
+  
+  return (
+    <div className="space-y-2">
+      {label && (
+        <label className="block text-sm font-semibold text-gray-700" style={{ fontFamily: 'Cairo, sans-serif' }}>
           {label}
         </label>
       )}
       <div 
-        className="relative rounded-xl border-2 p-4 bg-gradient-to-r"
+        className="relative rounded-xl border-2 p-4 bg-gradient-to-r transition-all duration-200 focus-within:border-2"
         style={{ 
-          borderColor: '#E5E5E5',
-          background: `linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%)`
+          borderColor: '#E5E7EB',
+          background: `linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%)`,
+          '--tw-ring-color': bankColor,
         }}
       >
         <CreditCard 
@@ -542,9 +866,11 @@ export const BankCardInput: React.FC<BankInputProps> = ({
           style={{ color: bankColor }}
         />
         <Input
-          className="border-0 bg-transparent pr-12 text-lg tracking-wider"
-          placeholder="XXXX XXXX XXXX XXXX"
+          className="border-0 bg-transparent pr-12 text-lg tracking-wider font-mono"
+          placeholder="xxxx xxxx xxxx xxxx"
           maxLength={19}
+          value={cardNumber}
+          onChange={handleChange}
           {...props}
         />
       </div>
@@ -552,16 +878,80 @@ export const BankCardInput: React.FC<BankInputProps> = ({
   );
 };
 
-// Security indicator component
-export const SecurityIndicator: React.FC<{ type?: 'safe' | 'warning' | 'secure' }> = ({ 
+// OTP Input component for bank authentication
+interface BankOTPInputProps {
+  length?: number;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+}
+
+export const BankOTPInput: React.FC<BankOTPInputProps> = ({
+  length = 6,
+  value,
+  onChange,
+  error
+}) => {
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const bankGradient = 'var(--brand-gradient, var(--bank-gradient, linear-gradient(135deg, #003366, #003366)))';
+  
+  const handleChange = (index: number, char: string) => {
+    if (!/^\d*$/.test(char)) return;
+    const newValue = value.split('');
+    newValue[index] = char;
+    onChange(newValue.join(''));
+  };
+
+  const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
+    if (e.key === 'Backspace' && !value[index] && index > 0) {
+      const input = document.querySelector(`#otp-${index - 1}`) as HTMLInputElement;
+      input?.focus();
+    }
+  };
+
+  return (
+    <div className="space-y-3">
+      <div className="flex justify-center gap-2">
+        {Array.from({ length }).map((_, index) => (
+          <input
+            key={index}
+            id={`otp-${index}`}
+            type="text"
+            inputMode="numeric"
+            maxLength={1}
+            value={value[index] || ''}
+            onChange={(e) => handleChange(index, e.target.value)}
+            onKeyDown={(e) => handleKeyDown(index, e)}
+            className="w-12 h-14 text-center text-2xl font-bold rounded-xl border-2 transition-all duration-200 focus:outline-none"
+            style={{ 
+              borderColor: value[index] ? bankColor : '#E5E7EB',
+              backgroundColor: '#FFFFFF',
+              boxShadow: value[index] ? `0 0 0 3px ${bankColor}20` : 'none',
+            }}
+          />
+        ))}
+      </div>
+      {error && (
+        <p className="text-sm text-red-500 text-center flex items-center justify-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+          <AlertCircle className="w-4 h-4" />
+          {error}
+        </p>
+      )}
+    </div>
+  );
+};
+
+// Security indicator with bank branding
+export const SecurityIndicator: React.FC<{ type?: 'safe' | 'warning' | 'secure' | 'verified' }> = ({ 
   type = 'secure' 
 }) => {
-  const bankColor = 'var(--bank-primary, #003366)';
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
   
   const configs = {
     safe: { icon: CheckCircle2, color: '#10B981', label: 'آمن ومؤمن' },
     warning: { icon: Shield, color: '#F59E0B', label: 'انتبه' },
-    secure: { icon: Lock, color: bankColor, label: 'مشفر 256-bit' }
+    secure: { icon: Lock, color: bankColor, label: 'مشفر 256-bit' },
+    verified: { icon: Verified, color: '#10B981', label: 'موثق رسمياً' }
   };
   
   const config = configs[type];
@@ -569,14 +959,46 @@ export const SecurityIndicator: React.FC<{ type?: 'safe' | 'warning' | 'secure' 
   
   return (
     <div 
-      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
       style={{ 
         backgroundColor: `${config.color}15`,
-        color: config.color
+        color: config.color,
+        fontFamily: 'Cairo, sans-serif'
       }}
     >
       <Icon className="w-4 h-4" />
-      <span className="font-semibold">{config.label}</span>
+      <span>{config.label}</span>
     </div>
+  );
+};
+
+// Biometric authentication button (fingerprint/face)
+interface BankBiometricButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  method: 'fingerprint' | 'face';
+}
+
+export const BankBiometricButton: React.FC<BankBiometricButtonProps> = ({ 
+  method,
+  className = '',
+  ...props 
+}) => {
+  const bankColor = 'var(--brand-primary, var(--bank-primary, #003366))';
+  const Icon = method === 'fingerprint' ? Fingerprint : Smartphone;
+  const label = method === 'fingerprint' ? 'المصادقة بالبصمة' : 'المصادقة بالوجه';
+  
+  return (
+    <button
+      className={`flex items-center justify-center gap-3 px-6 py-4 rounded-xl border-2 border-dashed transition-all duration-200 hover:border-solid ${className}`}
+      style={{ 
+        borderColor: bankColor,
+        color: bankColor,
+        backgroundColor: `${bankColor}08`,
+        fontFamily: 'Cairo, sans-serif'
+      }}
+      {...props}
+    >
+      <Icon className="w-8 h-8" />
+      <span className="font-semibold">{label}</span>
+    </button>
   );
 };

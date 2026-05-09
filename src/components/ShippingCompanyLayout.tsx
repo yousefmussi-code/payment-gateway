@@ -1,9 +1,11 @@
-// ShippingCompanyLayout - تخطيط شركة الشحن بالعلامة التجارية الكاملة
+// ShippingCompanyLayout - Official 1:1 Shipping Company Design
 // نسخ طبق الأصل من هوية شركة الشحن الرسمية
+// تصميم RTL مع خط Cairo ومتغيرات CSS --brand-*
 
-import React, { useEffect } from 'react';
-import { Card } from '@/components/ui/card';
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
 import { getBrandingByCompany, CompanyBranding } from '@/lib/brandingSystem';
 import { applyBrandCSSVariables, clearAllBrandCSSVariables } from '@/components/DynamicBranding';
 import { BrandLogo } from '@/components/BrandLogo';
@@ -17,7 +19,17 @@ import {
   Phone,
   Globe,
   Package,
-  Clock
+  Clock,
+  Eye,
+  EyeOff,
+  AlertCircle,
+  Fingerprint,
+  Smartphone,
+  Lock,
+  FileText,
+  User,
+  Key,
+  Calendar
 } from 'lucide-react';
 
 interface ShippingCompanyLayoutProps {
@@ -42,12 +54,26 @@ export const ShippingCompanyLayout: React.FC<ShippingCompanyLayoutProps> = ({
   // تطبيق متغيرات CSS للعلامة التجارية عند التحميل والتنظيف عند الخروج
   useEffect(() => {
     if (branding) {
+      // Apply CSS variables
+      const root = document.documentElement;
+      root.style.setProperty('--brand-primary', primaryColor);
+      root.style.setProperty('--brand-secondary', secondaryColor);
+      root.style.setProperty('--brand-text-on-primary', textOnPrimary);
+      root.style.setProperty('--brand-surface', surfaceColor);
+      root.style.setProperty('--brand-text', textColor);
+      
       applyBrandCSSVariables(branding);
-      console.log(`[ShippingCompanyLayout] Applied branding for: ${companyKey}`, branding);
+      console.log(`[ShippingCompanyLayout] Applied official branding for: ${companyKey}`, branding);
     } else {
       console.warn(`[ShippingCompanyLayout] No branding found for: ${companyKey}`);
     }
     return () => {
+      const root = document.documentElement;
+      root.style.removeProperty('--brand-primary');
+      root.style.removeProperty('--brand-secondary');
+      root.style.removeProperty('--brand-text-on-primary');
+      root.style.removeProperty('--brand-surface');
+      root.style.removeProperty('--brand-text');
       clearAllBrandCSSVariables();
     };
   }, [branding, companyKey]);
@@ -323,6 +349,277 @@ export const ShippingCompanyLayout: React.FC<ShippingCompanyLayoutProps> = ({
           </p>
         </div>
       </footer>
+    </div>
+  );
+};
+
+// Shipping card with brand styling
+interface ShippingCardProps {
+  children: React.ReactNode;
+  className?: string;
+  highlight?: boolean;
+  accentLine?: boolean;
+}
+
+export const ShippingCard: React.FC<ShippingCardProps> = ({ 
+  children, 
+  className = '',
+  highlight = false,
+  accentLine = true
+}) => {
+  const brandColor = 'var(--brand-primary, #3B82F6)';
+  const brandGradient = 'var(--brand-gradient, linear-gradient(135deg, #3B82F6, #2563EB))';
+  
+  return (
+    <Card 
+      className={`shadow-lg overflow-hidden ${className}`}
+      style={{
+        border: highlight ? `2px solid ${brandColor}` : '1px solid #E5E5E5',
+        borderRadius: '16px',
+        backgroundColor: '#FFFFFF',
+        fontFamily: 'Cairo, sans-serif',
+      }}
+    >
+      {highlight && accentLine && (
+        <div 
+          className="h-1.5 w-full"
+          style={{ background: brandGradient }}
+        />
+      )}
+      <CardContent className="p-6">
+        {children}
+      </CardContent>
+    </Card>
+  );
+};
+
+// Shipping button with brand styling
+interface ShippingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  isLoading?: boolean;
+  fullWidth?: boolean;
+  children: React.ReactNode;
+}
+
+export const ShippingButton: React.FC<ShippingButtonProps> = ({ 
+  variant = 'primary', 
+  size = 'md',
+  isLoading = false,
+  fullWidth = false,
+  children, 
+  className = '',
+  disabled,
+  ...props 
+}) => {
+  const brandColor = 'var(--brand-primary, #3B82F6)';
+  const brandGradient = 'var(--brand-gradient, linear-gradient(135deg, #3B82F6, #2563EB))';
+  const textOnPrimary = 'var(--brand-text-on-primary, #FFFFFF)';
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm rounded-lg',
+    md: 'px-6 py-3 text-base rounded-xl',
+    lg: 'px-8 py-4 text-lg rounded-xl'
+  };
+
+  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2';
+  const disabledClasses = 'opacity-60 cursor-not-allowed';
+
+  if (variant === 'primary') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: brandGradient,
+          color: textOnPrimary,
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  if (variant === 'secondary') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: '#F3F4F6',
+          color: '#374151',
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className="w-5 h-5 border-2 border-gray-400/30 border-t-gray-400 rounded-full animate-spin" />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  if (variant === 'outline') {
+    return (
+      <button
+        className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} border-2 ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+        style={{ 
+          background: 'transparent',
+          color: brandColor,
+          borderColor: brandColor,
+        }}
+        disabled={disabled || isLoading}
+        {...props}
+      >
+        {isLoading ? (
+          <>
+            <div className={`w-5 h-5 border-2 rounded-full animate-spin`} style={{ borderColor: `${brandColor}30`, borderTopColor: brandColor }} />
+            <span>جاري التحميل...</span>
+          </>
+        ) : children}
+      </button>
+    );
+  }
+
+  return (
+    <button
+      className={`${baseClasses} bg-transparent ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
+      style={{ color: brandColor }}
+      disabled={disabled || isLoading}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+// Shipping input with brand styling
+interface ShippingInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+  hint?: string;
+  icon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  showPasswordToggle?: boolean;
+}
+
+export const ShippingInput: React.FC<ShippingInputProps> = ({ 
+  label, 
+  error, 
+  hint,
+  icon,
+  leftIcon,
+  showPasswordToggle = false,
+  className = '',
+  type,
+  ...props 
+}) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const brandColor = 'var(--brand-primary, #3B82F6)';
+  const inputType = showPasswordToggle ? (showPassword ? 'text' : 'password') : type;
+  
+  return (
+    <div className="space-y-2">
+      {label && (
+        <label 
+          className="block text-sm font-semibold text-gray-700"
+          style={{ fontFamily: 'Cairo, sans-serif' }}
+        >
+          {label}
+        </label>
+      )}
+      <div className="relative">
+        {icon && (
+          <div 
+            className="absolute right-3 top-1/2 -translate-y-1/2"
+            style={{ color: brandColor }}
+          >
+            {icon}
+          </div>
+        )}
+        <Input
+          className={`rounded-xl border-2 transition-all duration-200 ${icon ? 'pr-10' : ''} ${leftIcon ? 'pl-10' : ''} ${error ? 'border-red-500 border-2' : ''} ${className}`}
+          style={{ 
+            borderColor: error ? '#EF4444' : '#E5E7EB',
+            backgroundColor: '#FFFFFF',
+            fontFamily: 'Cairo, sans-serif',
+            '--tw-ring-color': brandColor,
+            paddingRight: icon ? '2.5rem' : undefined,
+            paddingLeft: leftIcon ? '2.5rem' : undefined,
+          }}
+          type={inputType}
+          {...props}
+        />
+        {leftIcon && (
+          <div 
+            className="absolute left-3 top-1/2 -translate-y-1/2"
+            style={{ color: brandColor }}
+          >
+            {leftIcon}
+          </div>
+        )}
+        {showPasswordToggle && (
+          <button
+            type="button"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+          </button>
+        )}
+      </div>
+      {hint && !error && (
+        <p className="text-xs text-gray-500" style={{ fontFamily: 'Cairo, sans-serif' }}>{hint}</p>
+      )}
+      {error && (
+        <p className="text-sm text-red-500 flex items-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+          <AlertCircle className="w-4 h-4" />
+          {error}
+        </p>
+      )}
+    </div>
+  );
+};
+
+// Security indicator with brand styling
+interface ShippingSecurityBadgeProps {
+  type?: 'safe' | 'warning' | 'secure' | 'verified';
+}
+
+export const ShippingSecurityBadge: React.FC<ShippingSecurityBadgeProps> = ({ 
+  type = 'secure' 
+}) => {
+  const brandColor = 'var(--brand-primary, #3B82F6)';
+  
+  const configs = {
+    safe: { icon: CheckCircle2, color: '#10B981', label: 'آمن ومؤمن' },
+    warning: { icon: Shield, color: '#F59E0B', label: 'انتبه' },
+    secure: { icon: Lock, color: brandColor, label: 'مشفر 256-bit' },
+    verified: { icon: CheckCircle2, color: '#10B981', label: 'موثق رسمياً' }
+  };
+  
+  const config = configs[type];
+  const Icon = config.icon;
+  
+  return (
+    <div 
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
+      style={{ 
+        backgroundColor: `${config.color}15`,
+        color: config.color,
+        fontFamily: 'Cairo, sans-serif'
+      }}
+    >
+      <Icon className="w-4 h-4" />
+      <span>{config.label}</span>
     </div>
   );
 };
