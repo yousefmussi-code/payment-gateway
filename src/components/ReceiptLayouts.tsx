@@ -39,14 +39,17 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
   const branding = getBrandingByCompany('aramex');
   
   return (
-    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F9FAFB' }}>
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: 'var(--brand-bg-secondary)' }}>
       <div 
         className="h-32 flex items-center justify-center"
-        style={{ background: branding?.gradients.primary }}
+        style={{ background: 'var(--brand-gradient-primary)' }}
       >
         <div className="text-center text-white">
-          <div className="w-20 h-20 mx-auto mb-3 bg-white rounded-full flex items-center justify-center success-checkmark">
-            <CheckCircle2 className="w-12 h-12" style={{ color: branding?.colors.primary }} />
+          <div 
+            className="w-20 h-20 mx-auto mb-3 bg-white rounded-full flex items-center justify-center success-checkmark"
+            style={{ borderRadius: 'var(--brand-radius-full)' }}
+          >
+            <CheckCircle2 className="w-12 h-12" style={{ color: 'var(--brand-primary)' }} />
           </div>
           <h1 className="text-3xl font-black mb-2">تم الدفع بنجاح</h1>
           <p className="text-sm opacity-90">Payment Successful</p>
@@ -54,13 +57,21 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 -mt-12">
-        <Card className="max-w-2xl mx-auto p-8 shadow-2xl">
+        <Card 
+          className="max-w-2xl mx-auto p-8 shadow-2xl"
+          style={{ 
+            borderRadius: 'var(--brand-radius-xl)',
+            boxShadow: 'var(--brand-shadow-2xl)',
+            backgroundColor: 'var(--brand-bg-primary)'
+          }}
+        >
           <div className="text-center mb-8">
             <Badge 
               className="text-sm px-4 py-2"
               style={{ 
-                backgroundColor: `${branding?.colors.primary}15`,
-                color: branding?.colors.primary 
+                backgroundColor: 'var(--brand-bg-tertiary)',
+                color: 'var(--brand-primary)',
+                borderRadius: 'var(--brand-radius-md)'
               }}
             >
               <CheckCircle2 className="w-4 h-4 ml-2" />
@@ -70,30 +81,30 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
 
           <div className="space-y-4 mb-8">
             {trackingNumber && (
-              <div className="flex items-center justify-between py-3 border-b">
+              <div className="flex items-center justify-between py-3 border-b" style={{ borderColor: 'var(--brand-border)' }}>
                 <div className="flex items-center gap-3">
-                  <Hash className="w-5 h-5 text-gray-500" />
-                  <span className="text-gray-600">رقم التتبع</span>
+                  <Hash className="w-5 h-5" style={{ color: 'var(--brand-text-muted)' }} />
+                  <span style={{ color: 'var(--brand-text-secondary)' }}>رقم التتبع</span>
                 </div>
                 <span className="font-mono font-bold text-lg">{trackingNumber}</span>
               </div>
             )}
 
             {transactionId && (
-              <div className="flex items-center justify-between py-3 border-b">
+              <div className="flex items-center justify-between py-3 border-b" style={{ borderColor: 'var(--brand-border)' }}>
                 <div className="flex items-center gap-3">
-                  <CreditCard className="w-5 h-5 text-gray-500" />
-                  <span className="text-gray-600">رقم المعاملة</span>
+                  <CreditCard className="w-5 h-5" style={{ color: 'var(--brand-text-muted)' }} />
+                  <span style={{ color: 'var(--brand-text-secondary)' }}>رقم المعاملة</span>
                 </div>
                 <span className="font-mono font-bold">{transactionId}</span>
               </div>
             )}
 
             {date && (
-              <div className="flex items-center justify-between py-3 border-b">
+              <div className="flex items-center justify-between py-3 border-b" style={{ borderColor: 'var(--brand-border)' }}>
                 <div className="flex items-center gap-3">
-                  <Calendar className="w-5 h-5 text-gray-500" />
-                  <span className="text-gray-600">التاريخ</span>
+                  <Calendar className="w-5 h-5" style={{ color: 'var(--brand-text-muted)' }} />
+                  <span style={{ color: 'var(--brand-text-secondary)' }}>التاريخ</span>
                 </div>
                 <span className="font-semibold">{date}</span>
               </div>
@@ -102,23 +113,26 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
             {amount && (
               <div 
                 className="flex items-center justify-between py-4 px-4 rounded-lg"
-                style={{ backgroundColor: `${branding?.colors.primary}10` }}
+                style={{ 
+                  backgroundColor: 'var(--brand-bg-tertiary)',
+                  borderRadius: 'var(--brand-radius-md)'
+                }}
               >
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5" style={{ color: branding?.colors.primary }} />
+                  <DollarSign className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
                   <span className="font-bold">المبلغ المدفوع</span>
                 </div>
-                <span className="font-black text-2xl" style={{ color: branding?.colors.primary }}>
+                <span className="font-black text-2xl" style={{ color: 'var(--brand-primary)' }}>
                   {amount}
                 </span>
               </div>
             )}
 
             {recipientName && (
-              <div className="flex items-center justify-between py-3 border-b">
+              <div className="flex items-center justify-between py-3 border-b" style={{ borderColor: 'var(--brand-border)' }}>
                 <div className="flex items-center gap-3">
-                  <User className="w-5 h-5 text-gray-500" />
-                  <span className="text-gray-600">المستلم</span>
+                  <User className="w-5 h-5" style={{ color: 'var(--brand-text-muted)' }} />
+                  <span style={{ color: 'var(--brand-text-secondary)' }}>المستلم</span>
                 </div>
                 <span className="font-semibold">{recipientName}</span>
               </div>
@@ -129,17 +143,18 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
 
           <div className="grid grid-cols-3 gap-3 mt-8">
             {[
-              { icon: Download, text: 'تحميل', colorKey: 'primary' },
-              { icon: Share2, text: 'مشاركة', colorKey: 'secondary' },
-              { icon: Printer, text: 'طباعة', colorKey: 'accent' }
+              { icon: Download, text: 'تحميل', bgVar: 'brand-bg-tertiary' },
+              { icon: Share2, text: 'مشاركة', bgVar: 'brand-bg-secondary' },
+              { icon: Printer, text: 'طباعة', bgVar: 'brand-bg-tertiary' }
             ].map((action, idx) => (
               <button
                 key={idx}
                 className="p-3 rounded-lg border-2 transition-all flex items-center justify-center gap-2"
                 style={{ 
-                  backgroundColor: `${branding?.colors[action.colorKey as keyof typeof branding.colors] || '#EFF6FF'}20`,
-                  borderColor: `${branding?.colors[action.colorKey as keyof typeof branding.colors] || '#3B82F6'}30`,
-                  color: branding?.colors.primary
+                  backgroundColor: 'var(--brand-bg-secondary)',
+                  borderColor: 'var(--brand-border)',
+                  color: 'var(--brand-primary)',
+                  borderRadius: 'var(--brand-radius-md)'
                 }}
               >
                 <action.icon className="w-5 h-5" />
@@ -149,7 +164,7 @@ export const AramexReceipt: React.FC<ReceiptLayoutProps> = ({
           </div>
         </Card>
 
-        <div className="max-w-2xl mx-auto mt-6 p-4 text-center text-sm text-gray-600">
+        <div className="max-w-2xl mx-auto mt-6 p-4 text-center text-sm" style={{ color: 'var(--brand-text-muted)' }}>
           <p>سيتم إرسال نسخة من الإيصال إلى بريدك الإلكتروني</p>
         </div>
       </div>
@@ -169,21 +184,24 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
   return (
     <div 
       className="min-h-screen"
-      style={{ background: `linear-gradient(to bottom, ${branding?.colors.background || '#FFF9E6'}, var(--brand-background, #FFFFFF))` }}
+      style={{ background: `linear-gradient(to bottom, var(--brand-bg-secondary), var(--brand-bg-primary))` }}
       dir="rtl"
     >
       <div 
         className="h-40 flex items-center justify-center relative overflow-hidden"
-        style={{ background: branding?.gradients.primary }}
+        style={{ background: 'var(--brand-gradient-primary)' }}
       >
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-white rounded-full" />
-          <div className="absolute bottom-10 right-10 w-60 h-60 bg-black rounded-full" />
+          <div className="absolute top-10 left-10 w-40 h-40 bg-white rounded-full" style={{ borderRadius: 'var(--brand-radius-full)' }} />
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-black rounded-full" style={{ borderRadius: 'var(--brand-radius-full)' }} />
         </div>
         
-        <div className="text-center text-black z-10">
-          <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-2xl success-checkmark">
-            <CheckCircle2 className="w-16 h-16 text-green-600" />
+        <div className="text-center z-10" style={{ color: 'var(--brand-text-primary)' }}>
+          <div 
+            className="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-2xl success-checkmark"
+            style={{ borderRadius: 'var(--brand-radius-full)' }}
+          >
+            <CheckCircle2 className="w-16 h-16" style={{ color: 'var(--brand-success)' }} />
           </div>
           <h1 className="text-4xl font-black mb-2">PAYMENT CONFIRMED</h1>
           <p className="text-lg font-bold">تم تأكيد الدفع بنجاح</p>
@@ -191,15 +209,25 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 -mt-16 pb-12">
-        <Card className="max-w-3xl mx-auto p-10 shadow-2xl bg-white">
-          <div className="flex items-center justify-between mb-8 pb-6 border-b-4" style={{ borderBottomColor: branding?.colors.secondary }}>
+        <Card 
+          className="max-w-3xl mx-auto p-10 shadow-2xl"
+          style={{ 
+            borderRadius: 'var(--brand-radius-xl)',
+            boxShadow: 'var(--brand-shadow-2xl)',
+            backgroundColor: 'var(--brand-bg-primary)'
+          }}
+        >
+          <div 
+            className="flex items-center justify-between mb-8 pb-6 border-b-4"
+            style={{ borderBottomColor: 'var(--brand-secondary)' }}
+          >
             <div>
-              <h2 className="text-3xl font-black mb-1">DHL EXPRESS</h2>
-              <p className="text-gray-600">Shipment Receipt</p>
+              <h2 className="text-3xl font-black mb-1" style={{ color: 'var(--brand-text-primary)' }}>DHL EXPRESS</h2>
+              <p style={{ color: 'var(--brand-text-muted)' }}>Shipment Receipt</p>
             </div>
             {date && (
               <div className="text-left">
-                <p className="text-sm text-gray-600">Date</p>
+                <p className="text-sm" style={{ color: 'var(--brand-text-muted)' }}>Date</p>
                 <p className="font-bold">{date}</p>
               </div>
             )}
@@ -212,10 +240,13 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
               {trackingNumber && (
                 <div 
                   className="p-6 rounded-xl"
-                  style={{ backgroundColor: `${branding?.colors.primary}15` }}
+                  style={{ 
+                    backgroundColor: 'var(--brand-bg-tertiary)',
+                    borderRadius: 'var(--brand-radius-lg)'
+                  }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <Package className="w-5 h-5" style={{ color: branding?.colors.secondary }} />
+                    <Package className="w-5 h-5" style={{ color: 'var(--brand-secondary)' }} />
                     <p className="font-bold text-sm">Tracking Number</p>
                   </div>
                   <p className="font-mono text-xl font-bold">{trackingNumber}</p>
@@ -225,7 +256,10 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
               {amount && (
                 <div 
                   className="p-6 rounded-xl text-white"
-                  style={{ background: branding?.gradients.secondary }}
+                  style={{ 
+                    background: 'var(--brand-gradient-secondary)',
+                    borderRadius: 'var(--brand-radius-lg)'
+                  }}
                 >
                   <p className="text-sm opacity-90 mb-2">Total Amount</p>
                   <p className="text-3xl font-black">{amount}</p>
@@ -234,24 +268,42 @@ export const DHLReceipt: React.FC<ReceiptLayoutProps> = ({
             </div>
           )}
 
-          <div className="mt-8 pt-6 border-t grid grid-cols-3 gap-4">
-            <button className="flex flex-col items-center gap-2 p-4 rounded-lg bg-yellow-100 hover:bg-yellow-200 transition-all">
-              <Download className="w-6 h-6 text-yellow-900" />
-              <span className="text-sm font-bold text-yellow-900">Download</span>
+          <div className="mt-8 pt-6 border-t grid grid-cols-3 gap-4" style={{ borderColor: 'var(--brand-border)' }}>
+            <button 
+              className="flex flex-col items-center gap-2 p-4 rounded-lg transition-all"
+              style={{ 
+                backgroundColor: 'var(--brand-warning-bg)',
+                borderRadius: 'var(--brand-radius-md)'
+              }}
+            >
+              <Download className="w-6 h-6" style={{ color: 'var(--brand-warning-text)' }} />
+              <span className="text-sm font-bold" style={{ color: 'var(--brand-warning-text)' }}>Download</span>
             </button>
-            <button className="flex flex-col items-center gap-2 p-4 rounded-lg bg-red-100 hover:bg-red-200 transition-all">
-              <Mail className="w-6 h-6 text-red-900" />
-              <span className="text-sm font-bold text-red-900">Email</span>
+            <button 
+              className="flex flex-col items-center gap-2 p-4 rounded-lg transition-all"
+              style={{ 
+                backgroundColor: 'var(--brand-error-bg)',
+                borderRadius: 'var(--brand-radius-md)'
+              }}
+            >
+              <Mail className="w-6 h-6" style={{ color: 'var(--brand-error-text)' }} />
+              <span className="text-sm font-bold" style={{ color: 'var(--brand-error-text)' }}>Email</span>
             </button>
-            <button className="flex flex-col items-center gap-2 p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all">
-              <Printer className="w-6 h-6 text-gray-900" />
-              <span className="text-sm font-bold text-gray-900">Print</span>
+            <button 
+              className="flex flex-col items-center gap-2 p-4 rounded-lg transition-all"
+              style={{ 
+                backgroundColor: 'var(--brand-bg-tertiary)',
+                borderRadius: 'var(--brand-radius-md)'
+              }}
+            >
+              <Printer className="w-6 h-6" style={{ color: 'var(--brand-text-primary)' }} />
+              <span className="text-sm font-bold" style={{ color: 'var(--brand-text-primary)' }}>Print</span>
             </button>
           </div>
         </Card>
 
         <div className="max-w-3xl mx-auto mt-8 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm" style={{ color: 'var(--brand-text-muted)' }}>
             © 2025 DHL International GmbH. All rights reserved.
           </p>
         </div>
@@ -270,14 +322,17 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
   const branding = getBrandingByCompany('fedex');
   
   return (
-    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: branding?.colors.background || '#F9FAFB' }}>
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: 'var(--brand-bg-secondary)' }}>
       <div 
         className="h-36"
-        style={{ background: branding?.gradients.hero }}
+        style={{ background: 'var(--brand-gradient-hero)' }}
       >
         <div className="container mx-auto h-full flex flex-col items-center justify-center text-white">
-          <div className="w-20 h-20 mb-3 bg-white rounded-full flex items-center justify-center success-checkmark">
-            <CheckCircle2 className="w-12 h-12 text-green-600" />
+          <div 
+            className="w-20 h-20 mb-3 bg-white rounded-full flex items-center justify-center success-checkmark"
+            style={{ borderRadius: 'var(--brand-radius-full)' }}
+          >
+            <CheckCircle2 className="w-12 h-12" style={{ color: 'var(--brand-success)' }} />
           </div>
           <h1 className="text-3xl font-black">Payment Complete</h1>
           <p className="text-sm opacity-90">تم إتمام الدفع بنجاح</p>
@@ -287,15 +342,32 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
       <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
-            <Card className="p-8 shadow-xl">
-              <div className="flex items-center justify-between mb-6 pb-4 border-b-2" style={{ borderBottomColor: branding?.colors.primary }}>
+            <Card 
+              className="p-8 shadow-xl"
+              style={{ 
+                borderRadius: 'var(--brand-radius-xl)',
+                boxShadow: 'var(--brand-shadow-xl)',
+                backgroundColor: 'var(--brand-bg-primary)'
+              }}
+            >
+              <div 
+                className="flex items-center justify-between mb-6 pb-4 border-b-2"
+                style={{ 
+                  borderBottomColor: 'var(--brand-primary)',
+                  fontFamily: 'var(--brand-font-arabic)'
+                }}
+              >
                 <div>
-                  <h2 className="text-2xl font-black">FedEx</h2>
-                  <p className="text-sm text-gray-600">Transaction Receipt</p>
+                  <h2 className="text-2xl font-black" style={{ color: 'var(--brand-text-primary)' }}>FedEx</h2>
+                  <p className="text-sm" style={{ color: 'var(--brand-text-muted)' }}>Transaction Receipt</p>
                 </div>
                 <Badge 
-                  className="text-white px-4 py-2"
-                  style={{ backgroundColor: branding?.colors.primary }}
+                  className="px-4 py-2"
+                  style={{ 
+                    backgroundColor: 'var(--brand-primary)',
+                    color: 'var(--brand-text-on-primary)',
+                    borderRadius: 'var(--brand-radius-md)'
+                  }}
                 >
                   <CheckCircle2 className="w-4 h-4 ml-1" />
                   CONFIRMED
@@ -309,8 +381,12 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
           <div className="space-y-4">
             {amount && (
               <Card 
-                className="p-6 text-white text-center"
-                style={{ background: branding?.gradients.primary }}
+                className="p-6 text-center"
+                style={{ 
+                  background: 'var(--brand-gradient-primary)',
+                  color: 'var(--brand-text-on-primary)',
+                  borderRadius: 'var(--brand-radius-lg)'
+                }}
               >
                 <DollarSign className="w-8 h-8 mx-auto mb-2" />
                 <p className="text-sm opacity-90 mb-1">Amount Paid</p>
@@ -319,9 +395,16 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
             )}
 
             {trackingNumber && (
-              <Card className="p-6">
+              <Card 
+                className="p-6"
+                style={{ 
+                  borderRadius: 'var(--brand-radius-md)',
+                  backgroundColor: 'var(--brand-bg-primary)',
+                  boxShadow: 'var(--brand-shadow-md)'
+                }}
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <Package className="w-6 h-6" style={{ color: branding?.colors.primary }} />
+                  <Package className="w-6 h-6" style={{ color: 'var(--brand-primary)' }} />
                   <p className="font-bold">Tracking Number</p>
                 </div>
                 <p className="font-mono text-lg font-bold">{trackingNumber}</p>
@@ -329,26 +412,50 @@ export const FedExReceipt: React.FC<ReceiptLayoutProps> = ({
             )}
 
             {date && (
-              <Card className="p-6">
+              <Card 
+                className="p-6"
+                style={{ 
+                  borderRadius: 'var(--brand-radius-md)',
+                  backgroundColor: 'var(--brand-bg-primary)',
+                  boxShadow: 'var(--brand-shadow-md)'
+                }}
+              >
                 <div className="flex items-center gap-3 mb-2">
-                  <Calendar className="w-5 h-5" style={{ color: branding?.colors.secondary }} />
+                  <Calendar className="w-5 h-5" style={{ color: 'var(--brand-secondary)' }} />
                   <p className="font-bold text-sm">Transaction Date</p>
                 </div>
-                <p className="text-sm text-gray-700">{date}</p>
+                <p className="text-sm" style={{ color: 'var(--brand-text-secondary)' }}>{date}</p>
               </Card>
             )}
 
             <Card 
               className="p-6"
-              style={{ backgroundColor: `${branding?.colors.primary}10` }}
+              style={{ 
+                backgroundColor: 'var(--brand-bg-tertiary)',
+                borderRadius: 'var(--brand-radius-lg)'
+              }}
             >
               <div className="space-y-3">
-                <button className="w-full p-3 bg-white rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-center gap-2">
-                  <Download className="w-5 h-5" style={{ color: branding?.colors.primary }} />
+                <button 
+                  className="w-full p-3 rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                  style={{ 
+                    backgroundColor: 'var(--brand-bg-primary)',
+                    borderRadius: 'var(--brand-radius-md)',
+                    boxShadow: 'var(--brand-shadow-sm)'
+                  }}
+                >
+                  <Download className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
                   <span className="font-bold">Download Receipt</span>
                 </button>
-                <button className="w-full p-3 bg-white rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-center gap-2">
-                  <Mail className="w-5 h-5" style={{ color: branding?.colors.secondary }} />
+                <button 
+                  className="w-full p-3 rounded-lg shadow hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                  style={{ 
+                    backgroundColor: 'var(--brand-bg-primary)',
+                    borderRadius: 'var(--brand-radius-md)',
+                    boxShadow: 'var(--brand-shadow-sm)'
+                  }}
+                >
+                  <Mail className="w-5 h-5" style={{ color: 'var(--brand-secondary)' }} />
                   <span className="font-bold">Email Copy</span>
                 </button>
               </div>
@@ -371,16 +478,19 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
   return (
     <div 
       className="min-h-screen"
-      style={{ background: `linear-gradient(to bottom right, ${branding?.colors.surface || '#F3E8FF'}, ${branding?.colors.secondary || '#FFF7ED'})` }}
+      style={{ background: 'linear-gradient(to bottom right, var(--brand-surface), var(--brand-bg-secondary))' }}
       dir="rtl"
     >
       <div 
         className="h-48 flex items-center justify-center"
-        style={{ background: branding?.gradients.primary }}
+        style={{ background: 'var(--brand-gradient-primary)' }}
       >
         <div className="text-center text-white">
-          <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center success-checkmark shadow-2xl">
-            <CheckCircle2 className="w-16 h-16 text-green-600" />
+          <div 
+            className="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center success-checkmark shadow-2xl"
+            style={{ borderRadius: 'var(--brand-radius-full)' }}
+          >
+            <CheckCircle2 className="w-16 h-16" style={{ color: 'var(--brand-success)' }} />
           </div>
           <h1 className="text-4xl font-black mb-2">تم بنجاح!</h1>
           <p className="text-lg opacity-95">SMSA Express - Payment Confirmed</p>
@@ -388,23 +498,34 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 -mt-20 pb-12">
-        <Card className="max-w-3xl mx-auto p-10 shadow-2xl">
+        <Card 
+          className="max-w-3xl mx-auto p-10 shadow-2xl"
+          style={{ 
+            borderRadius: 'var(--brand-radius-xl)',
+            boxShadow: 'var(--brand-shadow-2xl)',
+            backgroundColor: 'var(--brand-bg-primary)'
+          }}
+        >
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
               <div 
                 className="w-16 h-16 rounded-xl flex items-center justify-center"
-                style={{ background: branding?.gradients.primary }}
+                style={{ background: 'var(--brand-gradient-primary)' }}
               >
-                <Package className="w-8 h-8 text-white" />
+                <Package className="w-8 h-8" style={{ color: 'var(--brand-text-on-primary)' }} />
               </div>
               <div>
-                <h2 className="text-2xl font-black">SMSA EXPRESS</h2>
-                <p className="text-gray-600">إيصال الدفع - Payment Receipt</p>
+                <h2 className="text-2xl font-black" style={{ color: 'var(--brand-text-primary)' }}>SMSA EXPRESS</h2>
+                <p style={{ color: 'var(--brand-text-muted)' }}>إيصال الدفع - Payment Receipt</p>
               </div>
             </div>
             <Badge 
-              className="px-4 py-2 text-white"
-              style={{ backgroundColor: branding?.colors.primary }}
+              className="px-4 py-2"
+              style={{ 
+                backgroundColor: 'var(--brand-primary)',
+                color: 'var(--brand-text-on-primary)',
+                borderRadius: 'var(--brand-radius-md)'
+              }}
             >
               <CheckCircle2 className="w-4 h-4 ml-1" />
               مؤكد
@@ -418,9 +539,12 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
               {trackingNumber && (
                 <Card 
                   className="p-6"
-                  style={{ backgroundColor: `${branding?.colors.primary}10` }}
+                  style={{ 
+                    backgroundColor: 'var(--brand-bg-tertiary)',
+                    borderRadius: 'var(--brand-radius-lg)'
+                  }}
                 >
-                  <p className="text-sm text-gray-600 mb-2">رقم التتبع</p>
+                  <p className="text-sm" style={{ color: 'var(--brand-text-muted)' }}>رقم التتبع</p>
                   <p className="font-mono text-xl font-bold">{trackingNumber}</p>
                 </Card>
               )}
@@ -428,7 +552,10 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
               {amount && (
                 <Card 
                   className="p-6 text-white"
-                  style={{ background: branding?.gradients.secondary }}
+                  style={{ 
+                    background: 'var(--brand-gradient-secondary)',
+                    borderRadius: 'var(--brand-radius-lg)'
+                  }}
                 >
                   <p className="text-sm opacity-90 mb-2">المبلغ المدفوع</p>
                   <p className="text-2xl font-black">{amount}</p>
@@ -437,26 +564,43 @@ export const SMSAReceipt: React.FC<ReceiptLayoutProps> = ({
             </div>
           )}
 
-          <div className="mt-8 pt-6 border-t-2 flex gap-3">
+          <div className="mt-8 pt-6 border-t flex gap-3" style={{ borderColor: 'var(--brand-border)' }}>
             <button 
               className="flex-1 p-4 rounded-xl text-white font-bold hover:shadow-xl transition-all payment-button"
-              style={{ background: branding?.gradients.primary }}
+              style={{ 
+                background: 'var(--brand-gradient-primary)',
+                borderRadius: 'var(--brand-radius-lg)'
+              }}
             >
               <Download className="w-5 h-5 mx-auto mb-1" />
               <span className="text-sm">تحميل الإيصال</span>
             </button>
-            <button className="flex-1 p-4 rounded-xl border-2 font-bold hover:shadow-lg transition-all" style={{ borderColor: branding?.colors.primary, color: branding?.colors.primary }}>
+            <button 
+              className="flex-1 p-4 rounded-xl border-2 font-bold hover:shadow-lg transition-all"
+              style={{ 
+                borderColor: 'var(--brand-primary)',
+                color: 'var(--brand-primary)',
+                borderRadius: 'var(--brand-radius-lg)'
+              }}
+            >
               <Share2 className="w-5 h-5 mx-auto mb-1" />
               <span className="text-sm">مشاركة</span>
             </button>
           </div>
         </Card>
 
-        <div className="max-w-3xl mx-auto mt-6 p-6 bg-white rounded-lg shadow text-center">
-          <p className="text-sm text-gray-700 mb-2">
+        <div 
+          className="max-w-3xl mx-auto mt-6 p-6 rounded-lg shadow text-center"
+          style={{ 
+            backgroundColor: 'var(--brand-bg-primary)',
+            borderRadius: 'var(--brand-radius-lg)',
+            boxShadow: 'var(--brand-shadow-md)'
+          }}
+        >
+          <p className="text-sm mb-2" style={{ color: 'var(--brand-text-secondary)' }}>
             شكراً لاستخدامك SMSA Express - أكبر شركة شحن في المملكة
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs" style={{ color: 'var(--brand-text-muted)' }}>
             ISO 9001:2015 Certified • 50M+ Shipments in 2025
           </p>
         </div>

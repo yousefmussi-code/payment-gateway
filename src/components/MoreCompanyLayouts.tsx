@@ -28,15 +28,15 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
   const branding = getBrandingByCompany('naqel');
   
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen" dir="rtl" style={{ backgroundColor: 'var(--brand-bg-secondary)' }}>
       <div 
         className="h-24 shadow-lg"
-        style={{ background: branding?.gradients.primary }}
+        style={{ background: 'var(--brand-gradient-primary)' }}
       >
         <div className="container mx-auto h-full flex items-center justify-between px-6">
           <div className="flex items-center gap-4">
-            <div className="bg-white p-3 rounded-lg">
-              <span className="font-black text-2xl" style={{ color: branding?.colors.primary }}>
+            <div className="bg-white p-3 rounded-lg" style={{ borderRadius: 'var(--brand-radius-md)' }}>
+              <span className="font-black text-2xl" style={{ color: 'var(--brand-primary)' }}>
                 ناقل
               </span>
             </div>
@@ -46,7 +46,14 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <Badge className="bg-yellow-400 text-yellow-900 px-3 py-1">
+            <Badge 
+              className="px-3 py-1"
+              style={{ 
+                backgroundColor: 'var(--brand-warning-bg)',
+                color: 'var(--brand-warning-text)',
+                borderRadius: 'var(--brand-radius-md)'
+              }}
+            >
               <Star className="w-4 h-4 ml-1 fill-current" />
               الأعلى تقييماً
             </Badge>
@@ -55,35 +62,54 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        {/* شبكته 4 أعمدة مع استجابة للشاشات الصغيرة */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
           {[
-            { icon: Truck, label: 'توصيل سريع', color: branding?.colors.primary },
-            { icon: Shield, label: 'آمن 100%', color: branding?.colors.secondary },
-            { icon: MapPin, label: 'تتبع GPS', color: branding?.colors.primary },
-            { icon: CheckCircle2, label: 'ضمان الجودة', color: branding?.colors.secondary }
+            { icon: Truck, label: 'توصيل سريع' },
+            { icon: Shield, label: 'آمن 100%' },
+            { icon: MapPin, label: 'تتبع GPS' },
+            { icon: CheckCircle2, label: 'ضمان الجودة' }
           ].map((item, idx) => (
-            <Card key={idx} className="p-4 text-center hover:shadow-lg transition-all" style={{ borderColor: `${item.color}30`, borderWidth: '1px', borderStyle: 'solid' }}>
+            <Card 
+              key={idx} 
+              className="p-4 text-center hover:shadow-lg transition-all" 
+              style={{ 
+                borderColor: 'var(--brand-primary)',
+                borderWidth: '1px', 
+                borderStyle: 'solid',
+                borderRadius: 'var(--brand-radius-md)',
+                backgroundColor: 'var(--brand-bg-primary)'
+              }}
+            >
               <div 
                 className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-2"
-                style={{ backgroundColor: `${item.color}15` }}
+                style={{ backgroundColor: 'var(--brand-bg-tertiary)' }}
               >
-                <item.icon className="w-6 h-6" style={{ color: item.color }} />
+                <item.icon className="w-6 h-6" style={{ color: 'var(--brand-primary)' }} />
               </div>
-              <p className="font-bold text-sm">{item.label}</p>
+              <p className="font-bold text-sm" style={{ color: 'var(--brand-text-primary)' }}>{item.label}</p>
             </Card>
           ))}
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
-            <Card className="p-8 shadow-xl">
+            <Card 
+              className="p-8 shadow-xl"
+              style={{ 
+                borderRadius: 'var(--brand-radius-xl)',
+                boxShadow: 'var(--brand-shadow-xl)',
+                backgroundColor: 'var(--brand-bg-primary)'
+              }}
+            >
               <div 
                 className="flex items-center gap-3 mb-6 pb-4 border-b-2"
-                style={{ borderBottomColor: branding?.colors.primary }}
+                style={{ 
+                  borderBottomColor: 'var(--brand-primary)',
+                  fontFamily: 'var(--brand-font-arabic)'
+                }}
               >
-                <CreditCard className="w-7 h-7" style={{ color: branding?.colors.primary }} />
-                <h2 className="text-2xl font-bold">الدفع الآمن</h2>
+                <CreditCard className="w-7 h-7" style={{ color: 'var(--brand-primary)' }} />
+                <h2 className="text-2xl font-bold" style={{ color: 'var(--brand-text-primary)' }}>الدفع الآمن</h2>
               </div>
               {children}
             </Card>
@@ -92,8 +118,12 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
           <div className="space-y-4">
             {amount && (
               <Card 
-                className="p-6 text-white text-center"
-                style={{ background: branding?.gradients.primary }}
+                className="p-6 text-center"
+                style={{ 
+                  background: 'var(--brand-gradient-primary)',
+                  color: 'var(--brand-text-on-primary)',
+                  borderRadius: 'var(--brand-radius-lg)'
+                }}
               >
                 <p className="text-sm opacity-90 mb-2">المبلغ الإجمالي</p>
                 <p className="text-3xl font-black">{amount}</p>
@@ -101,27 +131,47 @@ export const NAQELLayout: React.FC<CompanyLayoutProps> = ({
             )}
 
             {trackingNumber && (
-              <Card className="p-6">
-                <h3 className="font-bold mb-3">معلومات الشحنة</h3>
+              <Card 
+                className="p-6"
+                style={{ 
+                  borderRadius: 'var(--brand-radius-md)',
+                  backgroundColor: 'var(--brand-bg-primary)',
+                  boxShadow: 'var(--brand-shadow-md)'
+                }}
+              >
+                <h3 className="font-bold mb-3" style={{ color: 'var(--brand-text-primary)' }}>معلومات الشحنة</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">رقم التتبع:</span>
+                    <span style={{ color: 'var(--brand-text-secondary)' }}>رقم التتبع:</span>
                     <span className="font-mono">{trackingNumber}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">الحالة:</span>
-                    <Badge className="bg-green-100 text-green-800">نشط</Badge>
+                    <span style={{ color: 'var(--brand-text-secondary)' }}>الحالة:</span>
+                    <Badge 
+                      className="px-2 py-1"
+                      style={{ 
+                        backgroundColor: 'var(--brand-success-bg)',
+                        color: 'var(--brand-success-text)',
+                        borderRadius: 'var(--brand-radius-sm)'
+                      }}
+                    >نشط</Badge>
                   </div>
                 </div>
               </Card>
             )}
 
-            <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100">
+            <Card 
+              className="p-6"
+              style={{ 
+                background: 'var(--brand-gradient-info)',
+                borderRadius: 'var(--brand-radius-lg)'
+              }}
+            >
               <div className="flex items-center gap-3 mb-3">
-                <Shield className="w-6 h-6 text-blue-700" />
-                <h3 className="font-bold text-blue-900">ناقل إكسبرس</h3>
+                <Shield className="w-6 h-6" style={{ color: 'var(--brand-text-on-primary)' }} />
+                <h3 className="font-bold" style={{ color: 'var(--brand-text-on-primary)' }}>ناقل إكسبرس</h3>
               </div>
-              <p className="text-sm text-blue-800">
+              <p className="text-sm" style={{ color: 'var(--brand-text-on-primary)', opacity: 0.9 }}>
                 أكثر من 50 مليون شحنة تم توصيلها بنجاح في 2025
               </p>
             </Card>

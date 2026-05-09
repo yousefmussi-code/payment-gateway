@@ -119,6 +119,108 @@ All colors MUST be HSL.
     /* متغيرات تحويم البطاقات */
     --card-hover-offset: -4px;
     --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    /* ====== ملحق متغيرات العلامة التجارية الشاملة ====== */
+    
+    /* ألوان النصوص */
+    --brand-text-primary: #1F2937;
+    --brand-text-secondary: #4B5563;
+    --brand-text-muted: #6B7280;
+    --brand-text-placeholder: #9CA3AF;
+    --brand-text-disabled: #D1D5DB;
+    
+    /* ألوان الخلفية */
+    --brand-bg-primary: #FFFFFF;
+    --brand-bg-secondary: #F9FAFB;
+    --brand-bg-tertiary: #F3F4F6;
+    --brand-bg-elevated: #FFFFFF;
+    --brand-bg-overlay: rgba(0, 0, 0, 0.5);
+    
+    /* ألوان الحالات (hover, active, disabled) */
+    --brand-hover-opacity: 0.9;
+    --brand-active-opacity: 0.85;
+    --brand-focus-ring: rgba(59, 130, 246, 0.5);
+    
+    /* ألوان الحالات الخاصة */
+    --brand-success: #10B981;
+    --brand-success-bg: #ECFDF5;
+    --brand-success-text: #065F46;
+    --brand-warning: #F59E0B;
+    --brand-warning-bg: #FFFBEB;
+    --brand-warning-text: #92400E;
+    --brand-error: #EF4444;
+    --brand-error-bg: #FEF2F2;
+    --brand-error-text: #991B1B;
+    --brand-info: #3B82F6;
+    --brand-info-bg: #EFF6FF;
+    --brand-info-text: #1E40AF;
+    
+    /* تدرجات الحالات */
+    --brand-gradient-success: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    --brand-gradient-warning: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    --brand-gradient-error: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    --brand-gradient-info: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    
+    /* ظلال موسعة */
+    --brand-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --brand-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --brand-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --brand-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --brand-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --brand-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* حواف دائرية موسعة */
+    --brand-radius-none: 0;
+    --brand-radius-sm: 4px;
+    --brand-radius-md: 8px;
+    --brand-radius-lg: 12px;
+    --brand-radius-xl: 16px;
+    --brand-radius-2xl: 24px;
+    --brand-radius-full: 9999px;
+    
+    /* مسافات داخلية وخارجية */
+    --brand-spacing-xs: 4px;
+    --brand-spacing-sm: 8px;
+    --brand-spacing-md: 16px;
+    --brand-spacing-lg: 24px;
+    --brand-spacing-xl: 32px;
+    --brand-spacing-2xl: 48px;
+    
+    /* متغيرات الأزرار */
+    --brand-btn-height-sm: 32px;
+    --brand-btn-height-md: 40px;
+    --brand-btn-height-lg: 48px;
+    --brand-btn-padding-x-sm: 12px;
+    --brand-btn-padding-x-md: 16px;
+    --brand-btn-padding-x-lg: 24px;
+    --brand-btn-font-size-sm: 12px;
+    --brand-btn-font-size-md: 14px;
+    --brand-btn-font-size-lg: 16px;
+    
+    /* متغيرات البطاقات */
+    --brand-card-padding: 24px;
+    --brand-card-gap: 16px;
+    
+    /* متغيرات الإدخال */
+    --brand-input-height: 44px;
+    --brand-input-padding: 12px;
+    --brand-input-border-width: 1px;
+    --brand-input-focus-width: 2px;
+    
+    /* متغيرات الأيقونات */
+    --brand-icon-size-sm: 16px;
+    --brand-icon-size-md: 20px;
+    --brand-icon-size-lg: 24px;
+    --brand-icon-size-xl: 32px;
+    
+    /* متغيرات الحركة والانتقالات */
+    --brand-transition-fast: 150ms;
+    --brand-transition-base: 200ms;
+    --brand-transition-slow: 300ms;
+    --brand-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --brand-ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --brand-ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --brand-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
