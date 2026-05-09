@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#F58220"/>
-      <stop offset="100%" style="stop-color:#F58220"/>
-    </linearGradient>
-  </defs>
-  <rect width="200" height="80" fill="#F58220"/>
-  <text x="100" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">سداد</text>
+  <rect width="200" height="80" fill="#006C35"/>
+  <text x="100" y="40" font-family="Arial" font-size="26" font-weight="bold" fill="#FFFFFF" text-anchor="middle">سداد</text>
+  <text x="100" y="62" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">SADAD</text>
 </svg>

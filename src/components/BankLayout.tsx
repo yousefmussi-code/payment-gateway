@@ -1,6 +1,7 @@
 // BankLayout - Official 1:1 Bank Design
 // نسخ طبق الأصل من هوية البنك الرسمية - 175 بنك
 // تصميم RTL مع خط Cairo ومتغيرات CSS --brand-*
+// دعم شعارات PNG رسمية لكل بنك
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
@@ -26,7 +27,9 @@ import {
   AlertCircle,
   Verified,
   Fingerprint,
-  Smartphone
+  Smartphone,
+  Award,
+  ShieldCheck
 } from 'lucide-react';
 
 interface BankLayoutProps {

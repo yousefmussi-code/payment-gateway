@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#351C15"/>
-      <stop offset="100%" style="stop-color:#351C15"/>
-    </linearGradient>
-  </defs>
   <rect width="200" height="80" fill="#351C15"/>
-  <text x="100" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">يو بي إس</text>
+  <text x="100" y="40" font-family="Arial" font-size="26" font-weight="bold" fill="#FFB500" text-anchor="middle">UPS</text>
+  <text x="100" y="62" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">United Parcel Service</text>
 </svg>

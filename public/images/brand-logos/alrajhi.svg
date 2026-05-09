@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#006C35"/>
-      <stop offset="100%" style="stop-color:#006C35"/>
-    </linearGradient>
-  </defs>
-  <rect width="200" height="80" fill="#006C35"/>
-  <text x="100" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">مصرف الراجحي</text>
-  <text x="100" y="55" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.8">Al Rajhi Bank</text>
+  <rect width="200" height="80" fill="#009144"/>
+  <text x="100" y="38" font-family="Arial" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">الراجحي</text>
+  <text x="100" y="58" font-family="Arial" font-size="13" fill="#FFFFFF" text-anchor="middle">Al Rajhi</text>
 </svg>
