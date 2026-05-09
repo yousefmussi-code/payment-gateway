@@ -439,13 +439,114 @@ export const getGovernmentLayout = (countryCode: string) => {
   switch (countryCode.toUpperCase()) {
     case 'SA':
       return SADADLayout;
-    case 'KW':
-      return KNETLayout;
-    case 'BH':
-      return BENEFITLayout;
-    default:
-      return SADADLayout;
+export const getGovernmentLayout = (countryCode: string) => {
+  switch (countryCode.toUpperCase()) {
+    case 'SA': return SADADLayout;
+    case 'KW': return KNETLayout;
+    case 'BH': return BENEFITLayout;
+    default: return SADADLayout;
   }
+};
+
+// Layout موحد لجميع الجهات الحكومية
+export interface UnifiedGovernmentLayoutProps {
+  countryCode?: string;
+  serviceName?: string;
+  amount?: string;
+  children?: React.ReactNode;
+}
+
+export const GovernmentLayout: React.FC<UnifiedGovernmentLayoutProps> = ({ 
+  countryCode = 'SA', 
+  serviceName = '',
+  amount = '',
+  children 
+}) => {
+  const govSystem = countryCode === 'SA' 
+    ? governmentPaymentSystems.SA
+    : countryCode === 'KW'
+    ? governmentPaymentSystems.KW
+    : countryCode === 'BH'
+    ? governmentPaymentSystems.BH
+    : governmentPaymentSystems.SA;
+
+  const primaryColor = govSystem.colors.primary;
+  const textOnPrimary = govSystem.colors.textOnPrimary || '#FFFFFF';
+  const surfaceColor = govSystem.colors.surface || '#F8F9FA';
+
+  return (
+    <div 
+      className="min-h-screen" 
+      dir="rtl"
+      style={{ 
+        backgroundColor: surfaceColor,
+        fontFamily: 'Cairo, sans-serif'
+      }}
+    >
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/*                    الهيدر الرسمي للحكومة                   */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <header 
+        className="shadow-lg relative overflow-hidden"
+        style={{ 
+          background: `linear-gradient(135deg, ${primaryColor}, ${primaryColor})`,
+          minHeight: '120px'
+        }}
+      >
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white transform translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white transform -translate-x-1/2 translate-y-1/2" />
+        </div>
+
+        <div className="container mx-auto px-4 py-6 relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div 
+                className="bg-white p-3 rounded-xl shadow-md"
+                style={{ borderRadius: '12px' }}
+              >
+                <img 
+                  src={govSystem.logoUrl || `/images/brand-logos/${countryCode.toLowerCase()}.svg`}
+                  alt={serviceName}
+                  className="h-14 w-auto"
+                  style={{ maxHeight: '56px' }}
+                />
+              </div>
+              <div className="text-white">
+                <h1 className="text-2xl font-bold">
+                  {serviceName || govSystem.name}
+                </h1>
+                <p className="text-sm opacity-90">
+                  {govSystem.name}
+                </p>
+              </div>
+            </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <Badge className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white border-0">
+                <Shield className="w-4 h-4 ml-1" />
+                دفع حكومي آمن
+              </Badge>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* المحتوى */}
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+
+      {/* الفوتر */}
+      <footer 
+        className="mt-8 py-6 text-center text-sm"
+        style={{ backgroundColor: primaryColor, color: textOnPrimary }}
+      >
+        <div className="container mx-auto px-4">
+          <p>{govSystem.name} - جميع الحقوق محفوظة © {new Date().getFullYear()}</p>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default {
