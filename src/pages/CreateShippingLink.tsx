@@ -201,7 +201,9 @@ const CreateShippingLink = () => {
             <div
               className="h-16 -m-4 mb-4 rounded-t-xl relative"
               style={{
-                background: `linear-gradient(135deg, ${countryData.primaryColor}, ${countryData.secondaryColor})`,
+                background: serviceBranding 
+                  ? `linear-gradient(135deg, ${serviceBranding.colors.primary}, ${serviceBranding.colors.secondary})`
+                  : `linear-gradient(135deg, ${countryData.primaryColor}, ${countryData.secondaryColor})`,
               }}
             >
               <div className="absolute inset-0 bg-black/20 rounded-t-xl" />

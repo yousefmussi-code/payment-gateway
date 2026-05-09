@@ -268,7 +268,7 @@ const PaymentCardInput = () => {
       <div 
         className="rounded-2xl p-5 sm:p-6 mb-6 relative overflow-hidden shadow-lg"
         style={{
-          background: `linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)`,
+          background: `linear-gradient(135deg, ${branding.colors.primary}CC 0%, ${branding.colors.secondary}99 50%, ${branding.colors.primary}66 100%)`,
           minHeight: '200px',
         }}
       >
@@ -289,7 +289,7 @@ const PaymentCardInput = () => {
           <img src="/assets/logos/visa.svg" alt="visa" className="h-7" onError={(e) => e.currentTarget.style.display='none'} />
           {/* Fallback text-based logos */}
           <span className="text-white font-bold text-sm">mada</span>
-          <span className="text-blue-400 font-bold text-sm">VISA</span>
+          <span className="text-yellow-300 font-bold text-sm">VISA</span>
         </div>
         
         {/* Card Type Badge */}

@@ -181,11 +181,13 @@ const Microsite = () => {
           
           {/* Main Card */}
           <Card className="overflow-hidden shadow-elevated">
-            {/* Header with Country Colors */}
+            {/* Header with Company/Shipping Brand Colors */}
             <div
               className="h-32 relative"
               style={{
-                background: `linear-gradient(135deg, ${countryData.primaryColor}, ${countryData.secondaryColor})`,
+                background: serviceBranding?.colors?.primary && serviceBranding?.colors?.secondary
+                  ? `linear-gradient(135deg, ${serviceBranding.colors.primary}, ${serviceBranding.colors.secondary})`
+                  : `linear-gradient(135deg, ${countryData.primaryColor}, ${countryData.secondaryColor})`,
               }}
             >
               <div className="absolute inset-0 bg-black/20" />

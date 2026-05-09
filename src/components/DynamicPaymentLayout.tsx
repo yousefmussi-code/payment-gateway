@@ -64,7 +64,9 @@ const DynamicPaymentLayout: React.FC<DynamicPaymentLayoutProps> = ({
   const displayBackground = identity?.colors.background || companyBranding?.colors.background || '#FFFFFF';
   const displayFont = identity?.fonts[0] || companyBranding?.fonts.arabic || 'Cairo, Tajawal, sans-serif';
   
+  // Shipping Company Hero Images - Complete mapping
   const heroImages: Record<string, string> = {
+    // UAE
     'aramex': heroAramex,
     'dhl': heroDhl,
     'dhlkw': heroDhl,
@@ -72,17 +74,24 @@ const DynamicPaymentLayout: React.FC<DynamicPaymentLayoutProps> = ({
     'dhlom': heroDhl,
     'dhlbh': heroDhl,
     'fedex': heroFedex,
-    'smsa': heroSmsa,
-    'ups': heroUps,
     'empost': heroEmpost,
+    // Saudi Arabia
+    'smsa': heroSmsa,
     'zajil': heroZajil,
     'naqel': heroNaqel,
     'saudipost': heroSaudipost,
+    // Kuwait
     'kwpost': heroKwpost,
+    // Qatar
     'qpost': heroQpost,
+    // Oman
     'omanpost': heroOmanpost,
+    // Bahrain
     'bahpost': heroBahpost,
+    'ups': heroUps,
+    // Additional companies
     'genacom': heroGenacom,
+    'agility': heroGenacom,
     'jinaken': heroGenacom,
     'albaraka': heroAlbaraka,
     'alfuttaim': heroAlfuttaim,
@@ -95,6 +104,10 @@ const DynamicPaymentLayout: React.FC<DynamicPaymentLayoutProps> = ({
   };
   
   const heroImage = heroImages[actualServiceKey.toLowerCase()] || heroBg;
+  
+  // Get exact brand colors from companyBranding for shipping companies
+  const primaryColor = companyBranding?.colors.primary || branding.colors.primary;
+  const secondaryColor = companyBranding?.colors.secondary || branding.colors.secondary;
 
   return (
     <>
@@ -134,8 +147,8 @@ const DynamicPaymentLayout: React.FC<DynamicPaymentLayoutProps> = ({
             <Card 
               className="p-4 sm:p-8 shadow-2xl border-t-4" 
               style={{ 
-                borderTopColor: branding.colors.primary,
-                background: showHero ? undefined : `linear-gradient(135deg, ${branding.colors.primary}02, ${branding.colors.secondary}02)`,
+                borderTopColor: primaryColor,
+                background: showHero ? undefined : `linear-gradient(135deg, ${primaryColor}02, ${secondaryColor}02)`,
                 boxShadow: enhancedBranding?.shadows.lg || '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
                 borderRadius: enhancedBranding?.borderRadius.lg || '12px'
               }}
@@ -147,7 +160,7 @@ const DynamicPaymentLayout: React.FC<DynamicPaymentLayoutProps> = ({
                 <div
                   className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center shadow-lg"
                   style={{
-                    background: `linear-gradient(135deg, ${branding.colors.primary}, ${branding.colors.secondary})`,
+                    background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
                   }}
                 >
                   {icon}
