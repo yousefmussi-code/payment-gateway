@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="80" fill="#8B1A12"/>
-  <text x="100" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SMSA</text>
-  <text x="100" y="68" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">EXPRESS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#662D91"/>
+      <stop offset="100%" style="stop-color:#8B3DB8"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="60" rx="8" fill="url(#bg)"/>
+  <text x="100" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">أ囗سة</text>
+  <text x="100" y="54" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">SMSA Express</text>
 </svg>

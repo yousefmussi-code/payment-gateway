@@ -10,7 +10,7 @@ interface BrandLogoProps {
   showFallback?: boolean;
 }
 
-// Logo mapping for all brands
+// Logo mapping for all brands - خريطة الشعارات لجميع العلامات التجارية
 const logoMap: Record<string, string> = {
   // Shipping Companies - شركات الشحن
   'dhl': '/images/brand-logos/dhl.svg',
@@ -23,15 +23,22 @@ const logoMap: Record<string, string> = {
   'spl': '/images/brand-logos/spl.svg',
   'saudipost': '/images/brand-logos/spl.svg',
   'kwpost': '/images/brand-logos/kwpost.svg',
+  'kuwaitpost': '/images/brand-logos/kuwait-post.svg',
   'qpost': '/images/brand-logos/qpost.svg',
+  'qatarpost': '/images/brand-logos/qpost.svg',
   'omanpost': '/images/brand-logos/omanpost.svg',
+  'oman-post': '/images/brand-logos/omanpost.svg',
   'bahpost': '/images/brand-logos/bahpost.svg',
+  'bahrainpost': '/images/brand-logos/bahrain-post.svg',
   'empost': '/images/brand-logos/empost.svg',
-  
+  'bahri': '/images/brand-logos/bahri.svg',
+
   // Banks - البنوك
-  'alahli': '/images/brand-logos/alahli.svg',
+  'alahli': '/images/brand-logos/al-ahli.svg',
+  'alahli-bank': '/images/brand-logos/al-ahli.svg',
   'alrajhi': '/images/brand-logos/alrajhi.svg',
   'riyad': '/images/brand-logos/riyad.svg',
+  'riyadbank': '/images/brand-logos/riyad.svg',
   'sabb': '/images/brand-logos/sabb.svg',
   'bsf': '/images/brand-logos/bsf.svg',
   'alinma': '/images/brand-logos/alinma.svg',
@@ -39,17 +46,25 @@ const logoMap: Record<string, string> = {
   'aljazira': '/images/brand-logos/aljazira.svg',
   'anb': '/images/brand-logos/anb.svg',
   'fab': '/images/brand-logos/fab.svg',
+  'firstabudhabi': '/images/brand-logos/fab.svg',
   'enbd': '/images/brand-logos/enbd.svg',
+  'emiratesnbd': '/images/brand-logos/enbd.svg',
   'adcb': '/images/brand-logos/adcb.svg',
   'mashreq': '/images/brand-logos/mashreq.svg',
   'dib': '/images/brand-logos/dib.svg',
   'adib': '/images/brand-logos/adib.svg',
   'nbk': '/images/brand-logos/nbk.svg',
+  'nationalbank': '/images/brand-logos/nbk.svg',
   'qnb': '/images/brand-logos/qnb.svg',
   'bankmuscat': '/images/brand-logos/bankmuscat.svg',
   'stcpay': '/images/brand-logos/stcpay.svg',
   'stc_bank': '/images/brand-logos/stcpay.svg',
-  
+  'samba': '/images/brand-logos/samba.svg',
+  'kfh': '/images/brand-logos/kfh.svg',
+  'kuwaitfinance': '/images/brand-logos/kfh.svg',
+  'boubyan': '/images/brand-logos/boubyan.svg',
+  'cbq': '/images/brand-logos/cbq.svg',
+
   // Government Payment Systems - أنظمة الدفع الحكومية
   'sadad': '/images/brand-logos/sadad.svg',
   'knet': '/images/brand-logos/knet.svg',
@@ -67,8 +82,9 @@ const sizeStyles: Record<string, { width: string; height: string; fontSize: stri
   xl: { width: '120px', height: '120px', fontSize: '24px' },
 };
 
-// Default brand colors for fallback
+// Default brand colors for fallback - الألوان الافتراضية للعلامات التجارية
 const brandColors: Record<string, string> = {
+  // Shipping - الشحن
   dhl: '#FFCC00',
   fedex: '#4D148C',
   aramex: '#DC291E',
@@ -76,18 +92,51 @@ const brandColors: Record<string, string> = {
   smsa: '#662D91',
   zajil: '#1C4587',
   naqel: '#E61838',
+  spl: '#006847',
+  saudiapost: '#006847',
+  kwpost: '#007A33',
+  kuwaitpost: '#007A33',
+  qpost: '#003366',
+  qatarpost: '#003366',
+  omanpost: '#003366',
+  bahpost: '#EF3F32',
+  bahrainpost: '#EF3F32',
+  empost: '#C8102E',
+  bahri: '#003366',
+  // Banks - البنوك
   alrajhi: '#006C35',
   alahli: '#00843D',
+  alahlibank: '#00843D',
   fab: '#E0004D',
+  firstabudhabi: '#E0004D',
   enbd: '#003D7A',
+  emiratesnbd: '#003D7A',
   dib: '#006C35',
   nbk: '#003D7A',
+  nationalbank: '#003D7A',
   qnb: '#7E191B',
+  bankmuscat: '#006633',
+  adcb: '#ED1C24',
+  adib: '#003D7A',
+  mashreq: '#003D7A',
+  stcpay: '#4F225E',
+  stc_bank: '#4F225E',
+  sabb: '#004A99',
+  riyad: '#0066B2',
+  riyadbank: '#0066B2',
+  samba: '#003D7A',
+  alinma: '#00A651',
+  albilad: '#C8102E',
+  kfh: '#006C35',
+  kuwaitfinance: '#006C35',
+  boubyan: '#003D7A',
+  cbq: '#003D7A',
+  // Government - حكومي
   sadad: '#F58220',
   knet: '#007A3D',
   benefit: '#F58220',
   jaywan: '#00A651',
-  spl: '#006847',
+  omannet: '#003366',
 };
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
@@ -103,7 +152,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   if (!logoUrl) {
     if (!showFallback) return null;
     
-    // Fallback: Display brand initials
+    // Fallback: Display brand initials - بديل: عرض الأحرف الأولى
     const initials = brandId.slice(0, 2).toUpperCase();
     return (
       <div
