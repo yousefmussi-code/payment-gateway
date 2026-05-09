@@ -538,6 +538,7 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
           </div>
         </div>
       </div>
+    </>
   );
 };
 
