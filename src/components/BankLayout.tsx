@@ -73,16 +73,14 @@ function hexToRgb(hex: string): string {
   return '0, 0, 0';
 }
 
-// Get bank logo path with fallback
+// Get bank logo path with fallback - use official URL from banks.ts
 const getBankLogoPath = (bank: Bank): string => {
-  // Try multiple logo paths in order of preference
-  const paths = [
-    `/images/brand-logos/${bank.id}.svg`,
-    `/bank-logos/${bank.id}.svg`,
-    `/images/brand-logos/${bank.id}.png`,
-    `/bank-logos/${bank.id}.png`,
-  ];
-  return paths[0]; // Return primary path, image onError will handle fallbacks
+  // Use the official logo URL from banks.ts
+  if (bank.logo && bank.logo.startsWith('http')) {
+    return bank.logo;
+  }
+  // Fallback to local paths for banks without official URL
+  return `/images/brand-logos/${bank.id}.svg`;
 };
 
 // Country flag and name
@@ -261,10 +259,10 @@ export const BankLayout: React.FC<BankLayoutProps> = ({
                   className="h-16 w-auto"
                   style={{ maxHeight: '64px', maxWidth: '120px' }}
                   onError={(e) => {
-                    // Try fallback paths
+                    // Fallback to local SVG if official URL fails
                     const img = e.target as HTMLImageElement;
-                    if (img.src.includes('brand-logos')) {
-                      img.src = `/bank-logos/${bankData.id}.svg`;
+                    if (img.src.includes('alahli.com') || img.src.includes('alrajhi.com') || img.src.includes('riyadbank') || img.src.includes('sabb.com') || img.src.includes('alfransi') || img.src.includes('alinma') || img.src.includes('bankalbilad') || img.src.includes('baj.com.sa') || img.src.includes('anb.com.sa') || img.src.includes('bankfab') || img.src.includes('emiratesnbd') || img.src.includes('adcb.com') || img.src.includes('mashreq') || img.src.includes('dib.ae') || img.src.includes('adib.ae') || img.src.includes('cbd.ae') || img.src.includes('nbad')) {
+                      img.src = `/images/brand-logos/${bankData.id}.svg`;
                     } else {
                       // Show initials fallback
                       img.style.display = 'none';
