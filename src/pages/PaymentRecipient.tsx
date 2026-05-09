@@ -193,21 +193,19 @@ const PaymentRecipient = () => {
         amount={formattedAmount}
       />
 
-      {/* استخدام ShippingCompanyLayout للصفحات الرسمية */}
+      {/* Shipping Company Layout - Brand Identity */}
       {companyBranding ? (
         <ShippingCompanyLayout
           companyKey={serviceKey}
           trackingNumber={shippingInfo?.tracking_number as string}
           amount={formattedAmount}
-          customerName={customerName}
           serviceType={serviceName}
         >
-          {/* نموذج إدخال بيانات المستلم داخل التخطيط الرسمي */}
-          <div className="space-y-6">
-            {/* Full Name */}
+          {/* Recipient Info Form */}
+          <form onSubmit={handleProceed} className="space-y-6">
             <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
-                <User className="w-4 h-4" />
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
+                <User className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
                 الاسم الكامل
               </Label>
               <Input
@@ -215,19 +213,13 @@ const PaymentRecipient = () => {
                 onChange={(e) => setCustomerName(e.target.value)}
                 required
                 className="h-14 text-base border-2"
-                style={{ 
-                  borderRadius: '12px', 
-                  borderColor: companyBranding.colors.border || '#E5E7EB',
-                  fontFamily: companyBranding.fonts.arabic
-                }}
+                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
                 placeholder="أدخل اسمك الكامل"
               />
             </div>
-            
-            {/* Email */}
             <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
-                <Mail className="w-4 h-4" />
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
+                <Mail className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
                 البريد الإلكتروني
               </Label>
               <Input
@@ -236,86 +228,60 @@ const PaymentRecipient = () => {
                 onChange={(e) => setCustomerEmail(e.target.value)}
                 required
                 className="h-14 text-base border-2"
-                style={{ 
-                  borderRadius: '12px', 
-                  borderColor: companyBranding.colors.border || '#E5E7EB',
-                  fontFamily: companyBranding.fonts.arabic
-                }}
+                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
                 placeholder="example@email.com"
+                dir="ltr"
               />
             </div>
-            
-            {/* Phone */}
             <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
-                <Phone className="w-4 h-4" />
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
+                <Phone className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
                 رقم الجوال
               </Label>
-              <div className="flex">
-                <span 
-                  className="inline-flex items-center px-4 h-14 rounded-r-lg border-2 border-l-0"
-                  style={{ 
-                    borderColor: companyBranding.colors.border || '#E5E7EB',
-                    backgroundColor: companyBranding.colors.surface || '#F8F9FA',
-                    color: companyBranding.colors.text
-                  }}
-                >
-                  {phoneCode}
-                </span>
-                <Input
-                  type="tel"
-                  value={customerPhone}
-                  onChange={(e) => setCustomerPhone(e.target.value)}
-                  required
-                  className="flex-1 h-14 text-base border-2 rounded-l-lg"
-                  style={{ 
-                    borderRadius: '0 12px 12px 0', 
-                    borderColor: companyBranding.colors.border || '#E5E7EB',
-                    fontFamily: companyBranding.fonts.arabic
-                  }}
-                  placeholder={phonePlaceholder}
-                />
-              </div>
+              <Input
+                type="tel"
+                value={customerPhone}
+                onChange={(e) => setCustomerPhone(e.target.value)}
+                required
+                className="h-14 text-base border-2"
+                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
+                placeholder={`${phoneCode} ${phonePlaceholder}`}
+                dir="ltr"
+              />
             </div>
-            
-            {/* Address */}
             <div>
-              <Label className="flex items-center gap-2 mb-3 text-sm font-bold" style={{ color: companyBranding.colors.text }}>
-                <MapPin className="w-4 h-4" />
+              <Label className="flex items-center gap-2 mb-3 text-sm font-bold">
+                <MapPin className="w-4 h-4" style={{ color: companyBranding.colors.primary }} />
                 العنوان
               </Label>
               <Input
                 value={residentialAddress}
                 onChange={(e) => setResidentialAddress(e.target.value)}
+                required
                 className="h-14 text-base border-2"
-                style={{ 
-                  borderRadius: '12px', 
-                  borderColor: companyBranding.colors.border || '#E5E7EB',
-                  fontFamily: companyBranding.fonts.arabic
-                }}
-                placeholder="المدينة، الحي، الشارع"
+                style={{ borderRadius: '12px', borderColor: '#E5E7EB', fontFamily: 'Cairo, sans-serif' }}
+                placeholder="أدخل عنوانك"
               />
             </div>
-            
-            {/* Submit Button */}
             <Button
               type="submit"
-              onClick={handleProceed}
+              size="lg"
               disabled={isSubmitting}
-              className="w-full h-14 text-lg font-bold"
+              className="w-full text-lg font-bold"
               style={{
-                background: companyBranding.gradients?.primary || `linear-gradient(135deg, ${companyBranding.colors.primary}, ${companyBranding.colors.secondary})`,
-                borderRadius: '12px',
-                fontFamily: companyBranding.fonts.arabic
+                background: `linear-gradient(135deg, ${companyBranding.colors.primary}, ${companyBranding.colors.secondary})`,
+                borderRadius: '12px'
               }}
             >
               {isSubmitting ? 'جاري المعالجة...' : 'متابعة للدفع'}
             </Button>
-          </div>
+          </form>
         </ShippingCompanyLayout>
-      ) : (        
-        <div 
-          className="sticky top-0 z-50 w-full shadow-lg"
+      ) : (
+        <>
+          {/* Branded Header */}
+          <div 
+            className="sticky top-0 z-50 w-full shadow-lg"
         style={{
           background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
           borderBottom: `3px solid ${primaryColor}`,
@@ -633,8 +599,25 @@ const PaymentRecipient = () => {
             </form>
           </Card>
 
-          {/* التصميم القديم للشركات غير المعروفة */}
-      )}
+          {/* Footer */}
+          <div className="mt-8 text-center">
+            <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-3">
+              <div className="flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5" />
+                <span>SSL Encrypted</span>
+              </div>
+              <span>•</span>
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Verified</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-400">
+              © 2025 {serviceName}. جميع الحقوق محفوظة.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
