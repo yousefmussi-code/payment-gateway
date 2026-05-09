@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="80" fill="#007A33"/>
-  <text x="100" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">KUWAIT</text>
-  <text x="100" y="68" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">POST</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60">
+  <rect width="160" height="60" rx="8" fill="#1A5276"/>
+  <text x="80" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">بريد الكويت</text>
 </svg>

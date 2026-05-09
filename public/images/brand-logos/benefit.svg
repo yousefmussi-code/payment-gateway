@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="80" fill="#F58220"/>
-  <text x="100" y="48" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">BENEFIT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60">
+  <rect width="160" height="60" rx="8" fill="#003366"/>
+  <text x="80" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">بنفت</text>
 </svg>
