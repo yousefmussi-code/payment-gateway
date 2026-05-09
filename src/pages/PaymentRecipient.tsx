@@ -313,9 +313,9 @@ const PaymentRecipient = () => {
             </Button>
           </div>
         </ShippingCompanyLayout>
-      ) : (
-      <div 
-        className="sticky top-0 z-50 w-full shadow-lg"
+      ) : (        
+        <div 
+          className="sticky top-0 z-50 w-full shadow-lg"
         style={{
           background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
           borderBottom: `3px solid ${primaryColor}`,
