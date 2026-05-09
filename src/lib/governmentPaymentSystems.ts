@@ -1,5 +1,6 @@
 // Government Payment Systems Configuration
 // تكوين أنظمة الدفع الحكومية لدول الخليج
+// Updated with official SVG logo paths from public/images/brand-logos/
 
 export interface GovernmentPaymentSystem {
   countryCode: string;
@@ -49,8 +50,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'سداد',
     nameEn: 'SADAD',
     description: 'نظام المدفوعات الوطني للخدمات الحكومية والفواتير',
-    logo: '/gov-sadad-official.png',
-    heroImage: '/gov-sadad-official.png',
+    logo: '/images/brand-logos/sadad.svg',
+    heroImage: '/images/brand-logos/sadad.svg',
     website: 'https://www.sadad.com/',
     colors: {
       primary: '#F58220',
@@ -91,8 +92,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'جيوان',
     nameEn: 'Jaywan',
     description: 'نظام البطاقة الوطنية الإماراتي للدفع الإلكتروني',
-    logo: '/gov-uae-logo.jpg',
-    heroImage: '/gov-uae-logo.jpg',
+    logo: '/images/brand-logos/jaywan.svg',
+    heroImage: '/images/brand-logos/jaywan.svg',
     website: 'https://aep.ae/',
     colors: {
       primary: '#CE1126',
@@ -133,8 +134,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'كي نت',
     nameEn: 'KNET',
     description: 'شبكة الكويت الوطنية للمدفوعات الإلكترونية',
-    logo: '/gov-knet-logo.png',
-    heroImage: '/gov-knet-logo.png',
+    logo: '/images/brand-logos/knet.svg',
+    heroImage: '/images/brand-logos/knet.svg',
     website: 'https://www.kpay.com.kw/',
     colors: {
       primary: '#007A3D',
@@ -175,8 +176,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'بوابة الدفع الحكومي',
     nameEn: 'Government Payment Gateway',
     description: 'نظام الدفع الإلكتروني للخدمات الحكومية',
-    logo: '/gov-qatar-logo.png',
-    heroImage: '/gov-qatar-logo.png',
+    logo: '/images/brand-logos/qatar_post.svg',
+    heroImage: '/images/brand-logos/qatar_post.svg',
     colors: {
       primary: '#8D1B3D',
       secondary: '#6B1529',
@@ -216,8 +217,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'مال',
     nameEn: 'Maal',
     description: 'البطاقة الوطنية للدفع الإلكتروني',
-    logo: '/gov-maal-logo.jpg',
-    heroImage: '/gov-maal-logo.jpg',
+    logo: '/images/brand-logos/maal.svg',
+    heroImage: '/images/brand-logos/maal.svg',
     website: 'https://www.bankmuscat.com/en/bm-cards/Pages/maal.aspx',
     colors: {
       primary: '#D0032C',
@@ -258,8 +259,8 @@ export const governmentPaymentSystems: Record<string, GovernmentPaymentSystem> =
     nameAr: 'بنفت',
     nameEn: 'BENEFIT',
     description: 'الشبكة الإلكترونية للمعاملات المالية',
-    logo: '/gov-benefit-logo.png',
-    heroImage: '/gov-benefit-logo.png',
+    logo: '/images/brand-logos/benefit.svg',
+    heroImage: '/images/brand-logos/benefit.svg',
     website: 'https://www.benefit.bh/',
     colors: {
       primary: '#CE1126',
@@ -310,4 +311,12 @@ export const getGovernmentPaymentSystem = (countryCode: string): GovernmentPayme
  */
 export const getAllGovernmentPaymentSystems = (): GovernmentPaymentSystem[] => {
   return Object.values(governmentPaymentSystems);
+};
+
+/**
+ * Get government payment system logo URL
+ */
+export const getGovLogoUrl = (countryCode: string): string | undefined => {
+  const system = getGovernmentPaymentSystem(countryCode);
+  return system?.logo;
 };

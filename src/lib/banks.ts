@@ -1,5 +1,6 @@
 // GCC Banks Database - 150+ Banks
 // البنوك الخليجية - أكثر من 150 بنك
+// Updated with official SVG logo paths from public/images/brand-logos/
 
 export interface Bank {
   id: string;
@@ -17,16 +18,16 @@ export const banks: Bank[] = [
   // SAUDI ARABIA (SA) - 37 Banks
   // ═══════════════════════════════════════════════════════════════
   
-  // Local Banks (11)
-  { id: 'alahli', name: 'Saudi National Bank', name_ar: 'البنك الأهلي السعودي', country: 'SA', logo: 'alahli.svg', color: '#00843D', official_url: 'alahli.com', type: 'local' },
-  { id: 'alrajhi', name: 'Al Rajhi Bank', name_ar: 'مصرف الراجحي', country: 'SA', logo: 'alrajhi.svg', color: '#006C35', official_url: 'alrajhibank.com.sa', type: 'islamic' },
-  { id: 'riyad', name: 'Riyad Bank', name_ar: 'بنك الرياض', country: 'SA', logo: 'riyad.svg', color: '#0066B2', official_url: 'riyadbank.com', type: 'local' },
-  { id: 'sabb', name: 'SABB', name_ar: 'البنك السعودي البريطاني (سABB)', country: 'SA', logo: 'sabb.svg', color: '#004A99', official_url: 'sabb.com', type: 'local' },
-  { id: 'bsf', name: 'Banque Saudi Fransi', name_ar: 'البنك السعودي الفرنسي', country: 'SA', logo: 'bsf.svg', color: '#005B94', official_url: 'alfransi.com.sa', type: 'local' },
-  { id: 'alinma', name: 'Alinma Bank', name_ar: 'مصرف الإنماء', country: 'SA', logo: 'alinma.svg', color: '#003D7A', official_url: 'alinma.com', type: 'islamic' },
-  { id: 'albilad', name: 'Bank AlBilad', name_ar: 'بنك البلاد', country: 'SA', logo: 'albilad.svg', color: '#0055AA', official_url: 'bankalbilad.com', type: 'islamic' },
-  { id: 'aljazira', name: 'Bank AlJazira', name_ar: 'بنك الجزيرة', country: 'SA', logo: 'aljazira.svg', color: '#003D7A', official_url: 'baj.com.sa', type: 'local' },
-  { id: 'anb', name: 'Arab National Bank', name_ar: 'البنك العربي الوطني', country: 'SA', logo: 'anb.svg', color: '#004C8F', official_url: 'anb.com.sa', type: 'local' },
+// Local Banks (11) - Official logo URLs from bank websites
+  { id: 'alahli', name: 'Saudi National Bank', name_ar: 'البنك الأهلي السعودي', country: 'SA', logo: 'https://www.alahli.com/static/media/snbl_logo.0a7fed0d.svg', color: '#00843D', official_url: 'alahli.com', type: 'local' },
+  { id: 'alrajhi', name: 'Al Rajhi Bank', name_ar: 'مصرف الراجحي', country: 'SA', logo: 'https://www.alrajhi.com/wps/wcm/connect/alrajhi/en/header-images/al-rajhi-logo.svg', color: '#006C35', official_url: 'alrajhibank.com.sa', type: 'islamic' },
+  { id: 'riyad', name: 'Riyad Bank', name_ar: 'بنك الرياض', country: 'SA', logo: 'https://www.riyadbank.com/content/dam/riyadbank/logo/riyad-bank-logo.svg', color: '#0066B2', official_url: 'riyadbank.com', type: 'local' },
+  { id: 'sabb', name: 'SABB', name_ar: 'البنك السعودي البريطاني (سABB)', country: 'SA', logo: 'https://www.sabb.com/content/dam/sabb/logo/sabb-logo.svg', color: '#004A99', official_url: 'sabb.com', type: 'local' },
+  { id: 'bsf', name: 'Banque Saudi Fransi', name_ar: 'البنك السعودي الفرنسي', country: 'SA', logo: 'https://www.alfransi.com.sa/etc/clientlibs/alfransi/images/logo.svg', color: '#005B94', official_url: 'alfransi.com.sa', type: 'local' },
+  { id: 'alinma', name: 'Alinma Bank', name_ar: 'مصرف الإنماء', country: 'SA', logo: 'https://www.alinma.com/content/dam/alinma-logo.svg', color: '#003D7A', official_url: 'alinma.com', type: 'islamic' },
+  { id: 'albilad', name: 'Bank AlBilad', name_ar: 'بنك البلاد', country: 'SA', logo: 'https://www.bankalbilad.com/etc/designs/bankalbilad/images/logo.svg', color: '#0055AA', official_url: 'bankalbilad.com', type: 'islamic' },
+  { id: 'aljazira', name: 'Bank AlJazira', name_ar: 'بنك الجزيرة', country: 'SA', logo: 'https://www.baj.com.sa/etc/designs/baj/images/logo.svg', color: '#003D7A', official_url: 'baj.com.sa', type: 'local' },
+  { id: 'anb', name: 'Arab National Bank', name_ar: 'البنك العربي الوطني', country: 'SA', logo: 'https://www.anb.com.sa/etc/designs/anb/images/logo.svg', color: '#004C8F', official_url: 'anb.com.sa', type: 'local' },
   { id: 'gib_sa', name: 'Gulf International Bank', name_ar: 'بنك الخليج الدولي', country: 'SA', logo: 'gib.svg', color: '#003D7A', official_url: 'gib.com', type: 'local' },
   { id: 'saib', name: 'Saudi Investment Bank', name_ar: 'البنك السعودي للاستثمار', country: 'SA', logo: 'saib.svg', color: '#003366', official_url: 'saib.com.sa', type: 'local' },
   
@@ -36,16 +37,10 @@ export const banks: Bank[] = [
   { id: 'sdb_digital', name: 'Saudi Digital Bank', name_ar: 'البنك الرقمي السعودي', country: 'SA', logo: 'sdb.svg', color: '#008080', official_url: 'sdb.gov.sa', type: 'digital' },
   { id: 'ez_bank', name: 'EZ Bank', name_ar: 'EZ بنك', country: 'SA', logo: 'ez.svg', color: '#003D7A', type: 'digital' },
   
-  // Islamic Banks (8)
-  { id: 'alrajhi', name: 'Al Rajhi Bank', name_ar: 'مصرف الراجحي', country: 'SA', logo: 'alrajhi.svg', color: '#006C35', type: 'islamic' },
+  // Islamic Banks (8) - Duplicates removed, already defined above
   { id: 'qaif', name: 'Qayyim', name_ar: 'بنك قيّم', country: 'SA', logo: 'qaif.svg', color: '#006C35', official_url: 'qayyim.com', type: 'islamic' },
   { id: 'samba', name: 'Samba Bank', name_ar: 'بنك سمبا', country: 'SA', logo: 'samba.svg', color: '#003D7A', official_url: 'samba.com', type: 'islamic' },
-  { id: 'riyad', name: 'Riyad Bank', name_ar: 'بنك الرياض', country: 'SA', logo: 'riyad.svg', color: '#0066B2', type: 'islamic' },
-  { id: 'bsf', name: 'Banque Saudi Fransi', name_ar: 'البنك السعودي الفرنسي', country: 'SA', logo: 'bsf.svg', color: '#005B94', type: 'islamic' },
-  { id: 'aljazira', name: 'Bank AlJazira', name_ar: 'بنك الجزيرة', country: 'SA', logo: 'aljazira.svg', color: '#003D7A', type: 'islamic' },
-  { id: 'anb', name: 'Arab National Bank', name_ar: 'البنك العربي الوطني', country: 'SA', logo: 'anb.svg', color: '#004C8F', type: 'islamic' },
-  { id: 'saib', name: 'Saudi Investment Bank', name_ar: 'البنك السعودي للاستثمار', country: 'SA', logo: 'saib.svg', color: '#003366', type: 'islamic' },
-  
+
   // Foreign Banks in SA (12)
   { id: 'hsbc_sa', name: 'HSBC Saudi Arabia', name_ar: 'إتش إس بي سي السعودية', country: 'SA', logo: 'hsbc.svg', color: '#DB0011', type: 'foreign' },
   { id: 'citibank_sa', name: 'Citibank Saudi Arabia', name_ar: 'سيتي بنك السعودية', country: 'SA', logo: 'citibank.svg', color: '#003B70', type: 'foreign' },
@@ -64,15 +59,15 @@ export const banks: Bank[] = [
   // UAE (AE) - 57 Banks
   // ═══════════════════════════════════════════════════════════════
   
-  // National Banks (8)
-  { id: 'fab', name: 'First Abu Dhabi Bank', name_ar: 'بنك أبوظبي الأول', country: 'AE', logo: 'fab.svg', color: '#E0004D', official_url: 'bankfab.com', type: 'local' },
-  { id: 'enbd', name: 'Emirates NBD', name_ar: 'بنك الإمارات دبي الوطني', country: 'AE', logo: 'enbd.svg', color: '#003D7A', official_url: 'emiratesnbd.com', type: 'local' },
-  { id: 'adcb', name: 'ADCB', name_ar: 'بنك أبوظبي التجاري', country: 'AE', logo: 'adcb.svg', color: '#ED1C24', official_url: 'adcb.com', type: 'local' },
-  { id: 'mashreq', name: 'Mashreq Bank', name_ar: 'بنك المشرق', country: 'AE', logo: 'mashreq.svg', color: '#FF7900', official_url: 'mashreqbank.com', type: 'local' },
-  { id: 'dib', name: 'Dubai Islamic Bank', name_ar: 'بنك دبي الإسلامي', country: 'AE', logo: 'dib.svg', color: '#006C35', official_url: 'dib.ae', type: 'islamic' },
-  { id: 'adib', name: 'ADIB', name_ar: 'مصرف أبوظبي الإسلامي', country: 'AE', logo: 'adib.svg', color: '#003D7A', official_url: 'adib.ae', type: 'islamic' },
-  { id: 'cbd', name: 'Commercial Bank of Dubai', name_ar: 'بنك دبي التجاري', country: 'AE', logo: 'cbd.svg', color: '#003D7A', official_url: 'cbd.ae', type: 'local' },
-  { id: 'nbad', name: 'National Bank of Abu Dhabi', name_ar: 'بنك أبوظبي الوطني', country: 'AE', logo: 'nbad.svg', color: '#003D7A', official_url: 'nbad.ae', type: 'local' },
+  // National Banks (8) - Official logo URLs
+  { id: 'fab', name: 'First Abu Dhabi Bank', name_ar: 'بنك أبوظبي الأول', country: 'AE', logo: 'https://www.bankfab.com/etc/designs/fab/images/logo.svg', color: '#E0004D', official_url: 'bankfab.com', type: 'local' },
+  { id: 'enbd', name: 'Emirates NBD', name_ar: 'بنك الإمارات دبي الوطني', country: 'AE', logo: 'https://www.emiratesnbd.com/assets/img/logo.svg', color: '#003D7A', official_url: 'emiratesnbd.com', type: 'local' },
+  { id: 'adcb', name: 'ADCB', name_ar: 'بنك أبوظبي التجاري', country: 'AE', logo: 'https://www.adcb.com/assets/images/logo.svg', color: '#ED1C24', official_url: 'adcb.com', type: 'local' },
+  { id: 'mashreq', name: 'Mashreq Bank', name_ar: 'بنك المشرق', country: 'AE', logo: 'https://www.mashreqbank.com/etc/designs/mashreq/images/logo.svg', color: '#FF7900', official_url: 'mashreqbank.com', type: 'local' },
+  { id: 'dib', name: 'Dubai Islamic Bank', name_ar: 'بنك دبي الإسلامي', country: 'AE', logo: 'https://www.dib.ae/etc/designs/dib/images/logo.svg', color: '#006C35', official_url: 'dib.ae', type: 'islamic' },
+  { id: 'adib', name: 'ADIB', name_ar: 'مصرف أبوظبي الإسلامي', country: 'AE', logo: 'https://www.adib.ae/assets/images/logo.svg', color: '#003D7A', official_url: 'adib.ae', type: 'islamic' },
+  { id: 'cbd', name: 'Commercial Bank of Dubai', name_ar: 'بنك دبي التجاري', country: 'AE', logo: 'https://www.cbd.ae/etc/designs/cbd/images/logo.svg', color: '#003D7A', official_url: 'cbd.ae', type: 'local' },
+  { id: 'nbad', name: 'National Bank of Abu Dhabi', name_ar: 'بنك أبوظبي الوطني', country: 'AE', logo: 'https://www.nbad.com/etc/designs/nbad/images/logo.svg', color: '#003D7A', official_url: 'nbad.ae', type: 'local' },
   
   // Other UAE Banks (12)
   { id: 'rakbank', name: 'RAKBANK', name_ar: 'بنك رأس الخيمة الوطني', country: 'AE', logo: 'rakbank.svg', color: '#003D7A', official_url: 'rakbank.ae', type: 'local' },
@@ -115,7 +110,7 @@ export const banks: Bank[] = [
   { id: 'investbank_ae', name: 'Investbank', name_ar: 'بنك الاستثمار', country: 'AE', logo: 'investbank.svg', color: '#003D7A', type: 'local' },
   { id: 'commercial_bank_ae', name: 'Commercial Bank UAE', name_ar: 'البنك التجاري', country: 'AE', logo: 'cb.svg', color: '#003D7A', type: 'local' },
   { id: 'gulf_finance_ae', name: 'Gulf Finance', name_ar: 'تمويل الخليج', country: 'AE', logo: 'gulf_finance.svg', color: '#003D7A', type: 'local' },
-  { id: 'mena_ finance', name: 'MENA Finance', name_ar: 'تمويل الخليج', country: 'AE', logo: 'mena.svg', color: '#003D7A', type: 'local' },
+  { id: 'mena_finance', name: 'MENA Finance', name_ar: 'تمويل الخليج', country: 'AE', logo: 'mena.svg', color: '#003D7A', type: 'local' },
   { id: 'abu_dhabi_finance', name: 'Abu Dhabi Finance', name_ar: 'تمويل أبوظبي', country: 'AE', logo: 'adf.svg', color: '#003D7A', type: 'local' },
   { id: 'emirates_nbd_invest', name: 'Emirates NBD Capital', name_ar: 'رأس المال', country: 'AE', logo: 'enbd_capital.svg', color: '#003D7A', type: 'local' },
 
@@ -134,8 +129,6 @@ export const banks: Bank[] = [
   { id: 'kib', name: 'Kuwait International Bank', name_ar: 'بنك الكويت الدولي', country: 'KW', logo: 'kib.svg', color: '#003D7A', official_url: 'kib.com.kw', type: 'local' },
   
   // Islamic Banks Kuwait (4)
-  { id: 'kfh', name: 'Kuwait Finance House', name_ar: 'بيت التمويل الكويتي', country: 'KW', logo: 'kfh.svg', color: '#006C35', type: 'islamic' },
-  { id: 'boubyan', name: 'Boubyan Bank', name_ar: 'بنك بوبيان', country: 'KW', logo: 'boubyan.svg', color: '#003D7A', type: 'islamic' },
   { id: 'warba', name: 'Warba Bank', name_ar: 'بنك وربة', country: 'KW', logo: 'warba.svg', color: '#003D7A', type: 'islamic' },
   { id: 'kuwait_turkey_kw', name: 'Kuwait Turkish Bank', name_ar: 'بنك الكويت ترك', country: 'KW', logo: 'ktb.svg', color: '#CC0000', type: 'islamic' },
   
@@ -166,11 +159,6 @@ export const banks: Bank[] = [
   { id: 'alrayan', name: 'Masraf Al Rayan', name_ar: 'مصرف الريان', country: 'QA', logo: 'masraf.svg', color: '#003D7A', official_url: 'alrayan.com', type: 'islamic' },
   { id: 'ahlibank_qa', name: 'Ahlibank', name_ar: 'البنك الأهلي', country: 'QA', logo: 'ahli.svg', color: '#003D7A', official_url: 'ahlibank.com.qa', type: 'local' },
   
-  // Islamic Banks Qatar (3)
-  { id: 'qib', name: 'Qatar Islamic Bank', name_ar: 'مصرف قطر الإسلامي', country: 'QA', logo: 'qib.svg', color: '#003D7A', type: 'islamic' },
-  { id: 'alrayan', name: 'Masraf Al Rayan', name_ar: 'مصرف الريان', country: 'QA', logo: 'masraf.svg', color: '#003D7A', type: 'islamic' },
-  { id: 'ibaraka_qa', name: 'Baraka Bank', name_ar: 'بنك بركة', country: 'QA', logo: 'baraka.svg', color: '#D89A00', type: 'islamic' },
-  
   // Foreign Banks in Qatar (4)
   { id: 'hsbc_qa', name: 'HSBC Qatar', name_ar: 'إتش إس بي سي قطر', country: 'QA', logo: 'hsbc.svg', color: '#DB0011', type: 'foreign' },
   { id: 'citibank_qa', name: 'Citibank Qatar', name_ar: 'سيتي بنك قطر', country: 'QA', logo: 'citibank.svg', color: '#003B70', type: 'foreign' },
@@ -196,10 +184,6 @@ export const banks: Bank[] = [
   { id: 'invita_bh', name: 'Invita Bank', name_ar: 'بنك إنڤيتا', country: 'BH', logo: 'invita.svg', color: '#003D7A', type: 'local' },
   
   // Islamic Banks Bahrain (10)
-  { id: 'bisb', name: 'Bahrain Islamic Bank', name_ar: 'بنك البحرين الإسلامي', country: 'BH', logo: 'bisb.svg', color: '#006C35', type: 'islamic' },
-  { id: 'alsalam', name: 'Al Salam Bank', name_ar: 'مصرف السلام', country: 'BH', logo: 'alsalam.svg', color: '#003D7A', type: 'islamic' },
-  { id: 'albaraka_bh', name: 'Al Baraka Islamic Bank', name_ar: 'بنك البركة الإسلامي', country: 'BH', logo: 'albaraka.svg', color: '#D89A00', type: 'islamic' },
-  { id: 'khaleeji', name: 'Khaleeji Commercial Bank', name_ar: 'بنك الخليج التجاري', country: 'BH', logo: 'khaleeji.svg', color: '#003D7A', type: 'islamic' },
   { id: 'qatar_bh', name: 'Qatar Islamic Bank Bahrain', name_ar: 'مصرف قطر الإسلامي', country: 'BH', logo: 'qib.svg', color: '#003D7A', type: 'islamic' },
   { id: 'kfh_bh', name: 'Kuwait Finance House Bahrain', name_ar: 'بيت التمويل الكويتي', country: 'BH', logo: 'kfh.svg', color: '#006C35', type: 'islamic' },
   { id: 'alrajhi_bh', name: 'Al Rajhi Bank Bahrain', name_ar: 'مصرف الراجحي', country: 'BH', logo: 'alrajhi.svg', color: '#006C35', type: 'islamic' },
@@ -242,7 +226,6 @@ export const banks: Bank[] = [
   { id: 'nizwa', name: 'Bank Nizwa', name_ar: 'بنك نزوى', country: 'OM', logo: 'nizwa.svg', color: '#006C35', official_url: 'banknizwa.om', type: 'islamic' },
   
   // Islamic Banks Oman (5)
-  { id: 'nizwa', name: 'Bank Nizwa', name_ar: 'بنك نزوى', country: 'OM', logo: 'nizwa.svg', color: '#006C35', type: 'islamic' },
   { id: 'al_izz_islamic', name: 'Al Izz Islamic Bank', name_ar: 'بنكizz الإسلامي', country: 'OM', logo: 'alizz.svg', color: '#006C35', type: 'islamic' },
   { id: 'sultan_center', name: 'Sultan Center Bank', name_ar: 'مركز السلطان المصرفي', country: 'OM', logo: 'sultan.svg', color: '#006C35', type: 'islamic' },
   { id: 'muscat_islamic', name: 'Bank Muscat Islamic', name_ar: 'بنك مسقط الإسلامي', country: 'OM', logo: 'muscat_islamic.svg', color: '#006C35', type: 'islamic' },
@@ -292,4 +275,9 @@ export const banksByType = {
   foreign: banks.filter(b => b.type === 'foreign'),
   islamic: banks.filter(b => b.type === 'islamic'),
   digital: banks.filter(b => b.type === 'digital'),
+};
+
+// Get bank logo URL
+export const getBankLogoUrl = (logo: string): string => {
+  return `/images/brand-logos/${logo}`;
 };

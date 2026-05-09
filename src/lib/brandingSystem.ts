@@ -1,3 +1,6 @@
+// Branding System Configuration
+// نظام الهوية البصرية - مع روابط SVG الرسمية
+
 export interface BrandColors {
   primary: string;
   secondary: string;
@@ -38,6 +41,7 @@ export interface CompanyBranding {
   shadows: BrandShadows;
   borderRadius: { sm: string, md: string, lg: string };
   logoUrl?: string;
+  logoSvg?: string;
   websiteUrl?: string;
   description: string;
 }
@@ -50,6 +54,7 @@ const defaultFonts: BrandFonts = {
 
 const defaultBorderRadius = { sm: '0px', md: '0px', lg: '0px' };
 
+// Shipping Companies Branding
 export const shippingCompanyBranding: Record<string, CompanyBranding> = {
   aramex: {
     id: 'aramex',
@@ -78,7 +83,9 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(220, 41, 30, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/aramex.svg',
+    logoUrl: 'https://www.aramex.com/etc/clientlibs/aramex/images/logo.svg',
+    logoSvg: '/images/brand-logos/aramex.svg',
+    websiteUrl: 'https://www.aramex.com/',
     description: 'شركة عالمية لخدمات الشحن السريع واللوجستيات',
   },
   dhl: {
@@ -96,10 +103,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       textOnPrimary: '#000000',
       border: '#FFCC00',
     },
-    fonts: {
-      ...defaultFonts,
-      primary: 'Delivery, Helvetica, Arial, sans-serif',
-    },
+    fonts: defaultFonts,
     gradients: {
       primary: 'linear-gradient(135deg, #FFCC00 0%, #FFB800 100%)',
       secondary: 'linear-gradient(135deg, #D40511 0%, #A00410 100%)',
@@ -111,7 +115,9 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(255, 204, 0, 0.30)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/dhl.svg',
+    logoUrl: 'https://www.dhl.com/etc/designs/dhl/images/logo/dhl-logo.svg',
+    logoSvg: '/images/brand-logos/dhl.svg',
+    websiteUrl: 'https://www.dhl.com/',
     description: 'شبكة شحن عالمية توفر خدمات التوصيل السريع الدولي والمحلي',
   },
   fedex: {
@@ -129,10 +135,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       textOnPrimary: '#FFFFFF',
       border: '#E0D4ED',
     },
-    fonts: {
-      ...defaultFonts,
-      primary: 'FedEx Sans, Arial, sans-serif',
-    },
+    fonts: defaultFonts,
     gradients: {
       primary: 'linear-gradient(135deg, #660099 0%, #4D148C 100%)',
       secondary: 'linear-gradient(135deg, #FF6600 0%, #FF8533 100%)',
@@ -144,7 +147,9 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(102, 0, 153, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/fedex.png',
+    logoUrl: 'https://www.fedex.com/etc/designs/fedex/images/logo/fedex-logo.svg',
+    logoSvg: '/images/brand-logos/fedex.svg',
+    websiteUrl: 'https://www.fedex.com/',
     description: 'خدمات شحن دولية موثوقة مع تتبع فوري للشحنات',
   },
   ups: {
@@ -162,10 +167,7 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       textOnPrimary: '#FFFFFF',
       border: '#E5E0DC',
     },
-    fonts: {
-      ...defaultFonts,
-      primary: 'UPS Sans, Arial, sans-serif',
-    },
+    fonts: defaultFonts,
     gradients: {
       primary: 'linear-gradient(135deg, #351C15 0%, #1F0F0A 100%)',
       secondary: 'linear-gradient(135deg, #FFB500 0%, #FFC933 100%)',
@@ -177,7 +179,9 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(53, 28, 21, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/ups.svg',
+    logoUrl: 'https://www.ups.com/assets/images/ups-logo.svg',
+    logoSvg: '/images/brand-logos/ups.svg',
+    websiteUrl: 'https://www.ups.com/',
     description: 'حلول لوجستية متكاملة وخدمات شحن سريعة حول العالم',
   },
   smsa: {
@@ -207,7 +211,9 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 75, 135, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/smsa.svg',
+    logoUrl: 'https://www.smsaexpress.com/assets/images/logo.svg',
+    logoSvg: '/images/brand-logos/smsa.svg',
+    websiteUrl: 'https://www.smsaexpress.com/',
     description: 'أكبر شركة شحن سعودية متخصصة في التوصيل السريع',
   },
   spl: {
@@ -237,11 +243,14 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 104, 71, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/spl.svg',
+    logoUrl: 'https://www.se.com.sa/assets/images/logo.svg',
+    logoSvg: '/images/brand-logos/spl.svg',
+    websiteUrl: 'https://www.splonline.com.sa/',
     description: 'المشغل الوطني للبريد والخدمات اللوجستية في السعودية',
   },
 };
 
+// Government Payment Systems Branding
 export const governmentPaymentBranding: Record<string, CompanyBranding> = {
   sadad: {
     id: 'sadad',
@@ -270,7 +279,9 @@ export const governmentPaymentBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(245, 130, 32, 0.20)',
     },
     borderRadius: defaultBorderRadius,
-    logoUrl: '/images/brand-logos/sadad.svg',
+    logoUrl: 'https://www.sadad.com/assets/images/sadad-logo.svg',
+    logoSvg: '/images/brand-logos/sadad.svg',
+    websiteUrl: 'https://www.sadad.com/',
     description: 'نظام المدفوعات الوطني السعودي',
   },
   knet: {
@@ -300,10 +311,46 @@ export const governmentPaymentBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 122, 61, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.knet.gov.kw/assets/images/logo.svg',
+    logoSvg: '/images/brand-logos/knet.svg',
+    websiteUrl: 'https://www.kpay.com.kw/',
     description: 'شركة الخدمات المصرفية الآلية المشتركة في الكويت',
+  },
+  absher: {
+    id: 'absher',
+    nameEn: 'Absher',
+    nameAr: 'أبشر',
+    colors: {
+      primary: '#006847',
+      secondary: '#004D35',
+      accent: '#D4AF37',
+      background: '#FFFFFF',
+      surface: '#F5FAF7',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#D1E8DC',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #006847 0%, #004D35 100%)',
+      secondary: 'linear-gradient(180deg, #006847 0%, #009B42 100%)',
+      hero: 'linear-gradient(to right, #006847 0%, #004D35 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(0, 104, 71, 0.08)',
+      md: '0 4px 6px -1px rgba(0, 104, 71, 0.15)',
+      lg: '0 10px 15px -3px rgba(0, 104, 71, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.absher.gov.sa/assets/images/logo.svg',
+    logoSvg: '/images/brand-logos/absher.svg',
+    websiteUrl: 'https://www.absher.sa/',
+    description: 'منصة الخدمات الحكومية الإلكترونية في السعودية',
   },
 };
 
+// Bank Branding
 export const bankBranding: Record<string, CompanyBranding> = {
   alahli: {
     id: 'alahli',
@@ -332,6 +379,9 @@ export const bankBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 132, 61, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.alahli.com/static/media/snbl_logo.0a7fed0d.svg',
+    logoSvg: 'https://www.alahli.com/static/media/snbl_logo.0a7fed0d.svg',
+    websiteUrl: 'https://www.alahli.com/',
     description: 'أكبر بنك في المملكة العربية السعودية',
   },
   alrajhi: {
@@ -361,11 +411,187 @@ export const bankBranding: Record<string, CompanyBranding> = {
       lg: '0 10px 15px -3px rgba(0, 108, 53, 0.20)',
     },
     borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.alrajhi.com/wps/wcm/connect/alrajhi/en/header-images/al-rajhi-logo.svg',
+    logoSvg: 'https://www.alrajhi.com/wps/wcm/connect/alrajhi/en/header-images/al-rajhi-logo.svg',
+    websiteUrl: 'https://www.alrajhibank.com.sa/',
     description: 'أكبر بنك إسلامي في العالم',
+  },
+  aljazira: {
+    id: 'aljazira',
+    nameEn: 'Bank AlJazira',
+    nameAr: 'بنك الجزيرة',
+    colors: {
+      primary: '#003D7A',
+      secondary: '#FFD700',
+      accent: '#FFFFFF',
+      background: '#FFFFFF',
+      surface: '#F5F5FA',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#D1D9E6',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #003D7A 0%, #002855 100%)',
+      secondary: 'linear-gradient(180deg, #003D7A 0%, #0055AA 100%)',
+      hero: 'linear-gradient(to right, #003D7A 0%, #002855 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(0, 61, 122, 0.08)',
+      md: '0 4px 6px -1px rgba(0, 61, 122, 0.15)',
+      lg: '0 10px 15px -3px rgba(0, 61, 122, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.baj.com.sa/etc/designs/baj/images/logo.svg',
+    logoSvg: 'https://www.baj.com.sa/etc/designs/baj/images/logo.svg',
+    websiteUrl: 'https://www.baj.com.sa/',
+    description: 'بنك سعودي رائد يخدم العملاء منذ 1976',
+  },
+  qnb: {
+    id: 'qnb',
+    nameEn: 'Qatar National Bank',
+    nameAr: 'بنك قطر الوطني',
+    colors: {
+      primary: '#7E191B',
+      secondary: '#FFFFFF',
+      accent: '#D4AF37',
+      background: '#FFFFFF',
+      surface: '#F9F9F9',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#E8D4D5',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #7E191B 0%, #5E1315 100%)',
+      secondary: 'linear-gradient(180deg, #7E191B 0%, #A02428 100%)',
+      hero: 'linear-gradient(to right, #7E191B 0%, #5E1315 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(126, 25, 27, 0.08)',
+      md: '0 4px 6px -1px rgba(126, 25, 27, 0.15)',
+      lg: '0 10px 15px -3px rgba(126, 25, 27, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.qnb.com/etc/designs/qnb/images/logo.svg',
+    logoSvg: 'https://www.qnb.com/etc/designs/qnb/images/logo.svg',
+    websiteUrl: 'https://www.qnb.com/',
+    description: 'أكبر بنك في الشرق الأوسط وشمال أفريقيا',
+  },
+  enbd: {
+    id: 'enbd',
+    nameEn: 'Emirates NBD',
+    nameAr: 'بنك الإمارات دبي الوطني',
+    colors: {
+      primary: '#003D7A',
+      secondary: '#FFD700',
+      accent: '#FFFFFF',
+      background: '#FFFFFF',
+      surface: '#F5F8FA',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#D4DDE6',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #003D7A 0%, #002855 100%)',
+      secondary: 'linear-gradient(180deg, #003D7A 0%, #0055AA 100%)',
+      hero: 'linear-gradient(to right, #003D7A 0%, #002855 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(0, 61, 122, 0.08)',
+      md: '0 4px 6px -1px rgba(0, 61, 122, 0.15)',
+      lg: '0 10px 15px -3px rgba(0, 61, 122, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.emiratesnbd.com/assets/img/logo.svg',
+    logoSvg: 'https://www.emiratesnbd.com/assets/img/logo.svg',
+    websiteUrl: 'https://www.emiratesnbd.com/',
+    description: 'أكبر بنك في منطقة الشرق الأوسط',
+  },
+  adcb: {
+    id: 'adcb',
+    nameEn: 'ADCB',
+    nameAr: 'بنك أبوظبي التجاري',
+    colors: {
+      primary: '#ED1C24',
+      secondary: '#FFFFFF',
+      accent: '#000000',
+      background: '#FFFFFF',
+      surface: '#FDF5F5',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#F5D5D6',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #ED1C24 0%, #C4151D 100%)',
+      secondary: 'linear-gradient(180deg, #ED1C24 0%, #FF4D5A 100%)',
+      hero: 'linear-gradient(to right, #ED1C24 0%, #C4151D 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(237, 28, 36, 0.08)',
+      md: '0 4px 6px -1px rgba(237, 28, 36, 0.15)',
+      lg: '0 10px 15px -3px rgba(237, 28, 36, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.adcb.com/assets/images/logo.svg',
+    logoSvg: 'https://www.adcb.com/assets/images/logo.svg',
+    websiteUrl: 'https://www.adcb.com/',
+    description: 'بنك رائد في أبوظبي والإمارات',
+  },
+  adib: {
+    id: 'adib',
+    nameEn: 'ADIB',
+    nameAr: 'مصرف أبوظبي الإسلامي',
+    colors: {
+      primary: '#003D7A',
+      secondary: '#006847',
+      accent: '#FFFFFF',
+      background: '#FFFFFF',
+      surface: '#F5FAF8',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#D1E8DC',
+    },
+    fonts: defaultFonts,
+    gradients: {
+      primary: 'linear-gradient(135deg, #003D7A 0%, #002855 100%)',
+      secondary: 'linear-gradient(180deg, #003D7A 0%, #0055AA 100%)',
+      hero: 'linear-gradient(to right, #003D7A 0%, #006847 100%)',
+    },
+    shadows: {
+      sm: '0 1px 2px 0 rgba(0, 61, 122, 0.08)',
+      md: '0 4px 6px -1px rgba(0, 61, 122, 0.15)',
+      lg: '0 10px 15px -3px rgba(0, 61, 122, 0.20)',
+    },
+    borderRadius: defaultBorderRadius,
+    logoUrl: 'https://www.adib.ae/assets/images/logo.svg',
+    logoSvg: 'https://www.adib.ae/assets/images/logo.svg',
+    websiteUrl: 'https://www.adib.ae/',
+    description: 'مصرف إسلامي رائد في الإمارات',
   },
 };
 
+// Get branding by company key
 export const getBrandingByCompany = (companyKey: string): CompanyBranding | null => {
   const key = companyKey.toLowerCase();
   return shippingCompanyBranding[key] || governmentPaymentBranding[key] || bankBranding[key] || null;
+};
+
+// Get logo URL for a company
+export const getCompanyLogoUrl = (companyKey: string): string | undefined => {
+  const branding = getBrandingByCompany(companyKey);
+  return branding?.logoUrl || branding?.logoSvg;
+};
+
+// Check if company has SVG logo
+export const hasSvgLogo = (companyKey: string): boolean => {
+  const branding = getBrandingByCompany(companyKey);
+  return !!branding?.logoSvg;
 };

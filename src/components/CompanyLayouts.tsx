@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getBrandingByCompany } from '@/lib/brandingSystem';
+import { getBrandingByCompany, getCompanyLogoUrl } from '@/lib/brandingSystem';
 import { 
   Package, 
   Truck, 
@@ -23,6 +23,26 @@ interface CompanyLayoutProps {
   status?: 'pending' | 'processing' | 'completed';
 }
 
+// Official Logo Component
+const CompanyLogo: React.FC<{ companyKey: string; className?: string }> = ({ companyKey, className = 'w-10 h-10' }) => {
+  const logoUrl = getCompanyLogoUrl(companyKey);
+  
+  if (logoUrl) {
+    return (
+      <img 
+        src={logoUrl} 
+        alt={companyKey}
+        className={className}
+        style={{ objectFit: 'contain' }}
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = 'none';
+        }}
+      />
+    );
+  }
+  return null;
+};
+
 export const AramexLayout: React.FC<CompanyLayoutProps> = ({ 
   children, 
   trackingNumber, 
@@ -34,20 +54,23 @@ export const AramexLayout: React.FC<CompanyLayoutProps> = ({
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       <div 
-        className="h-16 flex items-center px-6 shadow-md"
+        className="h-20 flex items-center px-6 shadow-md"
         style={{ backgroundColor: branding?.colors.primary }}
       >
         <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-white p-2 rounded">
-              <Package className="w-6 h-6" style={{ color: branding?.colors.primary }} />
+          <div className="flex items-center gap-4">
+            <div className="bg-white p-2 rounded-lg shadow">
+              <CompanyLogo companyKey="aramex" className="h-10 w-auto" />
             </div>
-            <span className="text-white font-bold text-xl">Aramex</span>
+            <div className="text-white">
+              <span className="font-bold text-2xl">Aramex</span>
+              <p className="text-xs opacity-80">شركة الشحن السريع</p>
+            </div>
           </div>
           {trackingNumber && (
-            <Badge variant="secondary" className="bg-white/20 text-white">
-              <span className="text-xs">رقم التتبع:</span>
-              <span className="font-mono mr-1">{trackingNumber}</span>
+            <Badge variant="secondary" className="bg-white/20 text-white px-4 py-2">
+              <span className="text-xs mr-2">رقم التتبع:</span>
+              <span className="font-mono font-bold">{trackingNumber}</span>
             </Badge>
           )}
         </div>
@@ -146,12 +169,12 @@ export const DHLLayout: React.FC<CompanyLayoutProps> = ({
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="bg-black p-3 rounded-lg">
-                <span className="text-4xl font-black text-yellow-400">DHL</span>
+              <div className="bg-white p-3 rounded-lg shadow">
+                <CompanyLogo companyKey="dhl" className="h-12 w-auto" />
               </div>
               <div className="text-white">
-                <p className="text-sm opacity-90">EXPRESS SHIPPING</p>
-                <p className="text-xs opacity-75">Worldwide Delivery</p>
+                <p className="text-lg font-bold">DHL EXPRESS</p>
+                <p className="text-xs opacity-80">الشحن الدولي السريع</p>
               </div>
             </div>
             {trackingNumber && (
@@ -251,15 +274,20 @@ export const FedExLayout: React.FC<CompanyLayoutProps> = ({
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       <div 
-        className="h-16"
+        className="h-20"
         style={{ 
           background: `linear-gradient(to right, ${branding?.colors.primary}, ${branding?.colors.secondary})` 
         }}
       >
         <div className="container mx-auto h-full flex items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <span className="text-white font-black text-3xl tracking-wider">FedEx</span>
-            <span className="text-white text-xs opacity-80">EXPRESS</span>
+          <div className="flex items-center gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <CompanyLogo companyKey="fedex" className="h-10 w-auto" />
+            </div>
+            <div className="text-white">
+              <span className="text-2xl font-bold">FedEx</span>
+              <p className="text-xs opacity-80">EXPRESS</p>
+            </div>
           </div>
           {amount && (
             <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -365,13 +393,11 @@ export const SMSALayout: React.FC<CompanyLayoutProps> = ({
       >
         <div className="container mx-auto h-full flex items-center justify-between px-6">
           <div className="flex items-center gap-4">
-            <div className="bg-white p-3 rounded-xl">
-              <span className="font-black text-2xl" style={{ color: branding?.colors.primary }}>
-                SMSA
-              </span>
+            <div className="bg-white p-3 rounded-xl shadow">
+              <CompanyLogo companyKey="smsa" className="h-10 w-auto" />
             </div>
             <div className="text-white">
-              <p className="font-bold text-lg">EXPRESS</p>
+              <p className="font-bold text-lg">SMSA EXPRESS</p>
               <p className="text-xs opacity-90">الشحن السريع - المملكة العربية السعودية</p>
             </div>
           </div>
