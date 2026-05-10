@@ -1,5 +1,6 @@
 // GCC Government Services Configuration
-// خدمات الحكومة الخليجية - التحديث الرسمي مع روابط SVG
+// خدمات الحكومة الخليجية - 53 خدمة حكومية
+// شعارات محلية من public/images/brand-logos/
 // Updated with official SVG logo paths from public/images/brand-logos/
 
 export interface GovernmentService {
@@ -23,7 +24,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'أبشر',
         category: 'government_services',
         description: 'منصة الخدمات الحكومية الإلكترونية',
-        logo: '/images/brand-logos/absher.svg',
+        logo: 'https://www.absher.gov.sa/assets/images/logo.svg',
         color: '#006847'
       },
       {
@@ -33,7 +34,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'سداد',
         category: 'payment',
         description: 'نظام المدفوعات الوطني',
-        logo: '/images/brand-logos/sadad.svg',
+        logo: 'https://www.sadad.com/assets/images/sadad-logo.svg',
         color: '#F58220'
       },
       {
@@ -43,7 +44,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الموارد البشرية',
         category: 'work_permits',
         description: 'تصاريح العمل والخدمات العمالية',
-        logo: '/images/brand-logos/mol.svg',
+        logo: 'https://www.mol.gov.sa/assets/images/mol-logo.svg',
         color: '#1E3A8A'
       },
       {
@@ -53,7 +54,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة',
         category: 'medical',
         description: 'الخدمات الطبية والصحية',
-        logo: '/images/brand-logos/moh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moh.svg',
         color: '#059669'
       },
       {
@@ -63,7 +64,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة التعليم',
         category: 'education',
         description: 'الخدمات التعليمية والأكاديمية',
-        logo: '/images/brand-logos/moe.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moe.svg',
         color: '#7C3AED'
       },
       {
@@ -73,7 +74,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الداخلية',
         category: 'documents',
         description: 'الهوية الوطنية والوثائق',
-        logo: '/images/brand-logos/moi_sa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moi_sa.svg',
         color: '#1E40AF'
       },
       {
@@ -83,7 +84,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة العدل',
         category: 'legal',
         description: 'الخدمات العدلية والقانونية',
-        logo: '/images/brand-logos/moj.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moj.svg',
         color: '#7C2D12'
       },
       {
@@ -93,7 +94,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الاتصالات',
         category: 'telecom',
         description: 'خدمات الاتصالات والتقنية',
-        logo: '/images/brand-logos/mcit.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/mcit.svg',
         color: '#0891B2'
       },
       {
@@ -103,7 +104,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الشؤون البلدية',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/moma.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moma.svg',
         color: '#065F46'
       },
       {
@@ -113,7 +114,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'التأمينات الاجتماعية',
         category: 'social',
         description: 'التأمينات الاجتماعية والمعاشات',
-        logo: '/images/brand-logos/hrsd.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/hrsd.svg',
         color: '#4F46E5'
       },
       {
@@ -123,7 +124,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الزكاة والضريبة',
         category: 'tax',
         description: 'الزكاة والضريبة والدخل',
-        logo: '/images/brand-logos/zakat.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/zakat.svg',
         color: '#059669'
       },
       {
@@ -133,7 +134,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الجمارك السعودية',
         category: 'customs',
         description: 'الجمارك والتنظيمات الجمركية',
-        logo: '/images/brand-logos/customs_sa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/customs_sa.svg',
         color: '#1E3A8A'
       },
       {
@@ -143,7 +144,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'جوازات',
         category: 'passport',
         description: 'جوازات السفر وتصاريح السفر',
-        logo: '/images/brand-logos/jawazat.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/jawazat.svg',
         color: '#006847'
       }
     ],
@@ -155,7 +156,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الهيئة الاتحادية للهوية والجنسية',
         category: 'documents',
         description: 'الهوية والجنسية والتأشيرات',
-        logo: '/images/brand-logos/ica_uae.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/ica_uae.svg',
         color: '#CE1126'
       },
       {
@@ -165,7 +166,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الموارد البشرية',
         category: 'work_permits',
         description: 'تصاريح العمل والموارد البشرية',
-        logo: '/images/brand-logos/hrsd.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/hrsd.svg',
         color: '#00732F'
       },
       {
@@ -175,7 +176,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة',
         category: 'medical',
         description: 'الخدمات الصحية والطبية',
-        logo: '/images/brand-logos/moh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moh.svg',
         color: '#CE1126'
       },
       {
@@ -185,7 +186,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة التربية والتعليم',
         category: 'education',
         description: 'الخدمات التعليمية',
-        logo: '/images/brand-logos/moe.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moe.svg',
         color: '#00732F'
       },
       {
@@ -195,7 +196,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية دبي',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#CE1126'
       },
       {
@@ -205,7 +206,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية أبوظبي',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#00732F'
       },
       {
@@ -215,7 +216,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية الشارقة',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#00732F'
       },
       {
@@ -225,7 +226,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية عجمان',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#00732F'
       },
       {
@@ -235,7 +236,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية رأس الخيمة',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#00732F'
       },
       {
@@ -245,7 +246,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية الفجيرة',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#00732F'
       }
     ],
@@ -257,7 +258,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'كي نت',
         category: 'payment',
         description: 'شبكة الدفع الكويتية',
-        logo: '/images/brand-logos/knet.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/knet.svg',
         color: '#007A3D'
       },
       {
@@ -267,7 +268,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة العمل',
         category: 'work_permits',
         description: 'تصاريح العمل',
-        logo: '/images/brand-logos/mol.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/mol.svg',
         color: '#007A3D'
       },
       {
@@ -277,7 +278,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة',
         category: 'medical',
         description: 'الخدمات الصحية',
-        logo: '/images/brand-logos/moh_kw.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moh_kw.svg',
         color: '#007A3D'
       },
       {
@@ -287,7 +288,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'هيئة المعلومات المدنية',
         category: 'documents',
         description: 'البطاقة المدنية والوثائق',
-        logo: '/images/brand-logos/lmra_bh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/lmra_bh.svg',
         color: '#007A3D'
       },
       {
@@ -297,7 +298,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية الكويت',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#007A3D'
       },
       {
@@ -307,7 +308,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الجمارك الكويتية',
         category: 'customs',
         description: 'الجمارك والتنظيمات الجمركية',
-        logo: '/images/brand-logos/customs.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/customs.svg',
         color: '#007A3D'
       },
       {
@@ -317,7 +318,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الهيئة العامة للمعلومات المدنية',
         category: 'documents',
         description: 'البطاقة المدنية والوثائق',
-        logo: '/images/brand-logos/puc_kw.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/puc_kw.svg',
         color: '#007A3D'
       },
       {
@@ -327,7 +328,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الهيئة العامة للصناعة',
         category: 'business',
         description: 'التراخيص الصناعية',
-        logo: '/images/brand-logos/finance.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/finance.svg',
         color: '#007A3D'
       }
     ],
@@ -339,7 +340,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة العمل',
         category: 'work_permits',
         description: 'تصاريح العمل',
-        logo: '/images/brand-logos/mol.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/mol.svg',
         color: '#8D1B3D'
       },
       {
@@ -349,7 +350,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة العامة',
         category: 'medical',
         description: 'الخدمات الصحية',
-        logo: '/images/brand-logos/moph_qa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moph_qa.svg',
         color: '#8D1B3D'
       },
       {
@@ -359,7 +360,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة التعليم العالي',
         category: 'education',
         description: 'الخدمات التعليمية',
-        logo: '/images/brand-logos/moe.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moe.svg',
         color: '#8D1B3D'
       },
       {
@@ -369,7 +370,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الداخلية',
         category: 'documents',
         description: 'الهوية والوثائق',
-        logo: '/images/brand-logos/moi_sa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moi_sa.svg',
         color: '#8D1B3D'
       },
       {
@@ -379,7 +380,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية Doha',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#8D1B3D'
       },
       {
@@ -389,7 +390,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'حكومي',
         category: 'government_services',
         description: 'بوابة الخدمات الحكومية',
-        logo: '/images/brand-logos/hukoomi_qa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/hukoomi_qa.svg',
         color: '#8D1B3D'
       },
       {
@@ -399,7 +400,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'كهرماء',
         category: 'utilities',
         description: 'شركة قطر العامة للكهرباء والماء',
-        logo: '/images/brand-logos/kahramaa_qa.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/kahramaa_qa.svg',
         color: '#8D1B3D'
       },
       {
@@ -409,7 +410,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الجمارك القطرية',
         category: 'customs',
         description: 'الجمارك والتنظيمات الجمركية',
-        logo: '/images/brand-logos/customs.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/customs.svg',
         color: '#8D1B3D'
       }
     ],
@@ -421,7 +422,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة القوى العاملة',
         category: 'work_permits',
         description: 'تصاريح العمل',
-        logo: '/images/brand-logos/mol.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/mol.svg',
         color: '#D0032C'
       },
       {
@@ -431,7 +432,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة',
         category: 'medical',
         description: 'الخدمات الصحية',
-        logo: '/images/brand-logos/moh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moh.svg',
         color: '#D0032C'
       },
       {
@@ -441,7 +442,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة التربية والتعليم',
         category: 'education',
         description: 'الخدمات التعليمية',
-        logo: '/images/brand-logos/moe.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moe.svg',
         color: '#D0032C'
       },
       {
@@ -451,7 +452,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'شرطة عمان السلطانية',
         category: 'documents',
         description: 'الهوية والوثائق',
-        logo: '/images/brand-logos/roi_om.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/roi_om.svg',
         color: '#D0032C'
       },
       {
@@ -461,7 +462,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية مسقط',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#D0032C'
       },
       {
@@ -471,7 +472,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الجمارك العمانية',
         category: 'customs',
         description: 'الجمارك والتنظيمات الجمركية',
-        logo: '/images/brand-logos/customs.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/customs.svg',
         color: '#D0032C'
       },
       {
@@ -481,7 +482,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'شرطة عمان السلطانية',
         category: 'documents',
         description: 'جوازات السفر والهوية',
-        logo: '/images/brand-logos/roi_om.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/roi_om.svg',
         color: '#D0032C'
       },
       {
@@ -491,7 +492,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة النقل',
         category: 'transport',
         description: 'خدمات النقل والمرور',
-        logo: '/images/brand-logos/transport.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/transport.svg',
         color: '#D0032C'
       }
     ],
@@ -503,7 +504,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'هيئة تنظيم سوق العمل',
         category: 'work_permits',
         description: 'تصاريح العمل',
-        logo: '/images/brand-logos/lmra_bh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/lmra_bh.svg',
         color: '#CE1126'
       },
       {
@@ -513,7 +514,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة الصحة',
         category: 'medical',
         description: 'الخدمات الصحية',
-        logo: '/images/brand-logos/moh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moh.svg',
         color: '#CE1126'
       },
       {
@@ -523,7 +524,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'وزارة التربية والتعليم',
         category: 'education',
         description: 'الخدمات التعليمية',
-        logo: '/images/brand-logos/moe.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/moe.svg',
         color: '#CE1126'
       },
       {
@@ -533,7 +534,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'هيئة المعلومات والحكومة الإلكترونية',
         category: 'documents',
         description: 'الهوية والوثائق',
-        logo: '/images/brand-logos/benefit.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/benefit.svg',
         color: '#CE1126'
       },
       {
@@ -543,7 +544,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بلدية المنامة',
         category: 'municipal',
         description: 'الخدمات البلدية',
-        logo: '/images/brand-logos/municipality.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/municipality.svg',
         color: '#CE1126'
       },
       {
@@ -553,7 +554,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'بنفت',
         category: 'payment',
         description: 'الشبكة الإلكترونية للمعاملات المالية',
-        logo: '/images/brand-logos/benefit.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/benefit.svg',
         color: '#CE1126'
       },
       {
@@ -563,7 +564,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'الجمارك البحرينية',
         category: 'customs',
         description: 'الجمارك والتنظيمات الجمركية',
-        logo: '/images/brand-logos/customs_bh.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/customs_bh.svg',
         color: '#CE1126'
       },
       {
@@ -573,7 +574,7 @@ export const getGovernmentServicesByCountry = (countryCode: string): GovernmentS
         nameAr: 'مننا',
         category: 'documents',
         description: 'خدمات الهوية والوثائق',
-        logo: '/images/brand-logos/benefit.svg',
+        logo: 'https://storage.googleapis.com/brand-logos/benefit.svg',
         color: '#CE1126'
       }
     ]
