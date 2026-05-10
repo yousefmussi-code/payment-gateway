@@ -422,7 +422,7 @@ export const ShippingButton: React.FC<ShippingButtonProps> = ({
     lg: 'px-8 py-4 text-lg rounded-xl'
   };
 
-  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2';
+  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const disabledClasses = 'opacity-60 cursor-not-allowed';
 
   if (variant === 'primary') {
@@ -430,8 +430,12 @@ export const ShippingButton: React.FC<ShippingButtonProps> = ({
       <button
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
-          background: brandGradient,
-          color: textOnPrimary,
+          background: 'var(--brand-gradient-primary, linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%))',
+          color: 'var(--brand-text-on-primary, #FFFFFF)',
+          border: 'none',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -451,8 +455,12 @@ export const ShippingButton: React.FC<ShippingButtonProps> = ({
       <button
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
-          background: '#F3F4F6',
-          color: '#374151',
+          background: 'var(--brand-surface, #F3F4F6)',
+          color: 'var(--brand-primary, var(--brand-text, #374151))',
+          border: '1px solid var(--brand-border, #E5E7EB)',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -473,8 +481,11 @@ export const ShippingButton: React.FC<ShippingButtonProps> = ({
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} border-2 ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
           background: 'transparent',
-          color: brandColor,
-          borderColor: brandColor,
+          color: 'var(--brand-primary)',
+          border: '2px solid var(--brand-primary)',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -492,7 +503,12 @@ export const ShippingButton: React.FC<ShippingButtonProps> = ({
   return (
     <button
       className={`${baseClasses} bg-transparent ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
-      style={{ color: brandColor }}
+      style={{ 
+        color: 'var(--brand-primary)',
+        border: 'none',
+        cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+        fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+      }}
       disabled={disabled || isLoading}
       {...props}
     >
@@ -530,8 +546,8 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
     <div className="space-y-2">
       {label && (
         <label 
-          className="block text-sm font-semibold text-gray-700"
-          style={{ fontFamily: 'Cairo, sans-serif' }}
+          className="block text-sm font-semibold"
+          style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: 'var(--brand-text, #374151)' }}
         >
           {label}
         </label>
@@ -540,7 +556,7 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
         {icon && (
           <div 
             className="absolute right-3 top-1/2 -translate-y-1/2"
-            style={{ color: brandColor }}
+            style={{ color: 'var(--brand-primary)' }}
           >
             {icon}
           </div>
@@ -548,12 +564,11 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
         <Input
           className={`rounded-xl border-2 transition-all duration-200 ${icon ? 'pr-10' : ''} ${leftIcon ? 'pl-10' : ''} ${error ? 'border-red-500 border-2' : ''} ${className}`}
           style={{ 
-            borderColor: error ? '#EF4444' : '#E5E7EB',
-            backgroundColor: '#FFFFFF',
-            fontFamily: 'Cairo, sans-serif',
-            '--tw-ring-color': brandColor,
-            paddingRight: icon ? '2.5rem' : undefined,
-            paddingLeft: leftIcon ? '2.5rem' : undefined,
+            borderColor: error ? '#EF4444' : 'var(--brand-border, #E5E7EB)',
+            backgroundColor: 'var(--brand-background, #FFFFFF)',
+            fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+            '--tw-ring-color': 'var(--brand-primary)',
+            boxShadow: 'var(--brand-shadow-sm)',
           }}
           type={inputType}
           {...props}
@@ -561,7 +576,7 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
         {leftIcon && (
           <div 
             className="absolute left-3 top-1/2 -translate-y-1/2"
-            style={{ color: brandColor }}
+            style={{ color: 'var(--brand-primary)' }}
           >
             {leftIcon}
           </div>
@@ -569,7 +584,8 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
         {showPasswordToggle && (
           <button
             type="button"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+            className="absolute left-3 top-1/2 -translate-y-1/2 transition-colors"
+            style={{ color: 'var(--brand-text-light, #9CA3AF)' }}
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -577,10 +593,10 @@ export const ShippingInput: React.FC<ShippingInputProps> = ({
         )}
       </div>
       {hint && !error && (
-        <p className="text-xs text-gray-500" style={{ fontFamily: 'Cairo, sans-serif' }}>{hint}</p>
+        <p className="text-xs" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: 'var(--brand-text-light, #6B7280)' }}>{hint}</p>
       )}
       {error && (
-        <p className="text-sm text-red-500 flex items-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+        <p className="text-sm flex items-center gap-1" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: '#EF4444' }}>
           <AlertCircle className="w-4 h-4" />
           {error}
         </p>
