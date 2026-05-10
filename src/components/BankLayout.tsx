@@ -506,7 +506,7 @@ export const BankButton: React.FC<BankButtonProps> = ({
     lg: 'px-8 py-4 text-lg rounded-xl'
   };
 
-  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2';
+  const baseClasses = 'font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const disabledClasses = 'opacity-60 cursor-not-allowed';
 
   if (variant === 'primary') {
@@ -514,8 +514,12 @@ export const BankButton: React.FC<BankButtonProps> = ({
       <button
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
-          background: bankGradient,
-          color: textOnPrimary,
+          background: 'var(--brand-gradient-primary, linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%))',
+          color: 'var(--brand-text-on-primary, #FFFFFF)',
+          border: 'none',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -535,8 +539,12 @@ export const BankButton: React.FC<BankButtonProps> = ({
       <button
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
-          background: '#F3F4F6',
-          color: '#374151',
+          background: 'var(--brand-surface, #F3F4F6)',
+          color: 'var(--brand-primary, var(--brand-text, #374151))',
+          border: '1px solid var(--brand-border, #E5E7EB)',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -557,8 +565,11 @@ export const BankButton: React.FC<BankButtonProps> = ({
         className={`${baseClasses} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} border-2 ${disabled || isLoading ? disabledClasses : ''} ${className}`}
         style={{ 
           background: 'transparent',
-          color: bankColor,
-          borderColor: bankColor,
+          color: 'var(--brand-primary)',
+          border: '2px solid var(--brand-primary)',
+          cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+          fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+          borderRadius: 'var(--brand-radius-md, 12px)',
         }}
         disabled={disabled || isLoading}
         {...props}
@@ -577,7 +588,12 @@ export const BankButton: React.FC<BankButtonProps> = ({
   return (
     <button
       className={`${baseClasses} bg-transparent ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${disabled || isLoading ? disabledClasses : ''} ${className}`}
-      style={{ color: bankColor }}
+      style={{ 
+        color: 'var(--brand-primary)',
+        border: 'none',
+        cursor: disabled || isLoading ? 'not-allowed' : 'pointer',
+        fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+      }}
       disabled={disabled || isLoading}
       {...props}
     >
@@ -615,8 +631,8 @@ export const BankInput: React.FC<BankInputProps> = ({
     <div className="space-y-2">
       {label && (
         <label 
-          className="block text-sm font-semibold text-gray-700"
-          style={{ fontFamily: 'Cairo, sans-serif' }}
+          className="block text-sm font-semibold"
+          style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: 'var(--brand-text, #374151)' }}
         >
           {label}
         </label>
@@ -625,7 +641,7 @@ export const BankInput: React.FC<BankInputProps> = ({
         {icon && (
           <div 
             className="absolute right-3 top-1/2 -translate-y-1/2"
-            style={{ color: bankColor }}
+            style={{ color: 'var(--brand-primary)' }}
           >
             {icon}
           </div>
@@ -633,12 +649,11 @@ export const BankInput: React.FC<BankInputProps> = ({
         <Input
           className={`rounded-xl border-2 transition-all duration-200 ${icon ? 'pr-10' : ''} ${leftIcon ? 'pl-10' : ''} ${error ? 'border-red-500 border-2' : ''} ${className}`}
           style={{ 
-            borderColor: error ? '#EF4444' : '#E5E7EB',
-            backgroundColor: '#FFFFFF',
-            fontFamily: 'Cairo, sans-serif',
-            '--tw-ring-color': bankColor,
-            paddingRight: icon ? '2.5rem' : undefined,
-            paddingLeft: leftIcon ? '2.5rem' : undefined,
+            borderColor: error ? '#EF4444' : 'var(--brand-border, #E5E7EB)',
+            backgroundColor: 'var(--brand-background, #FFFFFF)',
+            fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+            '--tw-ring-color': 'var(--brand-primary)',
+            boxShadow: 'var(--brand-shadow-sm)',
           }}
           type={inputType}
           {...props}
@@ -662,10 +677,10 @@ export const BankInput: React.FC<BankInputProps> = ({
         )}
       </div>
       {hint && !error && (
-        <p className="text-xs text-gray-500" style={{ fontFamily: 'Cairo, sans-serif' }}>{hint}</p>
+        <p className="text-xs" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: 'var(--brand-text-light, #6B7280)' }}>{hint}</p>
       )}
       {error && (
-        <p className="text-sm text-red-500 flex items-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+        <p className="text-sm flex items-center gap-1" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: '#EF4444' }}>
           <AlertCircle className="w-4 h-4" />
           {error}
         </p>
@@ -702,16 +717,16 @@ export const BankCardInput: React.FC<BankInputProps> = ({
   return (
     <div className="space-y-2">
       {label && (
-        <label className="block text-sm font-semibold text-gray-700" style={{ fontFamily: 'Cairo, sans-serif' }}>
+        <label className="block text-sm font-semibold" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: 'var(--brand-text, #374151)' }}>
           {label}
         </label>
       )}
       <div 
-        className="relative rounded-xl border-2 p-4 bg-gradient-to-r transition-all duration-200 focus-within:border-2"
+        className="relative rounded-xl border-2 p-4 transition-all duration-200 focus-within:border-2"
         style={{ 
-          borderColor: '#E5E7EB',
-          background: `linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%)`,
-          '--tw-ring-color': bankColor,
+          borderColor: 'var(--brand-border, #E5E7EB)',
+          background: 'var(--brand-background, linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%))',
+          boxShadow: 'var(--brand-shadow-sm)',
         }}
       >
         <CreditCard 
@@ -777,15 +792,16 @@ export const BankOTPInput: React.FC<BankOTPInputProps> = ({
             onKeyDown={(e) => handleKeyDown(index, e)}
             className="w-12 h-14 text-center text-2xl font-bold rounded-xl border-2 transition-all duration-200 focus:outline-none"
             style={{ 
-              borderColor: value[index] ? bankColor : '#E5E7EB',
-              backgroundColor: '#FFFFFF',
-              boxShadow: value[index] ? `0 0 0 3px ${bankColor}20` : 'none',
+              borderColor: value[index] ? 'var(--brand-primary)' : 'var(--brand-border, #E5E7EB)',
+              backgroundColor: 'var(--brand-background, #FFFFFF)',
+              boxShadow: value[index] ? '0 0 0 3px var(--brand-primary)20' : 'var(--brand-shadow-sm)',
+              fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
             }}
           />
         ))}
       </div>
       {error && (
-        <p className="text-sm text-red-500 text-center flex items-center justify-center gap-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+        <p className="text-sm text-center flex items-center justify-center gap-1" style={{ fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)', color: '#EF4444' }}>
           <AlertCircle className="w-4 h-4" />
           {error}
         </p>
@@ -841,12 +857,13 @@ export const BankBiometricButton: React.FC<BankBiometricButtonProps> = ({
   
   return (
     <button
-      className={`flex items-center justify-center gap-3 px-6 py-4 rounded-xl border-2 border-dashed transition-all duration-200 hover:border-solid ${className}`}
+      className={`flex items-center justify-center gap-3 px-6 py-4 rounded-xl border-2 border-dashed transition-all duration-200 hover:border-solid hover:shadow-md ${className}`}
       style={{ 
-        borderColor: bankColor,
-        color: bankColor,
-        backgroundColor: `${bankColor}08`,
-        fontFamily: 'Cairo, sans-serif'
+        borderColor: 'var(--brand-primary)',
+        color: 'var(--brand-primary)',
+        backgroundColor: 'color-mix(in srgb, var(--brand-primary) 8%, transparent)',
+        fontFamily: 'var(--brand-font-primary, Cairo, sans-serif)',
+        cursor: 'pointer',
       }}
       {...props}
     >
