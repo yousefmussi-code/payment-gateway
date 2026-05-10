@@ -58,6 +58,10 @@ export const getEntityIdentity = (entityKey: string) => {
   return getBrandingByCompany(entityKey);
 };
 
+export const getEntityHeaderImages = (entityKey: string): string[] => {
+  return [];
+};
+
 export const getEntityPaymentShareImage = (entityKey: string): string | null => {
   if (entityKey.startsWith('bank_')) {
     const bankId = entityKey.replace('bank_', '');
@@ -68,10 +72,4 @@ export const getEntityPaymentShareImage = (entityKey: string): string | null => 
 
 export const getBankOGImage = (bankId: string): string => {
   return `/og-bank-${bankId}.jpg`;
-};
-
-// Helper functions for BrandedCarousel.tsx
-export const getEntityHeaderImages = (entityKey: string): string[] => {
-  // Return empty list as fallback, imagery is handled by local mapping in BrandedCarousel
-  return [];
 };
