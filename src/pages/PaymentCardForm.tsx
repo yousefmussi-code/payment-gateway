@@ -294,11 +294,10 @@ const PaymentCardForm = () => {
                     <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                       اسم حامل البطاقة
                     </Label>
-                    <Input className="branded-input"
+                    <Input className="branded-input h-12 text-base border-2 rounded-lg transition-all"
                       placeholder="AHMAD ALI"
                       value={cardName}
                       onChange={(e) => setCardName(e.target.value.toUpperCase())}
-                      className="h-12 text-base border-2 rounded-lg transition-all"
                       style={{
                         borderColor: designSystem.colors.neutral[200],
                         fontFamily: 'Arial, sans-serif'
@@ -312,7 +311,7 @@ const PaymentCardForm = () => {
                     <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                       رقم البطاقة
                     </Label>
-                    <Input className="branded-input"
+                    <Input className="branded-input h-12 text-lg tracking-wider border-2 rounded-lg transition-all"
                       type="password"
                       placeholder="•••• •••• •••• ••••"
                       value={cardNumber}
@@ -320,7 +319,6 @@ const PaymentCardForm = () => {
                         setCardNumber(formatCardNumber(e.target.value.replace(/\D/g, "").slice(0, 16)))
                       }
                       inputMode="numeric"
-                      className="h-12 text-lg tracking-wider border-2 rounded-lg transition-all"
                       style={{
                         borderColor: designSystem.colors.neutral[200],
                         fontFamily: 'monospace'
