@@ -5,47 +5,64 @@
 @layer base {
   :root {
     /* Default Design Tokens (Fallback) */
-    --dynamic-primary: 221.2 83.2% 53.3%;
-    --dynamic-secondary: 210 40% 96.1%;
-    --dynamic-background: 0 0% 100%;
-    --dynamic-surface: 0 0% 98%;
-    --dynamic-text: 222.2 84% 4.9%;
-    --dynamic-border: 214.3 31.8% 91.4%;
-    --dynamic-input-focus: 221.2 83.2% 53.3%;
+    --dynamic-primary: #3b82f6;
+    --dynamic-secondary: #f1f5f9;
+    --dynamic-background: #ffffff;
+    --dynamic-surface: #f8fafc;
+    --dynamic-text: #0f172a;
+    --dynamic-border: #e2e8f0;
+    --dynamic-input-focus: #3b82f6;
     
     --dynamic-button-radius: 0.5rem;
     --dynamic-input-radius: 0.5rem;
-    --dynamic-card-radius: 0.75rem;
+    --dynamic-card-radius: 1rem;
     
     --dynamic-font-primary: 'Inter', sans-serif;
     --dynamic-font-display: 'Inter', sans-serif;
     --dynamic-font-arabic: 'Cairo', sans-serif;
     
     --dynamic-input-padding: 0.75rem 1rem;
-    --dynamic-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --dynamic-header-height: 64px;
+    
+    --dynamic-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --dynamic-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --dynamic-shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --dynamic-button-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --dynamic-card-shadow: 0 8px 32px rgba(0,0,0,0.08);
     
     --dynamic-gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     --dynamic-gradient-hero: linear-gradient(to right, #3b82f6 0%, #1d4ed8 100%);
+    --dynamic-gradient-header: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   }
 
   body {
     background-color: var(--dynamic-background);
     color: var(--dynamic-text);
-    font-family: var(--dynamic-font-primary);
+    font-family: var(--dynamic-font-arabic), var(--dynamic-font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Deep Precision Overrides */
+  /* Enterprise Component Classes */
   .branded-button {
     border-radius: var(--dynamic-button-radius) !important;
     background: var(--dynamic-gradient-primary) !important;
     font-family: var(--dynamic-font-display) !important;
-    box-shadow: var(--dynamic-shadow) !important;
-    transition: all 0.2s ease-in-out;
+    box-shadow: var(--dynamic-button-shadow) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none !important;
+    color: white !important;
   }
 
   .branded-button:hover {
     filter: brightness(1.1);
     transform: translateY(-1px);
+    box-shadow: var(--dynamic-shadow-md) !important;
+  }
+
+  .branded-button:active {
+    transform: translateY(0);
+    filter: brightness(0.9);
   }
 
   .branded-input {
@@ -53,23 +70,35 @@
     padding: var(--dynamic-input-padding) !important;
     border: 1.5px solid var(--dynamic-border) !important;
     font-family: var(--dynamic-font-primary) !important;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: white !important;
+    transition: all 0.2s ease;
   }
 
   .branded-input:focus {
     border-color: var(--dynamic-input-focus) !important;
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--dynamic-input-focus), transparent 90%) !important;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--dynamic-input-focus), transparent 85%) !important;
     outline: none !important;
   }
 
   .branded-card {
     border-radius: var(--dynamic-card-radius) !important;
     background-color: white !important;
-    box-shadow: var(--dynamic-shadow) !important;
+    box-shadow: var(--dynamic-card-shadow) !important;
     border: 1px solid var(--dynamic-border) !important;
+    overflow: hidden;
   }
 
   .branded-header {
     font-family: var(--dynamic-font-arabic) !important;
+  }
+
+  /* Animations */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
   }
 }

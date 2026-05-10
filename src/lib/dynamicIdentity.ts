@@ -14,34 +14,38 @@ export const applyDynamicIdentity = (entityKey: string) => {
   root.style.setProperty('--dynamic-text', branding.colors.text);
   root.style.setProperty('--dynamic-border', branding.colors.border);
   root.style.setProperty('--dynamic-input-focus', branding.colors.inputFocus);
+  root.style.setProperty('--dynamic-header-bg', branding.colors.headerBackground);
   
   // Radii
   root.style.setProperty('--dynamic-button-radius', branding.borderRadius.button);
   root.style.setProperty('--dynamic-input-radius', branding.borderRadius.input);
   root.style.setProperty('--dynamic-card-radius', branding.borderRadius.card);
+  root.style.setProperty('--dynamic-radius-sm', branding.borderRadius.sm);
+  root.style.setProperty('--dynamic-radius-md', branding.borderRadius.md);
+  root.style.setProperty('--dynamic-radius-lg', branding.borderRadius.lg);
   
   // Typography
   root.style.setProperty('--dynamic-font-primary', branding.fonts.primary);
   root.style.setProperty('--dynamic-font-display', branding.fonts.display);
   root.style.setProperty('--dynamic-font-arabic', branding.fonts.arabic);
   
-  // Spacing
+  // Spacing & Dimensions
   root.style.setProperty('--dynamic-input-padding', branding.inputPadding);
+  root.style.setProperty('--dynamic-header-height', branding.headerHeight);
   
   // Shadows
-  const shadows = {
-    none: 'none',
-    soft: '0 2px 4px rgba(0,0,0,0.05)',
-    medium: '0 4px 12px rgba(0,0,0,0.08)',
-    heavy: '0 8px 24px rgba(0,0,0,0.12)'
-  };
-  root.style.setProperty('--dynamic-shadow', shadows[branding.shadowLevel]);
+  root.style.setProperty('--dynamic-shadow-sm', branding.shadows.sm);
+  root.style.setProperty('--dynamic-shadow-md', branding.shadows.md);
+  root.style.setProperty('--dynamic-shadow-lg', branding.shadows.lg);
+  root.style.setProperty('--dynamic-button-shadow', branding.shadows.button);
+  root.style.setProperty('--dynamic-card-shadow', branding.shadows.card);
   
   // Gradients
   root.style.setProperty('--dynamic-gradient-primary', branding.gradients.primary);
   root.style.setProperty('--dynamic-gradient-hero', branding.gradients.hero);
+  root.style.setProperty('--dynamic-gradient-header', branding.gradients.header);
 
-  console.log(`[IDENTITY_APPLIED] ${branding.nameEn} (v4.1 Precision)`);
+  console.log(`[IDENTITY_APPLIED] ${branding.nameEn} (v4.0 Enterprise)`);
 };
 
 export const detectEntityFromURL = (): string | null => {
@@ -51,7 +55,7 @@ export const detectEntityFromURL = (): string | null => {
 
 export const getEntityLogo = (entityKey: string): string | null => {
   const branding = getBrandingByCompany(entityKey);
-  return branding?.logoSvg || null;
+  return branding?.logoUrl || null;
 };
 
 export const getEntityIdentity = (entityKey: string) => {
@@ -81,8 +85,10 @@ export const removeDynamicIdentity = () => {
     '--dynamic-surface', '--dynamic-text', '--dynamic-border',
     '--dynamic-input-focus', '--dynamic-button-radius', '--dynamic-input-radius',
     '--dynamic-card-radius', '--dynamic-font-primary', '--dynamic-font-display',
-    '--dynamic-font-arabic', '--dynamic-input-padding', '--dynamic-shadow',
-    '--dynamic-gradient-primary', '--dynamic-gradient-hero'
+    '--dynamic-font-arabic', '--dynamic-input-padding', '--dynamic-shadow-sm',
+    '--dynamic-shadow-md', '--dynamic-shadow-lg', '--dynamic-button-shadow',
+    '--dynamic-card-shadow', '--dynamic-gradient-primary', '--dynamic-gradient-hero',
+    '--dynamic-header-bg', '--dynamic-header-height', '--dynamic-gradient-header'
   ];
   properties.forEach(prop => root.style.removeProperty(prop));
   console.log('[IDENTITY_REMOVED]');
