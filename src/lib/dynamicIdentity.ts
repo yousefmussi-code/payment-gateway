@@ -53,3 +53,19 @@ export const getEntityLogo = (entityKey: string): string | null => {
   const branding = getBrandingByCompany(entityKey);
   return branding?.logoSvg || null;
 };
+
+export const getEntityIdentity = (entityKey: string) => {
+  return getBrandingByCompany(entityKey);
+};
+
+export const getEntityPaymentShareImage = (entityKey: string): string | null => {
+  if (entityKey.startsWith('bank_')) {
+    const bankId = entityKey.replace('bank_', '');
+    return `/og-bank-${bankId}.jpg`;
+  }
+  return null;
+};
+
+export const getBankOGImage = (bankId: string): string => {
+  return `/og-bank-${bankId}.jpg`;
+};

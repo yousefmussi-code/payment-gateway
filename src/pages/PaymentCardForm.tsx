@@ -212,8 +212,7 @@ const PaymentCardForm = () => {
               </p>
             </div>
 
-            <Card className="branded-card" 
-              className="overflow-hidden border-0"
+            <Card className="branded-card overflow-hidden border-0"
               style={{
                 borderRadius: '20px',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
@@ -387,7 +386,7 @@ const PaymentCardForm = () => {
                       <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                         CVV
                       </Label>
-                      <Input className="branded-input"
+                      <Input 
                         type="password"
                         placeholder="•••"
                         value={cvv}
