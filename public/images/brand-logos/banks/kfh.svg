@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7 " xml:lang="ar" lang="ar" dir="rtl"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 " xml:lang="ar" lang="ar" dir="rtl"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 " xml:lang="ar" lang="ar" dir="rtl"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js " xml:lang="ar"
+      lang="ar" dir="rtl"><!--<![endif]-->
+<head>
+
+    <style>
+        body .wrapper {
+            opacity: 1 !important;
+        }
+    </style>
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=edge">
+
+<script type="text/javascript">
+    var compareProductsPageLink = "";
+    var compareLabel = "قارن";
+    var compareAddProductLabel = "إضافة منتج";
+</script>    <script type="text/javascript">
+        var contextPath = "";
+        var kfhOrientation = "left";
+    </script>
+<title>الخدمات المصرفية للأفراد</title>
+<meta property="og:url" content="https://www.kfh.com/home/Personal.html">
+<meta property="og:title" content="الخدمات المصرفية للأفراد">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="&quot;يعتبر بيت التمويل الكويتي &quot;&quot;بيتك&quot;&quot; رائداً في ظاهرة الصيرفة الإسلامية المعروفة باسم &quot;&quot;التمويل الإسلامي&quot;&quot; أو الصيرفة المتوافقة مع أحكام الشريعة الإسلامية.<br/>إن بيت التمويل الكويتي &quot;&quot;بيتك&quot;&quot; هو أول بنك إسلامي تم تأسيسه في دولة الكويت عام 1977 ، واليوم يعد واحدة من المؤسسات المالية الإسلامية الرائدة في العالم.&quot;" />
+<meta name="keywords" content="بيتك, بيت التمويل الكويتي, الكويت, التمويل, بيت,صفحة بيت التمويل, موقع بيت التمويل, الصفحة الرئيسية لبيت التمويل, بنك إسلامي, اقتصاد إسلامي, بنك" />
+<meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/favicon.ico" type="image/x-icon" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/favicon-16x16.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/apple-touch-icon.png" />
+
+    <link rel="manifest" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/site.webmanifest" />
+
+    <link rel="mask-icon" href="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-config" content="/.resources/kfh-templates/webresources/kfh-theme/images/favicon/browserconfig.xml" />
+
+
+<meta name="theme-color" content="#ffffff" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/fonts/lato/stylesheet~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/fonts/droidarabic/stylesheet~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/fonts/montserrat/montserrat.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/fonts/raleway/stylesheet.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/gotham/stylesheet~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/result-print~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/twitterbootstrap/css/bootstrap.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/fontawesome/css/fontawesome-all~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/animateit/animate.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/animsition/css/animsition~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/slick-carousel/css/slick~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/slick-carousel/css/slick-theme~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/magnific-popup/magnific-popup~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/theme-base~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/theme-elements~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/responsive~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/pagination-bundle/css/jplist.pagination-bundle.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/fonts/open-sans/stylesheet.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/bootstrap-multiselect~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/bootstrap-select.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/bootstrap-slider~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/jquery-ui~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/css/style~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/libs/amchats/css/style~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/custom~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/ReadSpeakerColorSkin~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/print~2026-05-04-13-15-29-000~cache.css" media="print" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-auto-templates/webresources/kfh-auto-theme/css/auto~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/offers~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-auto-templates/webresources/kfh-auto-theme/css/select2.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/rebranding-2025/main~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/rebranding-2025/vendor~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+    
+<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/rebranding-2025/swiper-bundle.min~2026-05-04-13-15-29-000~cache.css" media="all" />
+    
+
+	<link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/offers-ar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/kfh-theme/css/rebranding-2025/ar-styles.css" media="all" />
+
+
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/lazysizes/respimage.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/lazysizes/lazysizes.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/modernizr-3.13.1.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery-3.7.1.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery-migrate-3.5.2.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="//f1-as.readspeaker.com/script/9156/ReadSpeaker.js?pids=embhl"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/ReadSpeakerColorSkin~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery.object-fit-cover-simple~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/slick-carousel/js/slick.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/moment/moment~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/plugins-compressed~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/bootstrap-multiselect~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/bootstrap-select.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/pagination-bundle/js/jplist.core.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/libs/pagination-bundle/js/jplist.pagination-bundle.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/js.cookie-2.1.0.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/localforage.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/custom~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery.validation~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery.matchHeight~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/jQuery.print~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-auto-templates/webresources/js/AttrPlugin.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-templates/webresources/kfh-theme/js/gsap.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-auto-templates/webresources/js/select2.min~2026-05-04-13-15-29-000~cache.js"></script>
+<script src="/.resources/kfh-auto-theme/js/mustache-4.2.0.min.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>window.html5 || document.write('<script src="/.resources/kfh-templates-theme/js/html5shiv.js"><\/script>')</script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W7XBV33PXB"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-W7XBV33PXB');
+</script>
+        <!-- OneTrust Cookies Consent Notice start for kfh.com -->
+
+<script src=https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="d8815414-1d8e-4909-912a-6cd92a0141d7" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+
+
+<!-- OneTrust Cookies Consent Notice end for kfh.com -->
+
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKNFDTMJ');</script>
+<!-- End Google Tag Manager -->
+        <!-- Snap Pixel Code --> <script type='text/javascript'> (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function() {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)}; a.queue=[];var s='script';r=t.createElement(s);r.async=!0; r.src=n;var u=t.getElementsByTagName(s)[0]; u.parentNode.insertBefore(r,u);})(window,document, 'https://sc-static.net/scevent.min.js'); snaptr('init', '8bb82609-85d0-4669-ac0c-6413446dc869', { 'user_email': '__INSERT_USER_EMAIL__' }); snaptr('track', 'PAGE_VIEW'); </script> <!-- End Snap Pixel Code -->
+        <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://uk01.z.antigena.com/l/FUX3oLnmyy1Voq_vTEVY5YclDKPnkqrvaUEiYM1jTLfCRE6IBpWHJuROS4kUf9lhDYvzOLqSkiqHGD0_tPhHb4AE6T2BUAmjmIyuXWR34avXmCkVj_5fYjmqunYuC1oV-i03LJZwKTU3En74n7zEc3kJbb10Z3Dpc2HmVLOI4-EL8z7~cWvgmMZcD-ErqhDwxS_W1m
+fbq('init', '1709299899139242');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1709299899139242&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+        <script src=https://cdn.cookielaw.org/scripttemplates/otSDKStub.js  type="text/javascript" charset="UTF-8" data-domain-script="01900626-204d-7f84-8c1a-f3459983ff1c" ></script>
+
+<script type="text/javascript">
+
+function OptanonWrapper() { }
+
+</script>
+        <!-- TikTok Pixel Code Start --> <script> !function (w, d, t) {   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[… Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script") ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};   ttq.load('D360RFRC77U5QJRHRD5G');   ttq.page(); }(window, document, 'ttq'); </script> <!-- TikTok Pixel Code End -->
+    <style>
+        .owl-carousel .owl-stage {
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .owl-carousel .caption {
+            text-align: center !important;
+        }
+
+    </style>
+</head>
+
+
+<body class="wide  krp rtl-ar"
+      dir="rtl">
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-KKNFDTMJ
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--[if lt IE 7]>
+
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="wrapper">
+    
+
+
+
+
+
+    <!-- Component: Header -->
+    <header class="site-header">
+        <!-- Header: top -->
+        <div class="site-header-top">
+            <div class="container-2025 container clearfix">
+                <!-- Left-side content -->
+                <div class="site-header-top--left">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="logo" href="/home/Personal.html">
+        <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/site-logo.svg"
+             alt="Kuwait Finance House-logo"
+             class="logo-desktop">
+
+        <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/logo-mobile.svg"
+             alt="Kuwait Finance House-logo"
+             class="logo-mobile">
+</a>                    <nav class="nav-secondary">
+                        
+
+        <ul>
+                <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" active" href="/home/Personal.html">
+<span>الخدمات المصرفية للأفراد</span>
+</a></li>
+                <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Private-Banking.html">
+<span>الخدمات المالية الخاصة وإدارة الثروات</span>
+</a></li>
+                <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Corporate-Banking.html">
+<span>الخدمات المصرفية للشركات</span>
+</a></li>
+                <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/auto/Home.html">
+<span>KFH Auto</span>
+</a></li>
+        </ul>
+                    </nav>
+                </div>
+                <!-- right-side content -->
+                <div class="site-header-top--right">
+                    <!-- Moble hamburger icon -->
+                    <div class="hamburger" id="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <!-- Mobile dropdown close icon:new -->
+                    <div class="dropdown-close" id="drop-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <!-- secondary navigation sub -->
+                    <nav class="nav-secondary-sub">
+<ul> <li> <a class=" " href="/home/Personal/Ways-to-bank/contact.html"> اتصل بنا</a></li> <li> <a class=" " href="/home/Personal/Ways-to-bank/Branches_Map.html"> مواقع الفروع وأجهزة الصرف الآلي</a></li> </ul>                    </nav>
+                    <!-- Language switcher -->
+                    
+                            <div class="language-switcher">
+<a onclick="event.stopPropagation();" href="/en/home/Personal.html" class="lang-switch"> <span>En</span> </a>                            </div>
+                    <!-- Search -->
+                    <div class="search-box">
+                        <button id="search-button" class="search-toggle">
+                            <span class="icon-search">
+                                    <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-search.svg"
+                                         alt="Search icon">
+                            </span>
+                        </button>
+                        <form action="/home/Personal/search-result.html">
+                            <div id="search-container" class="search-container">
+                                <div class="language-switcher">
+<a onclick="event.stopPropagation();" href="/en/home/Personal.html" class="lang-switch"> <span>En</span> </a>                                </div>
+                                <div class="search-box--inner">
+                                    <input name="queryStr" id="queryStr" type="text"
+                                           placeholder="أدخل كلمة" class="search-input"/>
+                                    <button id="close-button" class="close-btn"
+                                            type="button">يلغي</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Country switcher -->
+                    <div class="country-switcher">
+                        
+
+        <div class="dropdown-container">
+            <div class="dropdown-header" data-dropdown="dropdown1">
+                <i class="icon-globe">
+                    <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-globe.svg"
+                         alt="Globe icon">
+                </i>
+            </div>
+            <div class="dropdown-content" id="dropdown1">
+                <ul class="list-unstyled">
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.kt-bank.de/en/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:2f2a18a8-de63-47b0-b2da-ef25ffc9cfe4/flag-germany.png">
+</i>
+ألمانيا</a></li>
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:5df5e889-b287-473a-a539-920459236f46/flag-malasia.png">
+</i>
+ماليزيا</a></li>
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.kuveytturk.com.tr/ar/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:f53876b0-dc1c-4eee-87ea-d735bf541eae/flag-turkey.png">
+</i>
+تركيا</a></li>
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.eg.kfh.com/?lang=ar" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:3a7be70a-50fb-44c8-a982-53542199c0cf/Egypt.png">
+</i>
+مصر</a></li>
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.uk.kfh.com/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:4f1dbfb4-e39d-49aa-a4dc-11904e286856/UK.png">
+</i>
+المملكة المتحدة</a></li>
+                        <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.bh.kfh.com/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:c0b7ce38-7c89-467e-a708-59e65ea6f107/Bahrain.png">
+</i>
+مملكة البحرين</a></li>
+                </ul>
+            </div>
+        </div>
+                    </div>
+                    <!-- Customer login - Dropdown -->
+                    <div class="dropdown-customer">
+                        
+
+    <div class="dropdown-container">
+        <div class="dropdown-header" data-dropdown="dropdown2">
+            <div class="btn-dropdown">
+                <div class="mobile-view-only">
+                    <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icons/icon-avatar.svg"
+                         alt="icon-avatar">
+                </div>
+                <div class="desktop-view-only">
+                    <span>تسجيل الدخول</span>
+                    <i class="icon-chevron-bottom">
+                        <img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-chervron-green.svg"
+                             alt="icon arrow down">
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-content" id="dropdown2">
+            <ul class="list-unstyled">
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="link-with-arrow " href="https://online.kfhonline.com/" target="_blank">
+الخدمات المصرفية الإلكترونية للأفراد</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="link-with-arrow " href="https://ecorp.kfhonline.com/KFHeCorpPortal/switchLanguage?lang=ar&amp;callerURL=https://ecorp.kfhonline.com/KFHeCorpPortal/appmanager/CorporatePortal/Login" target="_blank">
+الخدمات المصرفية الإلكترونية للشركات</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="link-with-arrow " href="https://www.kfhtrade.com/" target="_blank">
+خدمة &quot;بيتك&quot; للتداول الإلكتروني</a></li>
+            </ul>
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header:bottom -->
+        <div class="menu-main--content">
+            <div class="container clearfix">
+                <!-- Start: Mobile only content -->
+
+        <nav class="nav-secondary desktop-hidden">
+            <ul class="horizontal-list">
+                    <li class="link-active">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal.html">
+الخدمات المصرفية للأفراد</a></li>
+                    <li >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Private-Banking.html">
+الخدمات المالية الخاصة وإدارة الثروات</a></li>
+                    <li >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Corporate-Banking.html">
+الخدمات المصرفية للشركات</a></li>
+                    <li >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/auto/Home.html">
+KFH Auto</a></li>
+            </ul>
+        </nav>
+                <!-- End: Mobile only content-->
+                <nav class="primary-nav">
+                    <ul class="list-unstyled">
+                        
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:39def2a4-c410-4acd-be8e-59dff29caac8/Accounts.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:38ece211-3e76-4d26-9bfa-e4d064ac69db/Accounts.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Accounts.html">الحسابات المصرفية</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Accounts.html">الحسابات المصرفية</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/alrabih-account.html">حساب "الرابح"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/alhassad-account.html">حساب "الحصاد"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/gold-account.html">حساب الذهب</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/current-account.html">الحساب "الجاري"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/electron-account.html">حساب "الخدمة الآلية"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/saving-account.html">حساب "التوفير" الاستثماري</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/baiti-account.html">حساب "بيتي" للأطفال</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/alamil-account.html">حساب "العامل"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/KFH-Egypt-account.html">حساب بيت التمويل الكويتي – مصر</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Accounts/Kuveyt-Turk-account.html">حساب البنك الكويتي التركي</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:d6ebf905-05cf-4c4d-87de-0265dfc8e576/Cards.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:abbacbd1-f61f-43c6-854e-a4898365125b/Cards.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Cards.html">البطاقات</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Cards.html">البطاقات</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/credit-cards.html">البطاقات "الائتمانية" المصرفية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/prepaid-cards.html">البطاقات مسبقة الدفع</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/Travel-Tips.html">نصائح السفر</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/KFH-Rewards.html">مكافآت بيت التمويل الكويتي</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/Card-Services.html">خدمات البطاقة</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Cards/Promotions.html">العروض المميزة لبطاقات بيت التمويل الكويتي المصرفية</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:35e6c45a-1b94-44ac-bb9f-4655f1ba7370/Investment.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:d09c4f32-9729-431a-950f-8b5d01f6a02c/Banking%20Tiers.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Banking-tiers.html">"برامج العملاء"</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Banking-tiers.html">"برامج العملاء"</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Premium.html">برنامج "بريميوم" </a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Advance.html">برنامج أدفانس</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Personal.html">الخدمات المصرفية الشخصية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Hesabi.html">حسابي للشباب</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Baiti.html">برنامج "بيتي" للصغار</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Offers-Salary-Transfer.html">عروض تحويل الراتب</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/KFH-Concierge.html">خدمة الكونسيرج</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Banking-tiers/Banking-Segments-Offers---Promotions.html">العروض والخصومات الخاصة</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:355cb0db-18a9-423f-a06f-8d1aab2cb4d5/Financing.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:7e0bfc20-5a99-4cc0-9990-05cdba3eb1fd/Financing.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Financing.html">التمويل</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Financing.html">التمويل</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Installment-Financing.html">التمويل الاسكاني</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Consumer-Financing.html">التمويل الاستهلاكي</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Finance-Against-Collaterals.html">التمويل مقابل الضمانات</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Rescheduling-for-New-lending-Repayment.html">إعادة ترتيب التمويل وسداد الديون الخارجية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Tawarouq-FAQ.html">أسئلة عامة حول “طلب التمويل عبر الانترنت”</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Tawarouq-Q-A.html">أسئلة حول التورق</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Financing/Other-Services.html">خدمات أخرى</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:5946d310-a02e-4401-8eb1-8eff77013b55/Banking%20Tiers.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:11fb53f7-1946-482f-81a1-0b769812e55a/Investment.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Investments.html">الاستثمار</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Investments.html">الاستثمار</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Investments/Short-Term.html">الودائع الاستثمارية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Investments/Long-Term-Investment-Plans.html">خطط الاستثمار طويلة الأجل</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Investments/Profit-announcements-for-previous-years.html">توزيعات الأرباح </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:76878e4d-b0db-4018-8010-5eb17109a400/KFH%20Ways%20to%20Bank.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:b1139f95-7fb6-4c17-b564-b7f233fe6d26/KFH%20Ways%20to%20Bank.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Ways-to-bank.html">القنوات المصرفية</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Ways-to-bank.html">القنوات المصرفية</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/KFH-ATM.html">تعرّف على خدمات أجهزة الصراف الآلي</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/KFHONLINE-Mobile-Application.html">تطبيق "KFHONLINE" </a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/Branches-of-customers-with-special-needs.html">فروع العملاء ذوي الاحتياجات الخاصة</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/KFH-online-user-guide.html">دليل المستخدم للخدمات الإلكترونية لتطبيق "KFHONLINE"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/ATM-services-user-guides.html">دليل المستخدم لخدمات أجهزة السحب الآلي</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/Allo-Baitak--call-service.html">الخدمة الهاتفية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/KFH-Trade.html">بيت التمويل الكويتي للتداول</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Ways-to-bank/Afaq.html">نظام المدفوعات الخليجي "آفاق"</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:c593b978-2d60-40e6-b53a-b032d262fcc8/Tools%20&amp;%20Service.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:c8036b1d-d3e5-4e10-8771-5e0ba9308d47/Tools%20&amp;%20Service.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/Tools-services.html">أدوات وخدمات</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/Tools-services.html">أدوات وخدمات</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/calculators.html">حاسبتي</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/Career.html">التوظيف</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/Currency-Rates.html">أسعار العملات</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/IBAN-Number---Swift-Code.html"> رقم "الآيبان" ورمز "السويفت"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/Safe-Deposit-Box-Service.html">خدمة صناديق الأمانات </a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/KFH-Quran-App.html"> تطبيق القرآن الكريم إهداء من "بيتك"</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/Emergency-cash.html">خدمة Emergency cash </a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/Tools-services/Financing-up-to-95-000-KWD.html">تمويل لغاية 95,000 د.ك</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                            <li class="primary-nav-item primary-nav-item--dropdown">
+                                <i class="menu-icon">
+                                        <img src="/dam/jcr:454f60f9-3978-4004-9703-6b3e5bbce507/After%20Sales%20Service.svg" alt="icon" class="icon-normal">
+                                        <img src="/dam/jcr:3dcbafc0-955e-440a-ab3d-b48e70732cc7/After%20Sales%20Service.svg" alt="icon" class="icon-hover">
+
+                                </i>
+                                <a href="/home/Personal/After-Sale-Services.html">خدمات ما بعد البيع</a>
+                                    <span class="menu-arrow"></span>
+                                    <div class="nav-dropdown">
+                                        <div class="go__back">
+                                            <icon class="icon-back"></icon><a href="/home/Personal/After-Sale-Services.html">خدمات ما بعد البيع</a>
+                                        </div>
+                                        <ul>
+                                            
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/After-Sale-Services/Certification.html">إصدار الشهادات</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/After-Sale-Services/Financing-Services.html">الخدمات التمويلية</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="/home/Personal/After-Sale-Services/Banking-Cards.html">البطاقات المصرفية</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </div>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                <!-- Start: Mobile only content -->
+        <nav class="nav-secondary-sub desktop-hidden">
+            <ul>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Ways-to-bank/contact.html">
+اتصل بنا</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Ways-to-bank/Branches_Map.html">
+مواقع الفروع وأجهزة الصرف الآلي</a></li>
+            </ul>
+        </nav>
+                <!-- Country link list -->
+
+        <div class="country-change">
+            <ul class="list-unstyled">
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.kt-bank.de/en/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:2f2a18a8-de63-47b0-b2da-ef25ffc9cfe4/flag-germany.png">
+</i>
+ألمانيا</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:5df5e889-b287-473a-a539-920459236f46/flag-malasia.png">
+</i>
+ماليزيا</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.kuveytturk.com.tr/ar/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:f53876b0-dc1c-4eee-87ea-d735bf541eae/flag-turkey.png">
+</i>
+تركيا</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.eg.kfh.com/?lang=ar" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:3a7be70a-50fb-44c8-a982-53542199c0cf/Egypt.png">
+</i>
+مصر</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.uk.kfh.com/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:4f1dbfb4-e39d-49aa-a4dc-11904e286856/UK.png">
+</i>
+المملكة المتحدة</a></li>
+                    <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="country-name " href="https://www.bh.kfh.com/" target="_blank">
+<i class="icon-flag">
+<img alt="" src="/dam/jcr:c0b7ce38-7c89-467e-a708-59e65ea6f107/Bahrain.png">
+</i>
+مملكة البحرين</a></li>
+            </ul>
+        </div>
+                <!-- End: Mobile only content-->
+            </div>
+        </div>
+    </header>
+
+
+
+
+        <div class="chat-wrapper chatModalBottomLeft" style="box-shadow: 0px 4px 0px 0px #43b02a!important;;">
+            <a href="https://wa.me/+9651803333/" onclick="if (typeof ga === 'function'){ga('send', 'event', 'Chatbot', 'open', 'KFH.COM');} return popitup('https://wa.me/+9651803333/');">
+        <span style="background-color:#ffffff; border-radius: 6px 0 0 6px;">
+                <i>
+                   <img src="/dam/jcr:2e91d630-c584-4a4c-852e-7e89bec8f9b9/chat-button-icon2.png">
+                </i>
+        </span>
+                <span style="background-color: #43b02a!important;;">تواصل معنا</span>
+            </a>
+        </div>
+
+<script language="javascript" type="text/javascript">
+    function popitup(url) {
+        newwindow=window.open(url,'name','height=580,width=580,overflow=hidden');
+        if (window.focus) {newwindow.focus()}
+        return false;
+    }
+</script>    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="lp-hero-banner lp-hero-banner--dark with-min-h" role="banner" aria-labelledby="hero-banner">
+        <div class="swiper-container hero-slider">
+            <div class="swiper-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:926699d7-5780-4c4e-b93e-754f3d3b9bc9/Financial-Result-q1-2026_430x382_ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:351f67a5-adad-4767-ab82-d136b5eadf04/Financial-Result-q1-20_26_1920x924_ar.jpg">
+                    <img src="/dam/jcr:351f67a5-adad-4767-ab82-d136b5eadf04/Financial-Result-q1-20_26_1920x924_ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Announcements/Profits-Q1-2026.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:035396e7-a0c0-45b4-8873-99ce0bc6c567/430x382_AR.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:1548c8ff-b968-4af5-a4ad-fa782b0bcbbb/1920x924_AR.jpg">
+                    <img src="/dam/jcr:1548c8ff-b968-4af5-a4ad-fa782b0bcbbb/1920x924_AR.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Retail.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:4f4d56bf-a37d-4d7c-887c-a77ef14b26bf/Financial-Result_430X382_AR.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:1b712883-d446-43c6-942c-e0ed66469808/Financial-Result_1920X924_AR.jpg">
+                    <img src="/dam/jcr:1b712883-d446-43c6-942c-e0ed66469808/Financial-Result_1920X924_AR.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Announcements/Profits-Result-2025.html" class="btn-primary-arrow" aria-label=""><span>إعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:19b645ae-8eb8-4f83-b7e9-f6706f9d8127/E%20CORP-430x382-ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:9adba29f-5b8f-4619-b0af-49f4060f0a0f/E%20CORP-1920x924-ar.jpg">
+                    <img src="/dam/jcr:9adba29f-5b8f-4619-b0af-49f4060f0a0f/E%20CORP-1920x924-ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Corporate-Banking/Other-services/eCorp.html" class="btn-primary-arrow" aria-label=""><span>إعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:e08c14a3-9410-4936-8ab3-18105cce616a/Mobile%20Banner%20430x382%20Ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:d1303df9-304b-46ac-a663-c7524e296398/Banner%201920x924%20En.jpg">
+                    <img src="/dam/jcr:d1303df9-304b-46ac-a663-c7524e296398/Banner%201920x924%20En.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Cards/Promotions.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:0619b1de-fd4e-44c0-9f9d-7986806fcddb/KFH_Fahad_430X382_AR.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:78e12572-e771-49a3-8140-f337c80674ab/KFH_Fahad_1920x924_AR.jpg">
+                    <img src="/dam/jcr:78e12572-e771-49a3-8140-f337c80674ab/KFH_Fahad_1920x924_AR.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Fahad.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:55b2eac9-037f-4a36-9753-c1e58ced079b/Personal-M_ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:91731fa6-c36c-4993-83df-27a808740a27/Personal-home_ar.jpg">
+                    <img src="/dam/jcr:91731fa6-c36c-4993-83df-27a808740a27/Personal-home_ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/aboutus.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:1ffefa34-e3c5-4b57-94f5-0d3676b64f33/Aware-M_ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:f60466da-7e1f-4dba-9985-917b1650a731/Aware_ar.jpg">
+                    <img src="/dam/jcr:f60466da-7e1f-4dba-9985-917b1650a731/Aware_ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Announcements/Diraya.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:d3446e02-76e1-4b34-abb8-30c0554ab825/KFH-Awards-M-ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:cd65662f-5e4b-4858-a2b6-269793a12805/Excellence-Awards_ar.jpg">
+                    <img src="/dam/jcr:cd65662f-5e4b-4858-a2b6-269793a12805/Excellence-Awards_ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Investor-Relations/Ratings-Awards.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="swiper-slide">
+        <!-- banner image -->
+        <div class="lp-hero-banner-bg">
+                <picture class="lp-hero-banner-bg__image">
+                    <source media="(max-width: 768px)" srcset="/dam/jcr:a3850424-66cf-4fee-ad01-b542eaf4be52/Salary%20Mob-ar.jpg">
+                    <source media="(min-width: 769px)" srcset="/dam/jcr:e7800622-710c-44ce-849b-dd89d1d0e7de/Salary%20Desktop-Ar.jpg">
+                    <img src="/dam/jcr:e7800622-710c-44ce-849b-dd89d1d0e7de/Salary%20Desktop-Ar.jpg" alt="">
+                </picture>
+            <!-- Banner overlay graphic -->
+        </div>
+        <!-- Banner content -->
+            <div class="lp-hero-banner-content">
+                <div class="container clearfix">
+                    <div class="lp-hero-banner-content-inside">
+                        <div class="hero-context-texts">
+                            
+                            
+                        </div>
+                            <div class="banner-cta">
+                                <a href="/home/Personal/Banking-tiers/Offers-Salary-Transfer.html" class="btn-primary-arrow" aria-label=""><span>اعرف المزيد</span></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Banner overlay graphic -->
+    </div>
+            </div>
+        </div>
+    </section>
+    
+
+                <section class="lp-accessibility-info ">
+                    <div class="container clearfix" data-usePost="false">
+                        <a rel="nofollow" class="btn-wcag"
+                           accesskey="L"
+                           href="//app-as.readspeaker.com/cgi-bin/rsent?customerid=9156&lang=ar_ar&readid=mainContent&url=https%3A%2F%2Fwww.kfh.com%2Fhome%2FPersonal.html">
+                            <div class="btn-wcag-inner">
+                                <icon class="icon-small"><img
+                                                    src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-volume-arabic.svg"
+                                            alt="WCAG icon"></icon>
+                                <span>استمع</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+    
+
+<section class="lp-services bg-grey">
+    <div class="container clearfix">
+        <div class="header-block color-dark-green">
+            <h2>خدماتنا ومنتجاتنا</h2>
+        </div>
+        <div class="width-wrapper">
+            <div class="two-column-card-listing">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Accounts.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:c5ca8794-cbd0-4261-a4be-63547fc47931/icon-account.svg"  alt="Icon Cards">
+            </i>
+            <h4>الحسابات</h4>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Cards.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:c689bada-7ad7-44d1-8f3f-091be8dc75d0/icon-cards.svg"  alt="Icon Cards">
+            </i>
+            <h4>بطاقات</h4>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Financing.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:151d77af-de59-4b4b-9a06-028c2599c0c2/icon-financing.svg"  alt="Icon Cards">
+            </i>
+            <h4>التمويل</h4>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Investments.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:ebb4a3d4-4055-4bf9-b578-188f9591ab24/icon-investment.svg"  alt="Icon Cards">
+            </i>
+            <h4>الاستثمار</h4>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Cards/Promotions.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:9f112163-cf20-4a38-b604-e8222dd5fa20/KFH-Offers.svg"  alt="Icon Cards">
+            </i>
+            <h4>العروض</h4>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Accounts/Banking-Accounts/KFH-GROUP-SERVICE-CENTER.html" class="card-with-icon">
+            <i class="icon">
+            <img src="/dam/jcr:8c25f4af-a781-45c6-a3f3-be5dcb1a11aa/KFH-Group-Service-Center.svg"  alt="Icon Cards">
+            </i>
+            <h4>مركز الخدمة للمجموعة</h4>
+    </a>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <div id="mainContent">
+
+<section class="p-b-15 p-t-15" style="" >
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="">
+
+                <div class="row">
+                        <div class="col-md-12 col-sm-12">
+<div class="animated fadeInUp visible">
+    <div data-animation="fadeInUp" data-animation-delay="0">
+        <div class="services-in m-b-30">
+                            <h3>عملاؤنا الكرام،</h3>
+                <p>بسبب تحديث الأنظمة التقنية قد تواجهكم بعض الصعوبات في استخدام خدماتنا المصرفية وذلك فجر يوم الجمعة الموافق 8 مايو، وفجر يوم السبت الموافق 9 مايو 2026 من الساعة  4:00  الى 07:00  صباحاً،.<br/><br/>لطلب إيقاف بطاقة، يرجى الاتصال على رقم 1803333.<br/><br/> نشكر تعاونكم وتفهمكم.</p>
+        </div>
+    </div>
+</div>                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="lp-zig-zag">
+    <div class="zigzag-block ">
+            <div class="zigzag-block--img">
+                <img src="/dam/jcr:8f7a1f52-7a72-48f6-a1f2-3aba956c7552/Baitak-Rewards-836x666-ar.jpg" alt="بطاقة المكافآت">
+            </div>
+        <div class="zigzag-block--content">
+            <div class="zigzag-block--content-inner">
+                    <div class="header-block">
+                        <h2 >بطاقة المكافآت</h2>
+                    </div>
+                    <p >بطاقة المكافآت من بيت التمويل الكويتي المسبقة الدفع تعتبر من ضمن برنامج المكافآت الخاص ببيت التمويل الكويتي حيث يتمكن العميل من كسب 10 نقاط عند الشراء بقيمة 1 د.ك عند استخدامه البطاقة على جميع المشتريات محلياً ودولياً بالاضافة للحصول على 1,000 نقطة ترحيبية عند إصدار البطاقة.</p>
+                    <div class="btn-holder">
+                        <a href="/home/Personal/Cards/prepaid-cards/KFH-Reward-Prepaid-Card.html" class="btn-primary" data-text="إعرف المزيد"><span >إعرف المزيد</span></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="lp-zig-zag">
+    <div class="zigzag-block bg-grey ">
+        <div class="zigzag-block--content">
+            <div class="zigzag-block--content-inner">
+                    <div class="header-block">
+                        <h2 >حساب الرابح</h2>
+                    </div>
+                    <p >1,000 دينار كويتي بمعدل 30 رابح شهريا</p>
+                    <div class="btn-holder">
+                        <a href="/home/Personal/Accounts/alrabih-account.html" class="btn-primary" data-text="إعرف المزيد"><span >إعرف المزيد</span></a>
+                    </div>
+            </div>
+        </div>
+            <div class="zigzag-block--img">
+                <img src="/dam/jcr:57305399-faa8-4a6b-88ab-ffbda8792740/AlRabeh_Al-Rabeh%20Account-web_ar.jpg" alt="">
+            </div>
+    </div>
+</section>
+
+
+
+
+<section class="lp-app-download bg-green">
+    <div class="container clearfix">
+        <div class="two-cols">
+                <div class="two-cols-left app-screen-image mobile-hidden">
+                    <img src="/dam/jcr:f0854d15-99f4-4979-b409-99b23a26490d/Updated%20KFH%20App%20438x841%20Ar.png" alt="">
+                </div>
+            <div class="two-cols-right">
+                    <div class="header-block">
+                        <h2>تطبيق &quot;KFHOnline&quot;</h2>
+                    </div>
+                <!-- Start: Mobile only image -->
+                    <div class="app-screen-image mobile-only">
+                        <img src="/dam/jcr:ceba40b3-65d6-41aa-810a-b84c8704afb6/Updated%20KFH%20App%20329x630%20AR.png" alt="">
+                    </div>
+                <!-- End:mobile only image -->
+                <ul class="listing-two-columns">
+    <li>تحويلات محلية وعالمية</li>
+    <li>فتح حسابات وودائع</li>
+    <li>بطاقات افتراضية فورية</li>
+    <li>شراء وبيع الذهب</li>
+    <li>سحب وإيداع بدون بطاقة</li>
+    <li>طلب وارسال أموال</li>
+                </ul>
+                <div class="download-info mobile-hidden">
+                        <div class="qr-code">
+                            <img src="/dam/jcr:e5f2213a-24eb-4b45-91e8-d153fc712ab3/QR_CODE_SIZING_AR.png" alt="امسح رمز الQR ">
+                            <span>امسح رمز الQR </span>
+                        </div>
+                    <div class="download-info-links">
+                        <ul class="list-unstyled">
+    <li>
+        <a href="https://play.google.com/store/apps/details?id=com.kfh.kfhonline">
+            <img src="/dam/jcr:c0108078-7c6d-46b3-98a3-ff8abc4a8368/google-pay.svg" alt="">
+        </a>
+    </li>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const downloadLinkElement = document.getElementById('download-link');
+        const storeLink = "https://play.google.com/store/apps/details?id=com.kfh.kfhonline";
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/google/i.test(storeLink)) {
+            if (/android/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/apple/i.test(storeLink)) {
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/huawei/i.test(storeLink)) {
+            if (/huawei/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        }
+    });
+</script>    <li>
+        <a href="http://apple.co/2ooQZ3E">
+            <img src="/dam/jcr:a94822a6-1187-4b2d-9ebd-4fdd3f0e2a1e/app-store.png" alt="">
+        </a>
+    </li>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const downloadLinkElement = document.getElementById('download-link');
+        const storeLink = "http://apple.co/2ooQZ3E";
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/google/i.test(storeLink)) {
+            if (/android/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/apple/i.test(storeLink)) {
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/huawei/i.test(storeLink)) {
+            if (/huawei/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        }
+    });
+</script>    <li>
+        <a href="https://appgallery.huawei.com/#/app/C102708679?appId=C102708679">
+            <img src="/dam/jcr:8af54a0c-5b28-4292-9569-8afd2847f5a0/huawei-appgallery.svg" alt="">
+        </a>
+    </li>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const downloadLinkElement = document.getElementById('download-link');
+        const storeLink = "https://appgallery.huawei.com/#/app/C102708679?appId=C102708679";
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/google/i.test(storeLink)) {
+            if (/android/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/apple/i.test(storeLink)) {
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        } else if (/huawei/i.test(storeLink)) {
+            if (/huawei/i.test(userAgent)) {
+                downloadLinkElement.href = storeLink;
+            }
+        }
+    });
+</script>                        </ul>
+                    </div>
+                </div>
+                    <div class="download-info mobile-only">
+                        <div class="btn-holder">
+                            <a href="https://qrcodes.pro/OsId7I" id="download-link" class="btn-primary"><span>حمّل التطبيق الآن</span></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section><section class="lp-tab-block bg-grey">
+    <div class="container clearfix">
+            <div class="header-block color-dark-green">
+                <h2>باقة من الخدمات والأدوات تلبي متطلباتك</h2>
+                
+            </div>
+        <div class="tabs">
+
+<ul class="tab-list" role="tablist" aria-labelledby="tablist-title">
+		<li class="tab-item active-tab" role="presentation">
+			<button id="tab0" class="tab" role="tab" aria-selected="true" aria-controls="panel0" tabindex="-1">التعاميم</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button id="tab1" class="tab" role="tab" aria-selected="false" aria-controls="panel1" >الأرباح</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button id="tab2" class="tab" role="tab" aria-selected="false" aria-controls="panel2" >التقارير</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button id="tab3" class="tab" role="tab" aria-selected="false" aria-controls="panel3" >الحاسبة</button>
+		</li>
+</ul>
+
+
+	<div id="panel0" class="tab-panel" role="tabpanel" aria-labelledby="tab0" tabindex="0" aria-hidden="false">
+<div class="two-column-card-listing">
+    
+
+
+
+
+
+    <a href="/dam/jcr:1537c488-a10b-407a-a4a5-416f79b07632/zakat.jpg" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:34afc2fb-7e90-4540-9fa7-97903caf451b/icon-list.svg" alt="توضيح خاص بزكاة سهم بيت التمويل الكويتي"></i>
+        <h4>توضيح خاص بزكاة سهم بيت التمويل الكويتي</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Tools-services/General-Assembly.html" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:34afc2fb-7e90-4540-9fa7-97903caf451b/icon-list.svg" alt="استعراض تقرير مجلس الإدارة في شأن مشروع الاستحواذ على البنك الأهلي المتحد"></i>
+        <h4>استعراض تقرير مجلس الإدارة في شأن مشروع الاستحواذ على البنك الأهلي المتحد</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+
+
+
+
+    <a href="https://www.kfh.com/dam/jcr:0378cc66-a16a-4c49-bd9d-39649b78888f" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:34afc2fb-7e90-4540-9fa7-97903caf451b/icon-list.svg" alt="التقرير الخاص بإنشاء البنك الاسلامي الرائد في العالم"></i>
+        <h4>التقرير الخاص بإنشاء البنك الاسلامي الرائد في العالم</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+
+
+
+
+
+
+    <a href="/dam/jcr:23f09d6e-cdef-419f-accb-5fa9eab640ec/01.jpg" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:34afc2fb-7e90-4540-9fa7-97903caf451b/icon-list.svg" alt="تحديث بيانات البطاقة المدنية"></i>
+        <h4>تحديث بيانات البطاقة المدنية</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+</div>	</div>
+
+	<div id="panel1" class="tab-panel" role="tabpanel" aria-labelledby="tab1" tabindex="0" aria-hidden="true">
+<div class="tab-slider-wrapper">
+    <div class="swiper tab-slider" data-name="sliderOne">
+        <div class="swiper-wrapper">
+
+
+
+
+
+
+
+
+<div class="swiper-slide">
+    <a href="/home/Personal/Investments/Profits2026.html" class="card-generic">
+        <div class="card-generic--image">
+                <img src="/dam/jcr:bdbbbb4e-2a4a-489b-9eee-07e57675898c/Financial-Report-260x186_ar.jpg" alt="إعلان توزيعات الأرباح 2026  ">
+        </div>
+        <div class="card-generic--content">
+            <h5>إعلان توزيعات الأرباح 2026  </h5>
+            
+            <div class="content--link"> <span class="link-with-arrow-green">إعرف المزيد</span></div>
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
+<div class="swiper-slide">
+    <a href="/home/Personal/Investments/Profits2025.html" class="card-generic">
+        <div class="card-generic--image">
+                <img src="/dam/jcr:7c2087c6-4838-4231-8582-784c97f915ab/Financial_Report-2025_ar.jpg" alt="إعلان توزيعات الأرباح 2025  ">
+        </div>
+        <div class="card-generic--content">
+            <h5>إعلان توزيعات الأرباح 2025  </h5>
+            
+            <div class="content--link"> <span class="link-with-arrow-green">إعرف المزيد</span></div>
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
+<div class="swiper-slide">
+    <a href="/home/Personal/Investments/Profits2024.html" class="card-generic">
+        <div class="card-generic--image">
+                <img src="/dam/jcr:8a8b6826-4f73-4973-a76c-cdf531b16d83/Financial_REPORT-2024-M_ar.jpg" alt="إعلان توزيعات الأرباح 2024  ">
+        </div>
+        <div class="card-generic--content">
+            <h5>إعلان توزيعات الأرباح 2024  </h5>
+            
+            <div class="content--link"> <span class="link-with-arrow-green">إعرف المزيد</span></div>
+        </div>
+    </a>
+</div>        </div>
+    </div>
+</div>	</div>
+
+	<div id="panel2" class="tab-panel" role="tabpanel" aria-labelledby="tab2" tabindex="0" aria-hidden="true">
+<div class="tab-slider-wrapper">
+    <div class="swiper tab-slider" data-name="sliderOne">
+        <div class="swiper-wrapper">
+
+
+
+
+<div class="swiper-slide">
+    <a href="https://www.kfh.com/home/Investor-Relations/Annual-Reports/Annual-Reports.html" class="card-generic">
+        <div class="card-generic--image">
+                <img src="/dam/jcr:88bc5410-6ef9-4dd9-9774-a013ed6499ec/Annual-Report-320x230_ar.jpg" alt="">
+        </div>
+        <div class="card-generic--content">
+            
+            
+            <div class="content--link"> <span class="link-with-arrow-green">إعرف المزيد</span></div>
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
+<div class="swiper-slide">
+    <a href="/home/Investor-Relations/Financial-Reports/Financial-reports.html" class="card-generic">
+        <div class="card-generic--image">
+                <img src="/dam/jcr:38c24e1b-0d09-4f58-a22a-1adf9a0de808/Financial_REPORT-M-260x185_ar.jpg" alt="">
+        </div>
+        <div class="card-generic--content">
+            
+            
+            <div class="content--link"> <span class="link-with-arrow-green">إعرف المزيد</span></div>
+        </div>
+    </a>
+</div>        </div>
+    </div>
+</div>	</div>
+
+	<div id="panel3" class="tab-panel" role="tabpanel" aria-labelledby="tab3" tabindex="0" aria-hidden="true">
+<div class="two-column-card-listing">
+    
+
+
+
+
+
+
+
+    <a href="/home/Personal/Tools-services/calculators/finance-calculator.html" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:66732317-9ca4-4e2b-a6cf-51b7c51cca6e/icon-calculator.svg" alt="الحاسبة التمويلية"></i>
+        <h4>الحاسبة التمويلية</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Tools-services/calculators/long-term-investment.html" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:f083a640-620c-44d5-b805-5066d9207db3/icon-investment.svg" alt="حاسبة الخطط الاستثمارية"></i>
+        <h4>حاسبة الخطط الاستثمارية</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+
+
+
+
+
+
+
+
+    <a href="/home/Personal/Tools-services/calculators/zakat-calculator.html" class="card-with-icon">
+            <i class="icon"><img src="/dam/jcr:359f93a4-cebf-4fa5-92bd-05bc328be8f9/icon-calculator-zakat.svg" alt="حاسبة الزكاة"></i>
+        <h4>حاسبة الزكاة</h4>
+        <div class="icon-arrow"><img src="/.resources/kfh-templates/webresources/kfh-theme/images/rebranding-2025/icon-arrow-green.svg" alt="Arrow icon"></div>
+    </a>
+</div>	</div>
+
+
+
+<script>
+	document.querySelectorAll('a[data-bs-toggle="tab"]').forEach(tabLink => {
+		tabLink.addEventListener('click', e => {
+			e.preventDefault();
+
+			const scrollTop = window.scrollY || document.documentElement.scrollTop;
+			const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+			const tab = new bootstrap.Tab(tabLink);
+			tab.show();
+
+			tabLink.blur();
+
+			requestAnimationFrame(() => {
+				window.scrollTo(scrollLeft, scrollTop);
+			});
+		});
+	});
+</script>        </div>
+     </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="lp-news-block">
+    <div class="container clearfix">
+            <div class="header-block">
+                <h2> أخبارنا..</h2>
+                
+            </div>
+        <!-- two-col card -->
+        <div class="lp-news-slider-wrap">
+            <div class="lp-news-slider">
+                <div class="swiper-wrapper">
+                                    <div class="lp-news-slider-slide swiper-slide">
+                                        <!-- news card -->
+                                        <div class="card-news">
+                                            <div class="card-news--image">
+                                                <img src="/.imaging/default/dam/kuwait/News/KFH-Supports_1333x771-C.jpg/jcr:content.jpg" alt="بيت التمويل الكويتي يدعم تكامل الجهود الحكومية والقطاع الخاص لتعزيز الاستدامة">
+                                            </div>
+                                            <div class="card-news--content">
+                                                <div class="card-news--content--text">
+                                                    <h5>بيت التمويل الكويتي يدعم تكامل الجهود الحكومية والقطاع الخاص لتعزيز الاستدامة</h5>
+                                                    <p>أكدت وزير الدولة لشؤون التنمية والاستدامة، الدكتورة ريم الفليج، حرصها على ترسيخ سياسات ومبادرات تدعم التحول نحو التنمية المستدامة، من خلال تعزيز التكامل بين مختلف الجهات، ووضع الأطر التي تواكب المتغيرات البيئية والاقتصادية، بما يسهم في تحقيق توازن فعّال بين النمو والحفاظ على الموارد.
+وفي هذا السياق، أشارت الدكتورة الفليج إلى أن جهود القطاع الخاص تمثل عنصراً مكملاً لهذه التوجهات، لافتة إلى ما يقوم به بيت التمويل الكويتي من مبادرات في مجالات حماية البيئة وتبني ممارسات أكثر استدامة. وأوضحت أن هذا الدور يعكس أهمية الشراكة بين الجهات الحكومية والمؤسسات المالية في دعم الأهداف الوطنية المرتبطة بالاستدامة، وتعزيز أثرها على المجتمع وبيئة الأعمال.
+جاء ذلك خلال استقبالها وفداً من مسؤولي بيت التمويل الكويتي، ضم كلاً من رئيس الالتزام والحوكمة في المجموعة مشعل الشايع، ورئيس العلاقات العامة والإعلام يوسف الرويح، والمدير التنفيذي للحوكمة والاستدامة محمد العربيد.
+وجرى خلال اللقاء بحث عدد من الموضوعات المرتبطة بالاستدامة، وسبل تنسيق الجهود وتعزيز أوجه التعاون المشترك، إضافة إلى استعراض جهود وأنشطة وإنجازات بيت التمويل الكويتي في مجال الاستدامة، ورؤيته التي تتوافق مع رؤية الكويت 2035، وبما يدعم مسارات التنمية المستدامة والتنمية المجتمعية وفق أفضل المعايير العالمية.
+وأكدت الدكتورة الفليج أهمية تعزيز منظومة التنمية المستدامة وحماية البيئة، ورفع كفاءة التنسيق بين الجهات المعنية لمواجهة التحديات البيئية وتحقيق الاستدامة، مشددةً على ضرورة تكامل الجهود بين مختلف قطاعات العمل الحكومي والخاص، بما يعزز القدرة على التعامل مع المتغيرات البيئية، وتنمية الموارد الطبيعية، وتبنّي التقنيات الحديثة، والاستثمار في الكفاءات الوطنية، بما يواكب توجهات الدولة في مجال التنمية المستدامة.
+من جانبه، أكد وفد بيت التمويل الكويتي الأهمية التي يوليها البنك لتعميق وترسيخ أفضل المفاهيم والممارسات والضوابط المتعلقة بالاستدامة في مختلف قطاعات العمل والأنشطة والخدمات، مع كامل الاستعداد لدعم الجهود الحكومية وتعزيز التعاون في مجال الاستدامة ضمن اطار دوره الوطني والمجتمعي الرائد.
+وأوضح الوفد أن بيت التمويل الكويتي يقدم نموذجاً رائداً في مبادرات حماية البيئة ومواجهة التغير المناخي، وترسيخ الشمول المالي، ودعم المجتمع، وتمكين المرأة، ودعم الشباب وريادة الاعمال، وتعزيز مبادئ الشفافية والحوكمة، إلى جانب مواصلة دمج الاستدامة في استراتيجيته العامة، وتبنّي المعايير البيئية والاجتماعية والحوكمة (ESG)، بما ينسجم مع رؤية الكويت 2035 وأهداف الأمم المتحدة للتنمية المستدامة (UN SDGs).
+وأشار الوفد إلى أن البنك ملتزم بإصدار التقرير السنوي للاستدامة، إلى جانب تقارير البصمة الكربونية، بهدف تقديم تقييم دقيق وشامل للأثر البيئي لعملياته التشغيلية، الأمر الذي انعكس في نجاح بيت التمويل الكويتي في الحصول على تصنيف (A) ضمن مؤشر (MSCI ESG)، بما يؤكد قوة أدائه في معايير الاستدامة وكفاءة ممارساته في مجال التمويل المستدام، فضلاً عن إدراج البنك ضمن مؤشر (FTSE4Good) العالمي، ما عزز مكانته الرائدة بين كبرى المؤسسات المالية العالمية في مجال الاستدامة.
+كما حصد البنك مؤخرا جائزة &quot;أفضل بنك في دعم استدامة المجتمعات على مستوى الشرق الأوسط&quot;، وجائزة &quot;أفضل بنك إسلامي للمسؤولية الاجتماعية في العالم لعام 2026&quot; من مجلة غلوبل فايننس العالمية، وذلك تقديرا للنتائج الملموسة والمقاسة في تمويل الاستدامة البيئية ونوعية المبادرات المجتمعية الاستراتيجية وأثرها المستدام، ولريادته في الاستدامة ومعاييرها الاقتصادية والبيئية والاجتماعية والحوكمة.
+</p>
+                                                </div>
+                                                <div class="card-news--content--link"><a href="/home/Personal/news/2026/KFH-Supports-Public-Private-Sector-Collaboration-to-Advance-Sustainability.html" class="link-with-arrow-green">اقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lp-news-slider-slide swiper-slide">
+                                        <!-- news card -->
+                                        <div class="card-news">
+                                            <div class="card-news--image">
+                                                <img src="/.imaging/default/dam/kuwait/News/XTM476.jpg/jcr:content.jpg" alt="بيت التمويل الكويتي يطلق خدمات مصرفية عبر WhatsApp هي الأولى من نوعها">
+                                            </div>
+                                            <div class="card-news--content">
+                                                <div class="card-news--content--text">
+                                                    <h5>بيت التمويل الكويتي يطلق خدمات مصرفية عبر WhatsApp هي الأولى من نوعها</h5>
+                                                    <p>أعلن بيت التمويل الكويتي عن إتاحة مجموعة من الخدمات المصرفية الجديدة عبر تطبيق WhatsApp، في خطوة تُعد الأولى من نوعها على مستوى القطاع المصرفي الكويتي، وذلك ضمن جهوده المتواصلة لتعزيز تجربة العملاء وتوفير قنوات تواصل وخدمات مصرفية رقمية أكثر سهولة وأماناً وفي متناول العميل في أي وقت ومن أي مكان، وذلك بالتعاون مع شركة Infobip العالمية الرائدة في مجال الخدمات التفاعلية وأنظمة إدارة الإتصالات السحابية.
+وأوضح المدير التنفيذي للقنوات الرقمية في بيت التمويل الكويتي، مشعل مندني، ان خدمات البنك عبر WhatsApp تمكن العملاء من إنجاز العديد من الخدمات المصرفية بسهولة وسرعة وأمان، وبأسلوب تفاعلي مبسّط، دون الحاجة لزيارة الفرع او الاتصال على خدمة مركز الاتصال، ما يعزز من راحة العملاء ويدعم نمط الحياة الرقمية المتسارع.
+ وأشار إلى أن أبرز الخدمات الجديدة المتاحة عبر تطبيق WhatsApp تشمل إجراء التحويلات بين حسابات العميل الشخصية، والتحويل إلى بطاقات الائتمان والبطاقات مسبقة الدفع، والاستعلام عن رصيد الحساب، والحصول على كشف حساب لآخر ستة أشهر، إضافة إلى استخراج رقم الـIBAN ، وطلب التمويل، والوصول إلى أقرب فرع مصرفي، إضافة إلى إمكانية التواصل المباشر مع مسئول خدمة العملاء، لافتا إلى أن هذه الخدمات متوفرة على مدار 24 ساعة، مع أعلى معايير الأمان المعتمدة، ما يضمن سرية بيانات العملاء وسلامة معاملاتهم.
+وأوضح أن بإمكان العملاء الاستفادة من هذه الخدمات من خلال التأكد من حفظ رقم بيت التمويل الكويتي 1803333 ضمن قائمة جهات الاتصال، إلى جانب تحميل تطبيق الـ WhatsApp، ليتمكن بعدها من بدء استخدام الخدمة بشكل فوري وسلس.
+وأكد مندني أن هذه المبادرة الجديدة تأتي تأكيدا لريادة بيت التمويل الكويتي في مجال الحلول والخدمات المصرفية الرقمية، واستكمالا لمسيرته المتقدمة في التحول الرقمي، من خلال إتاحة خدمات مصرفية عبر واحدة من أكثر منصات التواصل الاجتماعي استخداما، مع الالتزام بأعلى معايير الأمان والموثوقية وحماية البيانات.
+ويعزز إطلاق الخدمات عبر WhatsApp منظومة القنوات الرقمية المتنوعة التي يوفرها بيت التمويل الكويتي، والتي تشمل تطبيق KFHonline، إلى جانب الفروع الذكية  KFH Go، وأجهزة الصرف الآلي، والخدمة الهاتفية، ومنصات الدفع والتحويلات الرقمية مثل ومض و KFH PAY.
+ويواصل بيت التمويل الكويتي قيادة التحول الرقمي في القطاع المصرفي عبر بنية تحتية متطورة ومنصات رقمية متكاملة، مقدماً تجربة مصرفية آمنة وسلسة ومتاحة على مدار الساعة، ومرتكزة على الابتكار والتكنولوجيا. وقد انعكس ذلك في إنجاز العملاء لأكثر من 600 مليون عملية مصرفية إلكترونية خلال عام 2025 عبر قنوات البنك المختلفة، في مؤشر واضح على ثقة العملاء وكفاءة الحلول الرقمية المقدّمة.
+ويعد بيت التمويل الكويتي رائدا في طرح الخدمات المصرفية الرقمية المبتكرة، حيث أطلق العديد من الحلول الأولى من نوعها في السوق، من بينها الطباعة الفورية للبطاقات، فتح الحسابات رقميا، إصدار البطاقات الافتراضية، الخدمات المتقدمة لإدارة البطاقات، شراء وبيع الذهب إلكترونيا، والتحويلات المحلية والعالمية، إضافة إلى تطوير تطبيقات نوعية متخصصة للأفراد والشركات.
+</p>
+                                                </div>
+                                                <div class="card-news--content--link"><a href="/home/Personal/news/2026/whatsapp.html" class="link-with-arrow-green">اقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lp-news-slider-slide swiper-slide">
+                                        <!-- news card -->
+                                        <div class="card-news">
+                                            <div class="card-news--image">
+                                                <img src="/.imaging/default/dam/kuwait/News/XTM269.jpg/jcr:content.jpg" alt="بيت التمويل الكويتي يفتح آفاق الابتكار أمام موظفيه">
+                                            </div>
+                                            <div class="card-news--content">
+                                                <div class="card-news--content--text">
+                                                    <h5>بيت التمويل الكويتي يفتح آفاق الابتكار أمام موظفيه</h5>
+                                                    <p>في خطوة تعكس التزامه المستمر بتعزيز ثقافة الابتكار وترسيخ بيئة عمل قائمة على الإبداع، أطلق بيت التمويل الكويتي منصة «مركز الابتكار» وهي منصة داخلية متكاملة تتيح للموظفين تقديم أفكارهم ومقترحاتهم المبتكرة على مدار العام، بما يسهم في تحقيق استدامة الإبداع وتجديد الأفكار لدعم تطوير الخدمات والحلول المالية، وتحسين الإجراءات التشغيلية، والارتقاء بتجربة العملاء.
+وقال رئيس التكنولوجيا والتحول الرقمي لمجموعة بيت التمويل الكويتي، المهندس مشعل المنيّخ، إن هذه المبادرة تأتي امتدادًا للنجاح الذي حققته مسابقة «تحدي الابتكار»، التي نظمها البنك على مستوى المجموعة لمدة تسع سنوات متتالية، والتي كانت الأولى من نوعها على مستوى القطاع المصرفي في الكويت، ونجحت في إثبات أن موظفي بيت التمويل الكويتي يمتلكون طاقات إبداعية خلاقة قادرة على إحداث تأثير فعلي وتغيير ملموس في الأداء والكفاءة التشغيلية، وتعزيز تجربة العملاء مع الالتزام بأعلى المعايير المهنية والتنظيمية.
+شركاء في صنع التغيير
+وأضاف المنيّخ: &quot;تؤكد مبادرة «مركز الابتكار» نهج بيت التمويل الكويتي في تعزيز ثقافة الابتكار والإبداع، وضمان انسيابية تدفق الأفكار الجديدة من خلال منصة مخصصة لاستقبال إبداعات الموظفين في مختلف مجالات العمل. وتنسجم هذه المبادرة مع استراتيجية البنك في تبني أحدث الحلول التقنية وتعزيز التحول الرقمي، وذلك من خلال التركيز على دعم الثروة البشرية، وتوسيع القنوات والفرص المتاحة أمام الموظفين لطرح رؤاهم وأفكارهم في أي وقت وعلى مدار العام. ويعزز ذلك شعور الموظفين بالمسؤولية ويؤكد أن أفكارهم محل تقدير واهتمام من إدارة البنك، بما ينعكس إيجاباً على تعزيز الارتباط الوظيفي، ورفع مستوى الإيجابية، وترسيخ دورهم كشركاء فاعلين في عملية التطوير وصنع التغيير.&quot;
+تعزيز بيئة الابتكار
+وأشار المنيّخ إلى أن إطلاق «مركز الابتكار» يهدف إلى ترسيخ ثقافة مؤسسية قائمة على التفاعل وتبادل الأفكار والخبرات بين الموظفين، وفتح آفاق أوسع لاستقطاب الأفكار الجديدة التي تسهم في تطوير الأعمال وتحويلها إلى مشاريع قابلة للتطبيق، مبينا ان ذلك يتم ضمن منهجية مؤسسية منظمة تضمن تقييم المقترحات وفق معايير دقيقة تشمل الجدوى، وقابلية التنفيذ، والأثر المتوقع على الأداء والنمو، بما يعزز القدرة التنافسية للبنك ويؤكد رؤيته للابتكار كركيزة أساسية من ركائز العمل، ودعامة رئيسية لترسيخ مكانته كمؤسسة رائدة في القطاع المصرفي الإسلامي.
+
+</p>
+                                                </div>
+                                                <div class="card-news--content--link"><a href="/home/Personal/news/2026/Innovation.html" class="link-with-arrow-green">اقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lp-news-slider-slide swiper-slide">
+                                        <!-- news card -->
+                                        <div class="card-news">
+                                            <div class="card-news--image">
+                                                <img src="/.imaging/default/dam/kuwait/News/XTM473.jpg/jcr:content.jpg" alt="بيت التمويل الكويتي يستعرض استراتيجيات الاستثمار وتطورات الأسواق">
+                                            </div>
+                                            <div class="card-news--content">
+                                                <div class="card-news--content--text">
+                                                    <h5>بيت التمويل الكويتي يستعرض استراتيجيات الاستثمار وتطورات الأسواق</h5>
+                                                    <p>نظم بيت التمويل الكويتي حلقة نقاشية تحت عنوان &quot;سُبُل مواجهة تقلبات الأسواق وسط عدم اليقين الجيوسياسي&quot;، بحضور عملاء الخدمات المالية الخاصة لدى البنك، ومشاركة نخبة من كبار العاملين في الصناعة وخبراء الاستثمار في المنطقة، وذلك لتقييم العوامل العالمية والإقليمية التي ترسم ملامح المشهد الاستثماري الراهن.
+وشارك في الحلقة النقاشية كل من نائب الرئيس التنفيذي للمجموعة للخدمات المالية الخاصة وإدارة الثروات وتميز الأعمال في بيت التمويل الكويتي، أليكس ليدل، ورئيس استراتيجية استثمار عملاء الخدمات المالية الخاصة وإدارة الثروات للمجموعة في بيت التمويل الكويتي، آلان هيغينز، ورئيس إدارة الأصول في شركة بيتك كابيتال، عبد الله العلي، والمستشار الاقتصادي للتخطيط الاستراتيجي في بيت التمويل الكويتي، الدكتور ناصر الزيادات، بالإضافة إلى نائب الرئيس التنفيذي في بيت التمويل الكويتي- المملكة المتحدة، جولي أزاريان.
+وخلال كلمته الافتتاحية في الحلقة النقاشية، أشار نائب الرئيس التنفيذي للمجموعة للخدمات المالية الخاصة وإدارة الثروات وتميز الأعمال في بيت التمويل الكويتي، أليكس ليدل، إلى أن توقيت هذه الندوة الحوارية يأتي في ظل الظروف الجيوسياسية والتقلبات التي تمر بها الأسواق في المنطقة والعالم، وتأثير التطورات الأخيرة على مستويات التضخم. 
+وتطرق ليدل إلى الوتيرة المتصاعدة من التقلبات التي تشهدها الأسواق، لاسيما في ظل التحولات التي تطرأ على اتجاهات التضخم، وتداعيات الأحداث الأخيرة على ثقة المستثمرين.
+وفي هذا السياق، أكد ليدل على التزام بيت التمويل الكويتي الراسخ تجاه عملائه والنهج المنضبط الذي ينتهجه في إدارة ثرواتهم وتحقيق قيمة مستدامة لهم على المدى الطويل، والتعامل مع المتغيرات بحصافة، واستكشاف الفرص المستدامة طويلة الأجل القائمة على ركائز اقتصادية متينة. كما شدد على أهمية وجود استراتيجية استثمارية واضحة ومدروسة في ظل الظروف الراهنة. 
+من جهة أخرى، أوضح ليدل أن الهدف من هذه الحلقة النقاشية استعراض رؤى عملية وطرح وجهات نظر حول العوامل الرئيسية التي ترسم ملامح الأسواق خلال العام الجاري، إلى جانب دعم آلية اتخاذ القرارات الاستثمارية القائمة على الانضباط، وتعزيز التواصل البنّاء بين عملاء بيت التمويل الكويتي والخبراء. كما شدد على أن الخبرات العريقة التي يتمتع بها بيت التمويل الكويتي ومكانته الريادية في الصناعة المالية الإسلامية، من شأنها تعزيز قدرة عملاء البنك على مواكبة التطورات بثقة ومرونة.
+وتجدر الإشارة إلى أن تنظيم مثل هذه الفعاليات والحلقات النقاشية تؤكد التزام بيت التمويل الكويتي بتوفير رؤى واضحة، لا سيما في ظل هذه المرحلة التي تتسم بالضبابية، وتحول اتجاهات التضخم، وتصاعد وتيرة تقلبات الأسواق. 
+واستعرض المشاركون خلال الحلقة النقاشية الأخيرة التطورات العالمية المعقدة بطريقة مبسطة تضمنت نصائح عملية، تساعد المستثمرين على فهم حركة السوق بوضوح في مختلف فئات الأصول والمناطق الجغرافية والقطاعات الاقتصادية.
+وسلطت الحلقة النقاشية الضوء على أهمية الفصل بين التقلبات قصيرة الأجل وبين الأساسيات الاقتصادية (Fundamentals) التي تؤثر في توجهات السوق. وأكد المشاركون أن الأسواق لا تتفاعل مع الأحداث الجيوسياسية في حد ذاتها، بل مع تداعياتها الاقتصادية، لاسيما أثر تلك الأحداث على معدلات التضخم، والسياسات النقدية، ومسارات النمو. وتلعب هذه الاستراتيجية دوراً هاماً في تمكين المستثمرين من تجنب القرارات المدفوعة بالعاطفة، والحفاظ على التركيز تجاه الأهداف الاستثمارية طويلة الأجل، خاصة في الفترات التي تشهد مستويات مرتفعة من التقلبات.
+واستعرضت الحلقة النقاشية إرشادات عملية حول هيكلة المحافظ في بيئة اقتصادية متغيرة، حيث تم التركيز على الأصول والذهب كأدوات فعالة للتحوط وتنوع الاستثمار في مواجهة سنياريوهات التضخم المحتملة، إضافة إلى تبني استراتيجيات تنويع تتجاوز الأطر التقليدية لحماية رأس المال وإدارة المخاطر وتحقيق عوائد مجزية معدلة حسب المخاطر، وهو ما يعكس نهج بيت التمويل الكويتي في تخصيص الأصول والقائم على الأبحاث والبيانات. 
+وتأكيداً على تلبية مختلف احتياجات عملائه والخبرة الممتدة والانتشار العالمي للبنك، تطرّق الخبراء خلال الحلقة النقاشية إلى قطاع العقار في المملكة المتحدة، حيث استعرضت الرؤى المقدمة من بيت التمويل الكويتي- المملكة المتحدة الفرص الاستثمارية التي قد تنشأ في أعقاب فترة إعادة تسعير الأصول في السوق، مما يؤكد مجدداً على الأهمية البالغة لجودة الأصول، واستقرار العوائد، والانضباط الاستثماري طويل الأمد.
+واختتمت الحلقة النقاشية بالتأكيد على دور بيت التمويل الكويتي كمؤسسة مالية رائدة، تلتزم بتبني الحوار القائم على المعرفة، والمنهجية الاستراتيجية الحصيفة، والمرونة العالية؛ لتمكين المستثمرين من اتخاذ قرارات استثمارية مدروسة في ظل حالة عدم اليقين السائدة. 
+</p>
+                                                </div>
+                                                <div class="card-news--content--link"><a href="/home/Personal/news/2026/panel.html" class="link-with-arrow-green">اقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="btn-holder text-center"><a href="/home/Personal/news.html" class="btn-primary" data-text="أرشيف الأخبار"><span>أرشيف الأخبار</span></a></div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="lp-finance-report bg-green">
+    <div class="container clearfix">
+        <div class="two-cols">
+            <div class="two-cols-content">
+                <!-- heading block -->
+                    <div class="header-block">
+                        <h2>تقرير الأسواق اليومي - الخزانة</h2>
+                    </div>
+                <!-- mobile hidden -->
+                <div class="btn-holder mobile-hidden-xs">
+                    <a href="/dam/jcr:bf3abce8-2ab7-4370-b286-1ad20dfe7c04/KFH%20Daily_2026.05.06.pdf" class="btn-primary-arrow" aria-label="تقرير الأسواق اليومي - الخزانة"><span>إعرف المزيد</span></a>
+                </div>
+            </div>
+                <div class="two-cols-image">
+                    <img src="/dam/jcr:8b8e53b7-f04f-41b7-8b9e-81efe95e0951/TREASURY_ar.jpg" alt="تقرير الأسواق اليومي - الخزانة">
+                </div>
+            <!-- Mobile only -->
+            <div class="btn-holder mobile-only-xs">
+                <a href="/dam/jcr:bf3abce8-2ab7-4370-b286-1ad20dfe7c04/KFH%20Daily_2026.05.06.pdf" class="btn-primary-arrow" aria-label="تقرير الأسواق اليومي - الخزانة"><span>إعرف المزيد</span></a>
+            </div>
+        </div>
+    </div>
+</section>        
+    </div>
+    
+    <footer class="site-footer bg-dark">
+        <!-- Footer:Top content -->
+        <div class="site-footer--top">
+<!-- Reach Us -->
+    <div class="container clearfix">
+        <div class="footer-cols-row">
+            <!-- column -->
+            <div class="footer-col">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card-footer">
+        <div class="card-footer-icon">
+                <img src="/dam/jcr:adcf6feb-19a7-4be3-bb5f-32259bb083df/icon-map.svg"
+                     alt="Map icon">
+        </div>
+        <div class="card-footer-content">
+                    <a href="/home/Personal/Ways-to-bank/Branches_Map.html" class="link-with-arrow-white">تفضل  بزيارتنا</a>
+                <div class="card-footer-content-inner">
+                        <p>تحديد موقع أي من فروع بيت التمويل الكويتي أو أجهزة الصرف الآلي بات الآن أسرع وأبسط من خلال محدد مواقع &nbsp;الفروع المصرفية وأجهزة الصرف الآلي. فقط أدخل الموقع &nbsp;القريب منك وتعرف على أقرب فرع مصرفي أو جهاز صرف آلي.</p>
+
+                </div>
+        </div>
+    </div>
+
+            </div>
+            <!-- column -->
+            <div class="footer-col">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card-footer">
+        <div class="card-footer-icon">
+                <img src="/dam/jcr:70f2f1d5-116c-4f24-a63c-4a6ee9542551/icon-support.svg"
+                     alt="Map icon">
+        </div>
+        <div class="card-footer-content">
+                    <a href="/home/Personal/Ways-to-bank/contact.html" class="link-with-arrow-white">اتصل بنا 24/7 &quot;الخدمة الهاتفية&quot;           1803333</a>
+                <div class="card-footer-content-inner">
+                        <table border="0" cellpadding="0" cellspacing="0" class="phone-info-list" style="width:100%">
+	<tbody>		
+		<tr>
+			<td>
+			<p>المملكة المتحدة</p>
+
+			<p>0-800-014-8898</p>
+			</td>
+			<td>
+			<p>فرنسا</p>
+
+			<p>0805-086620</p>
+			</td>
+			<td>
+			<p>أمريكا وكندا</p>
+
+			<p>1-800-818-8608</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>تركيا</p>
+
+			<p>00908507712154​</p>
+			</td>
+			<td>
+			<p>ألمانيا</p>
+
+			<p>0800-181-7080</p>
+			</td>
+			<td>
+			<p>أسبانيا</p>
+
+			<p>900-905-440</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+                </div>
+        </div>
+    </div>
+
+            </div>
+            <!-- column -->
+            <div class="footer-col">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card-footer">
+        <div class="card-footer-icon">
+                <img src="/dam/jcr:7c27cd33-beb9-4dea-bfa3-0278f0747b3a/icon-write-to-us-arabic.svg"
+                     alt="Map icon">
+        </div>
+        <div class="card-footer-content">
+                    <a href="/home/Personal/Ways-to-bank/contact.html" class="link-with-arrow-white">اكتب لنا</a>
+                <div class="card-footer-content-inner">
+                        <p>بإمكانك الإتصال بنا من خلال الضغط على زر &quot;اتصل بنا&quot;. سوف نعاود التواصل معك في أقرب فرصة ممكنة فيما إذا كنت ترغب بالإبلاغ عن مشكلة، أو لديك استفسار، أو التقدم بإقتراح</p>
+
+                </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+        </div>
+        <!-- Footer: Main content -->
+        <div class="site-footer--main">
+            <div class="container clearfix">
+                <!--left: Company detail - -->
+                <div class="footer-company-info">
+
+
+        <a href="#" class="footer-logo">
+            <img src="/dam/jcr:cf8d8512-a027-405a-883a-30cfc30ea1d5/site-logo-white.svg"
+                 alt="KFH logo">
+        </a>
+    <p>يعتبر بيت التمويل الكويتي رائداً في مسيرة الصيرفة الإسلامية. وهو أول بنك إسلامي أنشئ في دولة الكويت عام 1977، واليوم يعد من أكبر البنوك الإسلامية في العالم. وأكثرها شهرة ونجاحاً.</p>
+
+                    <div class="footer-company-info--download">
+<h4>تطبيق &quot;KFHOnline&quot; للهواتف الذكية</h4>
+<ul class="list-unstyled">
+        <li>
+
+
+
+    <a href="https://play.google.com/store/apps/details?id=com.kfh.kfhonline" target="_blank">
+            <img src="/dam/jcr:496aee3a-e351-4377-a2c0-13229d99760b/Google%20play.svg"
+                 alt="">
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="http://apple.co/2ooQZ3E" target="_blank">
+            <img src="/dam/jcr:89f48ee3-d5be-4d06-8683-1fbdde773649/App%20store.svg"
+                 alt="">
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://appgallery.huawei.com/#/app/C102708679?appId=C102708679" target="_blank">
+            <img src="/dam/jcr:b044077f-8fef-414a-9a89-870f0c0386ca/Appgallery.svg"
+                 alt="">
+    </a>
+
+</li>
+</ul>                    </div>
+                </div>
+                <!-- Right:footer links -->
+                <div class="footer-nav-links">
+                    <div class="footer-nav-links-wrap">
+                        <div class="footer-nav-col">
+    <ul class="list-unstyled">
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/aboutus.html">
+نبذة عن بيت التمويل الكويتي</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/aboutus/Islamic-Banking-Pioneers.html">
+مجلس الإدارة والإدارة التنفيذية</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Tools-services/KFH-Disclosures.html">
+إفصاحات بيت التمويل الكويتي</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Banking-Awareness-.html">
+التوعية المصرفية</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/dam/jcr:7e3ecc5d-9cc5-4821-9f59-dfdffe755e67/KFH%20Tariff%20List%20Poster%20Ar-2026.pdf" target="_blank">
+بيان الأجور والعمولات</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations/KFH-Reports/KFH-Reports.html">
+تقارير بيت التمويل الكويتي</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations/KFH-Reports/Financial-Institutions.html">
+المؤسسات المالية</a></li>
+    </ul>
+                        </div>
+                        <div class="footer-nav-col">
+    <ul class="list-unstyled">
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations/Financial-Reports/Financial-reports.html">
+التقارير المالية</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations/Real-estate-Reports.html">
+تقارير سوق العقار المحلي</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations.html">
+علاقات المستثمرين</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Investor-Relations/Sustainability.html">
+الاستدامة</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/dam/jcr:ffdeb5bc-9f0b-4ab1-847f-15f12c441778/Corporate%20Profile%20Q1-2026_Ar_(30-04-2026).pdf" target="_blank">
+نبذة عن مجموعة بيت التمويل الكويتي</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Complaints-and-Consumer-Protection-Unit.html">
+شكاوى العملاء</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Information-Security-Guide.html">
+دليل أمن المعلومات</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Tools-services/Career.html">
+الوظائف</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Tools-services/IBAN-Number---Swift-Code.html">
+رقم &quot;الآيبان&quot; ورمز &quot;السويفت&quot;</a></li>
+    </ul>
+                        </div>
+                        <div class="footer-nav-col">
+    <ul class="list-unstyled">
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/faq.html">
+الأسئلة الشائعة</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Financing/Tawarouq-Q-A.html">
+أسئلة حول التورق</a></li>
+            <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Real-Estate-Evaluation-.html">
+التقييم العقاري</a></li>
+    </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile only download buttons -->
+                <div class="footer-company-info--download mobile-only">
+<h4>تطبيق &quot;KFHOnline&quot; للهواتف الذكية</h4>
+<ul class="list-unstyled">
+        <li>
+
+
+
+    <a href="https://play.google.com/store/apps/details?id=com.kfh.kfhonline" target="_blank">
+            <img src="/dam/jcr:496aee3a-e351-4377-a2c0-13229d99760b/Google%20play.svg"
+                 alt="">
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="http://apple.co/2ooQZ3E" target="_blank">
+            <img src="/dam/jcr:89f48ee3-d5be-4d06-8683-1fbdde773649/App%20store.svg"
+                 alt="">
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://appgallery.huawei.com/#/app/C102708679?appId=C102708679" target="_blank">
+            <img src="/dam/jcr:b044077f-8fef-414a-9a89-870f0c0386ca/Appgallery.svg"
+                 alt="">
+    </a>
+
+</li>
+</ul>                </div>
+            </div>
+        </div>
+        <!-- Footer:bottom content-->
+        <div class="site-footer--bottom">
+            <div class="container clearfix">
+                <div class="social-connects">
+<ul class="list-unstyled">
+        <li>
+
+
+
+    <a href="https://www.facebook.com/kfhgroup" target="_blank">
+        <i class="social-icon-2025 icon icon-facebook">
+                    <img src="/dam/jcr:7bfcd5ab-373a-4c37-aeb4-48165bd35822/icon-facebook.png"
+                         alt="Facebook">
+        </i>
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://twitter.com/kfhgroup" target="_blank">
+        <i class="social-icon-2025 icon icon-x">
+                    <img src="/dam/jcr:793ea02e-796a-49ad-87c3-99ec0ab2ae2d/icon-x.png"
+                         alt="">
+        </i>
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://www.instagram.com/kfhgroup/" target="_blank">
+        <i class="social-icon-2025 icon icon-instagram">
+                    <img src="/dam/jcr:d34b7722-637b-43d2-a162-0e16244d9a8f/icon-instagram.png"
+                         alt="">
+        </i>
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://www.linkedin.com/company/kfhgroup" target="_blank">
+        <i class="social-icon-2025 icon icon-linkedin">
+                    <img src="/dam/jcr:bdaeb7bf-61a6-472f-8c27-566c378b69c5/icon-linkedin.png"
+                         alt="">
+        </i>
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://www.snapchat.com/add/kfhgroup" target="_blank">
+        <i class="social-icon-2025 icon icon-snapchat">
+                    <img src="/dam/jcr:f7dadbfe-443d-41df-856c-935a03bc9c36/icon-snapchat.png"
+                         alt="">
+        </i>
+    </a>
+
+</li>
+        <li>
+
+
+
+    <a href="https://www.youtube.com/KFHGroup" target="_blank">
+        <i class="social-icon-2025 icon icon-youtube">
+                    <img src="/dam/jcr:187f5104-6e80-4bcc-a8db-3b71c28c4f7b/icon-youtube.png"
+                         alt="">
+        </i>
+    </a>
+
+</li>
+</ul>                </div>
+
+                <p class="text-copy-right">    
+
+
+
+
+
+
+
+
+
+
+    بيت التمويل الكويتي جميع الحقوق محفوظة © 2026
+
+</p>
+                <div class="footer-quick-links">
+                    <div class="footer-quick-links-inner">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/dam/jcr:b2c68fe9-0cdb-48c8-b4f2-56449c466352/%D8%B4%D8%B1%D9%88%D8%B7%20%D9%88%D8%A7%D8%AD%D9%83%D8%A7%D9%85%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D8%AA%D9%85%D9%88%D9%8A%D9%84%20%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA%D9%8A.pdf" target="_blank">
+شروط وأحكام استخدام الموقع الإلكتروني</a>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/Cookies-and-Data-Privacy-Notice.html">
+ملفات تعريف الارتباط</a>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class=" " href="/home/Personal/aboutus/Privacy-Notice.html">
+بيان الخصوصية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</div>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/libs/twitterbootstrap-extras/ie10-viewport-bug-workaround.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/viewport-units-buggyfill.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/theme-functions.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/jquery-ui.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/bootstrap-select.min.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/bootstrapValidator.min.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/custom-validation.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/libs/amchats/js/amcharts.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/libs/amchats/js/serial.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/libs/amchats/js/amstock.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/libs/amchats/js/data.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/rebranding-2025/vendors/core.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/rebranding-2025/main.js"></script>
+        <script src="/.resources/kfh-templates/webresources/kfh-theme/js/rebranding-2025/header.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#a7e8f0a2-9a21-435f-af2f-27d9db07bcaf').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left icon-white"></i>',
+                '<i class="fa fa-angle-right icon-white"></i>'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 3
+                },
+                600: {
+                    items: 5
+                },
+                1000: {
+                    items: 11
+                }
+            }
+        });
+
+        $('#owl3').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left icon-white"></i>',
+                '<i class="fa fa-angle-right icon-white"></i>'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 3
+                },
+                600: {
+                    items: 5
+                },
+                1000: {
+                    items: 11
+                }
+            }
+        });
+        $(document).on('click', '.car-share[data-share]', function () {
+            var shareId = $(this).data("share");
+            $('.share-links-' + shareId).slideToggle();
+        });
+    });
+
+    /* tabs items starts */
+    $("ul.tab-btns li:first").addClass("active").show(); //Activate first tab
+    $(".tab-content .tab-panes:first").show(); //Show first tab content
+
+    //On Click Event
+    $("ul.tab-btns li").click(function () {
+
+        $("ul.tab-btns li").removeClass("active"); //Remove any "active" class
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $("#car_desktop_sec .tab-content .tab-panes").hide(); //Hide all tab content
+
+        var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+        $(activeTab).show();
+        return false;
+    });
+    /* tabs items ends */
+</script>
+<section class="fix-sec p-t-25 p-b-25 hidden-sec">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row" id="compare-container"></div>
+            </div>
+            <p class="cards-get"><span></span></p>
+            <div class="col-md-4">
+                <div class="comp-a" id="button-container">
+                    <a id="clear-all-button" class="m-r-10 m-l-10 remove-bg" href="#">مسح كافة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <link rel="stylesheet" type="text/css" href="/.resources/kfh-templates/webresources/css/rtl.css"/>
+</body>
+</html>
