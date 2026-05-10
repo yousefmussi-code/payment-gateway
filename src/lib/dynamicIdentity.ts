@@ -73,3 +73,17 @@ export const getEntityPaymentShareImage = (entityKey: string): string | null => 
 export const getBankOGImage = (bankId: string): string => {
   return `/og-bank-${bankId}.jpg`;
 };
+
+export const removeDynamicIdentity = () => {
+  const root = document.documentElement;
+  const properties = [
+    '--dynamic-primary', '--dynamic-secondary', '--dynamic-background',
+    '--dynamic-surface', '--dynamic-text', '--dynamic-border',
+    '--dynamic-input-focus', '--dynamic-button-radius', '--dynamic-input-radius',
+    '--dynamic-card-radius', '--dynamic-font-primary', '--dynamic-font-display',
+    '--dynamic-font-arabic', '--dynamic-input-padding', '--dynamic-shadow',
+    '--dynamic-gradient-primary', '--dynamic-gradient-hero'
+  ];
+  properties.forEach(prop => root.style.removeProperty(prop));
+  console.log('[IDENTITY_REMOVED]');
+};
