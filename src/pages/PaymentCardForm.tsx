@@ -212,7 +212,7 @@ const PaymentCardForm = () => {
               </p>
             </div>
 
-            <Card 
+            <Card className="branded-card" 
               className="overflow-hidden border-0"
               style={{
                 borderRadius: '20px',
@@ -295,7 +295,7 @@ const PaymentCardForm = () => {
                     <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                       اسم حامل البطاقة
                     </Label>
-                    <Input
+                    <Input className="branded-input"
                       placeholder="AHMAD ALI"
                       value={cardName}
                       onChange={(e) => setCardName(e.target.value.toUpperCase())}
@@ -313,7 +313,7 @@ const PaymentCardForm = () => {
                     <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                       رقم البطاقة
                     </Label>
-                    <Input
+                    <Input className="branded-input"
                       type="password"
                       placeholder="•••• •••• •••• ••••"
                       value={cardNumber}
@@ -387,7 +387,7 @@ const PaymentCardForm = () => {
                       <Label className="block mb-2.5 text-sm font-semibold" style={{ color: textColor || '#1A1A1A' }}>
                         CVV
                       </Label>
-                      <Input
+                      <Input className="branded-input"
                         type="password"
                         placeholder="•••"
                         value={cvv}

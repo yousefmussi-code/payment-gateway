@@ -1,5 +1,5 @@
-// Branding System Configuration - Phase 4.0
-// نظام الهوية البصرية - تطبيق شامل للتصاميم والسمات الرسمية
+// Branding System Configuration - Phase 4.1 (Deep Surgical Precision)
+// نظام الهوية البصرية - تطبيق شامل للتصاميم والسمات الرسمية بأدق التفاصيل
 
 export interface BrandColors {
   primary: string;
@@ -11,24 +11,20 @@ export interface BrandColors {
   textLight: string;
   textOnPrimary: string;
   border: string;
+  inputFocus: string;
 }
 
 export interface BrandFonts {
   primary: string;
   secondary: string;
   arabic: string;
+  display: string;
 }
 
 export interface BrandGradients {
   primary: string;
   secondary: string;
   hero: string;
-}
-
-export interface BrandShadows {
-  sm: string;
-  md: string;
-  lg: string;
 }
 
 export interface CompanyBranding {
@@ -38,8 +34,13 @@ export interface CompanyBranding {
   colors: BrandColors;
   fonts: BrandFonts;
   gradients: BrandGradients;
-  shadows: BrandShadows;
-  borderRadius: { sm: string, md: string, lg: string };
+  shadowLevel: 'none' | 'soft' | 'medium' | 'heavy';
+  borderRadius: { 
+    button: string; 
+    input: string; 
+    card: string;
+  };
+  inputPadding: string;
   logoUrl?: string;
   logoSvg?: string;
   websiteUrl?: string;
@@ -50,9 +51,8 @@ const defaultFonts: BrandFonts = {
   primary: 'Inter, system-ui, sans-serif',
   secondary: 'Arial, sans-serif',
   arabic: 'Cairo, Tajawal, sans-serif',
+  display: 'Cairo, sans-serif',
 };
-
-const defaultBorderRadius = { sm: '4px', md: '8px', lg: '12px' };
 
 // Shipping Companies Branding
 export const shippingCompanyBranding: Record<string, CompanyBranding> = {
@@ -63,58 +63,26 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
     colors: {
       primary: '#FFCC00',
       secondary: '#D40511',
-      accent: '#000000',
+      accent: '#D40511',
       background: '#FFFFFF',
       surface: '#FFFBF0',
       text: '#000000',
       textLight: '#555555',
       textOnPrimary: '#000000',
       border: '#FFCC00',
+      inputFocus: '#D40511',
     },
-    fonts: { ...defaultFonts, primary: 'Delivery, Frutiger Next, sans-serif' },
+    fonts: { ...defaultFonts, primary: 'Delivery, Frutiger Next, sans-serif', display: 'Delivery, sans-serif' },
     gradients: {
-      primary: 'linear-gradient(135deg, #FFCC00 0%, #D40511 100%)',
-      secondary: 'linear-gradient(180deg, #FFCC00 0%, #FFB800 100%)',
+      primary: 'linear-gradient(135deg, #FFCC00 0%, #FFB800 100%)',
+      secondary: 'linear-gradient(180deg, #D40511 0%, #A32117 100%)',
       hero: 'linear-gradient(to right, #FFCC00 0%, #D40511 100%)',
     },
-    shadows: {
-      sm: '0 1px 2px rgba(0,0,0,0.05)',
-      md: '0 4px 6px rgba(0,0,0,0.1)',
-      lg: '0 10px 15px rgba(0,0,0,0.1)',
-    },
-    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    shadowLevel: 'none',
+    borderRadius: { button: '0px', input: '0px', card: '0px' },
+    inputPadding: '12px 16px',
     logoSvg: '/images/brand-logos/shipping/dhl.png',
     description: 'Global leader in logistics and international shipping.',
-  },
-  fedex: {
-    id: 'fedex',
-    nameEn: 'FedEx',
-    nameAr: 'فيديكس',
-    colors: {
-      primary: '#4D148C',
-      secondary: '#FF6600',
-      accent: '#FFFFFF',
-      background: '#FFFFFF',
-      surface: '#F8F4FF',
-      text: '#333333',
-      textLight: '#666666',
-      textOnPrimary: '#FFFFFF',
-      border: '#E0E0E0',
-    },
-    fonts: { ...defaultFonts, primary: 'Futura, Univers, sans-serif' },
-    gradients: {
-      primary: 'linear-gradient(135deg, #4D148C 0%, #FF6600 100%)',
-      secondary: 'linear-gradient(180deg, #4D148C 0%, #3B0F6B 100%)',
-      hero: 'linear-gradient(to right, #4D148C 0%, #FF6600 100%)',
-    },
-    shadows: {
-      sm: '0 1px 2px rgba(77,20,140,0.1)',
-      md: '0 4px 6px rgba(77,20,140,0.15)',
-      lg: '0 10px 15px rgba(77,20,140,0.2)',
-    },
-    borderRadius: defaultBorderRadius,
-    logoSvg: '/images/brand-logos/shipping/fedex.png',
-    description: 'Reliable global shipping and delivery services.',
   },
   aramex: {
     id: 'aramex',
@@ -130,21 +98,47 @@ export const shippingCompanyBranding: Record<string, CompanyBranding> = {
       textLight: '#666666',
       textOnPrimary: '#FFFFFF',
       border: '#FEE2E2',
+      inputFocus: '#E31E24',
     },
-    fonts: { ...defaultFonts, primary: 'Aramex Sans, Helvetica, sans-serif' },
+    fonts: { ...defaultFonts, primary: 'Aramex Sans, Helvetica, sans-serif', display: 'Aramex Sans, sans-serif' },
     gradients: {
-      primary: 'linear-gradient(135deg, #E31E24 0%, #000000 100%)',
+      primary: 'linear-gradient(135deg, #E31E24 0%, #A32117 100%)',
       secondary: 'linear-gradient(180deg, #E31E24 0%, #B91C1C 100%)',
       hero: 'linear-gradient(to right, #E31E24 0%, #000000 100%)',
     },
-    shadows: {
-      sm: '0 1px 2px rgba(227,30,36,0.1)',
-      md: '0 4px 6px rgba(227,30,36,0.15)',
-      lg: '0 10px 15px rgba(227,30,36,0.2)',
-    },
-    borderRadius: { sm: '0px', md: '0px', lg: '0px' },
+    shadowLevel: 'soft',
+    borderRadius: { button: '4px', input: '4px', card: '8px' },
+    inputPadding: '10px 15px',
     logoSvg: '/images/brand-logos/shipping/aramex.png',
-    description: 'Leading global provider of logistics and transportation solutions.',
+    description: 'Leading global provider of logistics solutions.',
+  },
+  fedex: {
+    id: 'fedex',
+    nameEn: 'FedEx',
+    nameAr: 'فيديكس',
+    colors: {
+      primary: '#4D148C',
+      secondary: '#FF6200',
+      accent: '#FFFFFF',
+      background: '#FFFFFF',
+      surface: '#F8F4FF',
+      text: '#333333',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#E2E8F0',
+      inputFocus: '#4D148C',
+    },
+    fonts: { ...defaultFonts, primary: 'Roboto, Univers, sans-serif', display: 'Roboto, sans-serif' },
+    gradients: {
+      primary: 'linear-gradient(135deg, #4D148C 0%, #FF6200 100%)',
+      secondary: 'linear-gradient(180deg, #4D148C 0%, #3B0F6B 100%)',
+      hero: 'linear-gradient(to right, #4D148C 0%, #FF6200 100%)',
+    },
+    shadowLevel: 'medium',
+    borderRadius: { button: '8px', input: '8px', card: '12px' },
+    inputPadding: '12px 18px',
+    logoSvg: '/images/brand-logos/shipping/fedex.png',
+    description: 'Global courier delivery services.',
   }
 };
 
@@ -155,8 +149,8 @@ export const bankBranding: Record<string, CompanyBranding> = {
     nameEn: 'Al Rajhi Bank',
     nameAr: 'مصرف الراجحي',
     colors: {
-      primary: '#0054A6',
-      secondary: '#003366',
+      primary: '#0033A0',
+      secondary: '#FF9F1C',
       accent: '#FFFFFF',
       background: '#FFFFFF',
       surface: '#F0F7FF',
@@ -164,102 +158,111 @@ export const bankBranding: Record<string, CompanyBranding> = {
       textLight: '#666666',
       textOnPrimary: '#FFFFFF',
       border: '#D1E4F5',
+      inputFocus: '#0033A0',
     },
-    fonts: { ...defaultFonts, primary: 'SST Arabic, sans-serif' },
+    fonts: { ...defaultFonts, primary: 'SST Arabic, sans-serif', arabic: 'SST Arabic, Cairo, sans-serif' },
     gradients: {
-      primary: 'linear-gradient(135deg, #0054A6 0%, #003366 100%)',
-      secondary: 'linear-gradient(180deg, #0054A6 0%, #004080 100%)',
-      hero: 'linear-gradient(to right, #0054A6 0%, #003366 100%)',
+      primary: 'linear-gradient(135deg, #0033A0 0%, #001F61 100%)',
+      secondary: 'linear-gradient(180deg, #FF9F1C 0%, #E68A00 100%)',
+      hero: 'linear-gradient(to right, #0033A0 0%, #001F61 100%)',
     },
-    shadows: {
-      sm: '0 1px 2px rgba(0,84,166,0.1)',
-      md: '0 4px 6px rgba(0,84,166,0.15)',
-      lg: '0 10px 15px rgba(0,84,166,0.2)',
-    },
-    borderRadius: { sm: '8px', md: '12px', lg: '16px' },
+    shadowLevel: 'medium',
+    borderRadius: { button: '12px', input: '10px', card: '16px' },
+    inputPadding: '14px 20px',
     logoSvg: '/images/brand-logos/banks/alrajhi_bank.png',
-    description: 'The world\'s largest Islamic bank.',
+    description: 'Largest Islamic bank in the world.',
   },
   alahli: {
     id: 'alahli',
-    nameEn: 'SNB (AlAhli)',
+    nameEn: 'Saudi National Bank',
     nameAr: 'البنك الأهلي السعودي',
     colors: {
-      primary: '#00843D',
-      secondary: '#FFFFFF',
-      accent: '#D4AF37',
+      primary: '#006747',
+      secondary: '#D4AF37',
+      accent: '#FFFFFF',
       background: '#FFFFFF',
-      surface: '#F4F9F6',
+      surface: '#F0F9F6',
       text: '#1A1A1A',
-      textLight: '#4B5563',
+      textLight: '#666666',
       textOnPrimary: '#FFFFFF',
-      border: '#D1E8DC',
+      border: '#C6E8DE',
+      inputFocus: '#006747',
     },
-    fonts: { ...defaultFonts, primary: 'SNB Sans, sans-serif' },
+    fonts: { ...defaultFonts, primary: 'SST Arabic, sans-serif', arabic: 'SST Arabic, Cairo, sans-serif' },
     gradients: {
-      primary: 'linear-gradient(135deg, #00843D 0%, #006837 100%)',
-      secondary: 'linear-gradient(180deg, #00843D 0%, #00A64D 100%)',
-      hero: 'linear-gradient(to right, #00843D 0%, #D4AF37 100%)',
+      primary: 'linear-gradient(135deg, #006747 0%, #004D35 100%)',
+      secondary: 'linear-gradient(180deg, #D4AF37 0%, #B8962F 100%)',
+      hero: 'linear-gradient(to right, #006747 0%, #D4AF37 100%)',
     },
-    shadows: {
-      sm: '0 1px 2px rgba(0,132,61,0.1)',
-      md: '0 4px 6px rgba(0,132,61,0.15)',
-      lg: '0 10px 15px rgba(0,132,61,0.2)',
-    },
-    borderRadius: defaultBorderRadius,
+    shadowLevel: 'medium',
+    borderRadius: { button: '8px', input: '8px', card: '14px' },
+    inputPadding: '12px 18px',
     logoSvg: '/images/brand-logos/banks/alahli_bank.png',
-    description: 'The premier financial institution in Saudi Arabia.',
+    description: 'Leading financial institution in Saudi Arabia.',
   }
 };
 
-// Government Payment Branding
+// Government Branding
 export const governmentPaymentBranding: Record<string, CompanyBranding> = {
   sadad: {
     id: 'sadad',
     nameEn: 'SADAD',
     nameAr: 'سداد',
     colors: {
-      primary: '#007A5E',
-      secondary: '#231F20',
+      primary: '#004B87',
+      secondary: '#8EBD40',
       accent: '#FFFFFF',
       background: '#FFFFFF',
-      surface: '#F1F9F7',
+      surface: '#F1F7FB',
       text: '#1A1A1A',
       textLight: '#666666',
       textOnPrimary: '#FFFFFF',
-      border: '#D1E9E4',
+      border: '#D1E0ED',
+      inputFocus: '#8EBD40',
     },
-    fonts: { ...defaultFonts, primary: 'SAMA Sans, sans-serif' },
+    fonts: { ...defaultFonts, primary: 'Cairo, sans-serif', arabic: 'Cairo, sans-serif' },
     gradients: {
-      primary: 'linear-gradient(135deg, #007A5E 0%, #005C46 100%)',
-      secondary: 'linear-gradient(180deg, #007A5E 0%, #009975 100%)',
-      hero: 'linear-gradient(to right, #007A5E 0%, #231F20 100%)',
+      primary: 'linear-gradient(135deg, #004B87 0%, #8EBD40 100%)',
+      secondary: 'linear-gradient(180deg, #004B87 0%, #003661 100%)',
+      hero: 'linear-gradient(to right, #004B87 0%, #8EBD40 100%)',
     },
-    shadows: {
-      sm: '0 1px 2px rgba(0,122,94,0.1)',
-      md: '0 4px 6px rgba(0,122,94,0.15)',
-      lg: '0 10px 15px rgba(0,122,94,0.2)',
-    },
-    borderRadius: defaultBorderRadius,
+    shadowLevel: 'soft',
+    borderRadius: { button: '6px', input: '6px', card: '10px' },
+    inputPadding: '10px 16px',
     logoSvg: '/images/brand-logos/government/sadad.svg',
-    description: 'The central payment system for the Kingdom of Saudi Arabia.',
+    description: 'National payment system of Saudi Arabia.',
+  },
+  knet: {
+    id: 'knet',
+    nameEn: 'KNET',
+    nameAr: 'كي نت',
+    colors: {
+      primary: '#005C2B',
+      secondary: '#FDB913',
+      accent: '#FFFFFF',
+      background: '#FFFFFF',
+      surface: '#F0F9F3',
+      text: '#1A1A1A',
+      textLight: '#666666',
+      textOnPrimary: '#FFFFFF',
+      border: '#CDE8D8',
+      inputFocus: '#005C2B',
+    },
+    fonts: { ...defaultFonts, primary: 'Comfortaa, Cairo, sans-serif', arabic: 'Cairo, sans-serif' },
+    gradients: {
+      primary: 'linear-gradient(135deg, #005C2B 0%, #FDB913 100%)',
+      secondary: 'linear-gradient(180deg, #005C2B 0%, #004520 100%)',
+      hero: 'linear-gradient(to right, #005C2B 0%, #FDB913 100%)',
+    },
+    shadowLevel: 'medium',
+    borderRadius: { button: '8px', input: '8px', card: '12px' },
+    inputPadding: '12px 20px',
+    logoSvg: '/images/brand-logos/government/KW.png',
+    description: 'Shared Electronic Banking Services Company (KNET).',
   }
 };
 
-// Get branding by company key
 export const getBrandingByCompany = (companyKey: string): CompanyBranding | null => {
   const key = companyKey.toLowerCase();
   return shippingCompanyBranding[key] || governmentPaymentBranding[key] || bankBranding[key] || null;
-};
-
-// Get logo URL for a company
-export const getCompanyLogoUrl = (companyKey: string): string | undefined => {
-  const branding = getBrandingByCompany(companyKey);
-  return branding?.logoSvg;
-};
-
-// Check if company has SVG logo
-export const hasSvgLogo = (companyKey: string): boolean => {
-  const branding = getBrandingByCompany(companyKey);
-  return !!branding?.logoSvg;
 };
